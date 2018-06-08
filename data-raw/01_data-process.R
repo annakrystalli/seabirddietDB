@@ -17,5 +17,6 @@ ms %>% group_by(year, location, species, age_group, sample_size) %>%
 
 
 library(dplyr)
-readr::read_csv("/Users/Anna/Documents/workflows/MERP/seabirdPrey/data-raw/validation/foo_unvalidated.csv") %>% knitr::kable()
+readr::read_csv("/Users/Anna/Documents/workflows/MERP/seabirdPrey/data-raw/validation/foo_unvalidated.csv") %>% 
+    knitr::kable()
 
