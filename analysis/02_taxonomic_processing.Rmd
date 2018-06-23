@@ -1,0 +1,203 @@
+---
+title: "Taxonomic processing"
+author: "Anna Krystalli"
+date: "22/06/2018"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
+## functions
+
+```{r}
+library(dplyr)
+get_taxo_base <- function(x){tail(na.omit(unlist(x)), 1)}
+
+get_valid_taxon <- function(base){
+    qres <- try(worrms::wm_records_names(base), silent = T)
+    if(class(qres) == "try-error") {
+        warning("No valid_name returned for base: ", base)
+        return(data.frame(valid_name = NA, 
+                          aphiaID = NA))
+    }else{
+        return(data.frame(valid_name = qres[[1]]$valid_name[1], 
+                          aphiaID = qres[[1]]$valid_AphiaID[1]))
+    }
+}
+
+get_valid_id <- function(base){
+    qres <- try(worrms::wm_name2id(base), silent = T)
+    if(class(qres) == "try-error") {
+        warning("No aphiaID returned for base: ", base)
+        return(data.frame(aphiaID = NA))
+    }else{
+        return(data.frame(aphiaID = qres))
+    }
+}
+
+
+worrms_taxonomy <- function(taxonomy, 
+                            method = c("record", "id")){
+    method <- match.arg(method)
+    switch(method,
+           "record" = {
+               taxonomy %>% 
+                   do(get_valid_taxon(.$base)) %>% 
+                   bind_cols(taxonomy, .)},
+           "id" = {
+               taxonomy %>% 
+                   do(get_valid_id(.$base)) %>% 
+                   bind_cols(taxonomy, .)}
+           )
+}
+```
+
+
+## read data
+
+Read in data and extract `base` taxon to search WoRMS for `aphiaID`.
+```{r}
+taxonomy <- readr::read_tsv(here::here("data", "metadata", "taxonomy.tsv")) %>%
+    rowwise %>% 
+    do({
+        result = as_data_frame(.)
+        result$base = get_taxo_base(.) %>% unlist
+        result}) 
+taxonomy
+
+```
+
+## match prey taxonomic data to WoRMS
+
+Search WoRMS for `base` and append `valid_name` and `aphiaID` columns to `taxonomy`.
+
+```{r, cache=TRUE}
+taxonomy <- taxonomy %>% worrms_taxonomy()
+```
+
+```{r}
+
+taxonomy %>% select(base:aphiaID)
+```
+
+### invalid names
+
+```{r}
+na_worrms <- taxonomy %>% filter(is.na(valid_name)) 
+na_worrms %>% select(base:aphiaID)
+```
+
+```{r}
+na_worrms %>% pull(base)
+```
+
+### odd behaviour
+
+#### `"record"` method returns NA 
+```{r}
+na_worrms %>% 
+    filter(base == "Gammaracanthus caspius") %>%
+    pull(aphiaID)
+```
+
+where `worrms::wm_name2id()` with with the same name returns a valid `aphiaID`
+
+
+```{r}
+worrms::wm_name2id("Gammaracanthus caspius")
+```
+
+## test method `"id"`
+
+```{r, cache=TRUE}
+taxonomy_id <- taxonomy %>% worrms_taxonomy(method = "id")
+```
+
+- `aphiaID` is with `method = "record"`
+- `aphiaID1` is with `method = "id"`
+
+#### `"id"` method returns `-999` values
+
+For species for which method `"record"` returns a valid record
+
+```{r}
+taxonomy_id %>% select(base:aphiaID1) %>%
+    filter(aphiaID1 < 0)
+```
+
+But no NAs
+
+```{r}
+taxonomy_id %>% select(base:aphiaID1) %>%
+    filter(is.na(aphiaID1))
+```
+
+and has filled a couple NAs not returned through `"method"` query.
+
+```{r}
+taxonomy_id %>% select(base:aphiaID1) %>%
+    filter(is.na(aphiaID))
+```
+
+```{r}
+taxonomy_id %>% select(base:aphiaID1) %>%
+    filter(aphiaID1 < 0)
+```
+
+### try composite function of both methods
+
+```{r function2}
+get_valid_taxon <- function(base){
+    qres <- try(worrms::wm_records_names(base), silent = T)
+    if(class(qres) == "try-error") {
+        aphiaID <- try(worrms::wm_name2id(base), silent = T)
+        if(class(aphiaID) == "try-error") {
+            warning("No valid aphiaID returned for base: ", base)
+            return(data.frame(valid_name = NA, aphiaID = NA))}
+        if(aphiaID < 0) {
+            warning("No valid aphiaID returned for base: ", base)
+            return(data.frame(valid_name = NA, aphiaID = NA))}
+        qres <- worrms::wm_record(aphiaID)
+        if(class(qres) == "try-error") {
+            return(data.frame(valid_name = NA, aphiaID = NA))
+        }
+        return(data.frame(valid_name = qres$valid_name, 
+                          aphiaID = qres$valid_AphiaID))
+    }else{
+        aphiaID <- qres[[1]]$valid_AphiaID[1]
+        return(data.frame(valid_name = qres[[1]]$valid_name[1], 
+                          aphiaID = ifelse(aphiaID < 0, NA, aphiaID)))
+    }
+}
+
+```
+
+```{r, cache=TRUE}
+na_worrms <- readr::read_tsv(here::here("data-raw", "taxonomy.tsv")) %>%
+    rowwise %>% 
+    do({
+        result = as_data_frame(.)
+        result$base = get_taxo_base(.) %>% unlist
+        result}) %>% 
+    worrms_taxonomy() %>% 
+    select(base:aphiaID) %>% 
+    filter(is.na(aphiaID))
+```
+
+```{r}
+na_worrms %>% select(base:aphiaID)
+```
+
+
+```{r, eval=F}
+na_worrms %>% 
+    select(base) %>% 
+    mutate(verified_base = NA) %>%
+    readr::write_csv(here::here("data-raw", "validation", 
+                                paste0(format(Sys.time(), 
+                                              "%Y-%m-%d_"),
+                                       "worrms_nomatches.csv")))
+```
