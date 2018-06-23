@@ -1,22 +1,21 @@
-# load-libraries ----
-library(dplyr)
+# ---- load-libraries ----
+library(seabirdPrey)
 
-# read-raw-data ----
-ms <- readxl::read_excel(here::here("data-raw", "Master File 20171020.xlsx")) %>% 
-    janitor::clean_names()
+# ---- write-data ----
+seabirddiet <- readr::read_csv(
+    here::here("data-raw", 
+               "Seabird Diets British Isles revised 20180620.csv")) %>% 
+    janitor::clean_names() 
+
+create_ID <- function(df, name, identifiers){
+    mutate = paste0()
+    df %>% dplyr::select((!!rlang::sym(identifiers[1])))
+}
+
+seabirddiet <- bind_cols(ID =  1:nrow(seabirddiet), seabirddiet)
+
+seabirddiet %>% janitor::get_dupes(startyear, location, species, prey_species,
+                                   breeding_status, age_group) %>% View()
 
 
-
-# validate proportional frequencies
-ms %>% group_by(year, location, species, age_group, sample_size) %>% 
-    summarise(fo_o_sum = sum(fo_o)) %>% 
-    mutate(valip_prop = near(fo_o_sum, 1)) %>% arrange(desc(fo_o_sum)) %>%
-    filter(valip_prop == F) %>% 
-    readr::write_csv(here::here("data-raw", "validation", 
-                                "foo_unvalidated.csv"))
-
-
-library(dplyr)
-readr::read_csv("/Users/Anna/Documents/workflows/MERP/seabirdPrey/data-raw/validation/foo_unvalidated.csv") %>% 
-    knitr::kable()
 
