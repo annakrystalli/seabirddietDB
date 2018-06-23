@@ -9,3 +9,18 @@ LazyData: true
 ByteCompile: true
 URL: https://github.com/annakrystalli/seabirdPrey
 BugReports: https://github.com/annakrystalli/seabirdPrey/issues
+Suggests: 
+    readxl,
+    janitor,
+    dplyr,
+    here,
+    DT,
+    rlang,
+    plyr
+Imports: 
+    readr,
+    magrittr,
+    worrms,
+    glue
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
