@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "taxonomic matching report"
+      href: taxonomic_processing.html
     - text: "License"
       href: license.html
   right:
