@@ -1,41 +1,46 @@
-get_taxo_base <- function(x){tail(na.omit(unlist(x)), 1)}
-
-get_valid_taxon <- function(base){
-    qres <- try(worrms::wm_records_names(base), silent = T)
-    if(class(qres) == "try-error") {
-        aphiaID <- try(worrms::wm_name2id(base), silent = T)
-        if(class(aphiaID) == "try-error") {
-            warning("No valid aphiaID returned for base: ", base)
-            return(data.frame(valid_name = NA, aphiaID = NA))}
-        if(aphiaID < 0) {
-            warning("No valid aphiaID returned for base: ", base)
-            return(data.frame(valid_name = NA, aphiaID = NA))}
-        qres <- worrms::wm_record(aphiaID)
-        if(class(qres) == "try-error") {
-            return(data.frame(valid_name = NA, aphiaID = NA))
-        }
-        return(data.frame(valid_name = qres$valid_name, 
-                          aphiaID = qres$valid_AphiaID))
-    }else{
-        aphiaID <- qres[[1]]$valid_AphiaID[1]
-        return(data.frame(valid_name = qres[[1]]$valid_name[1], 
-                          aphiaID = ifelse(aphiaID < 0, NA, aphiaID)))
-    }
+get_tx_base_name <- function(x){tail(na.omit(unlist(x)), 1)}
+get_tx_base_rank <- function(x, ranks = names(taxonomy)){
+    ranks[which(x == tail(na.omit(unlist(x)), 1))]
 }
 
-worrms_taxonomy <- function(taxonomy){
+get_valid_taxon <- function(base_name){
+    out <- data.frame(aphiaID = NA, valid_name = NA, valid_aphiaID = NA)
+    
+    qres <- try(worrms::wm_records_names(base_name)[[1]], silent = T)
+    if(inherits(qres, "try-error")) {
+        aphiaID <- try(worrms::wm_name2id(base_name), silent = T)
+        if(inherits(aphiaID, "try-error")) {
+            warning("No valid aphiaID returned for base_name: ", base_name)
+            return(out)}
+        if(aphiaID < 0) {
+            warning("No valid aphiaID returned for base_name: ", base_name)
+            return(out)}
+        qres <- worrms::wm_record(aphiaID)
+        if(inherits(qres, "try-error")) {
+            return(out)
+        }}
+    
+    valid_aphiaID <- qres$valid_AphiaID[1]
+    aphiaID <- qres$AphiaID[1]
+    out$aphiaID <- ifelse(aphiaID < 0, NA, aphiaID)
+    out$valid_aphiaID <- ifelse(valid_aphiaID < 0, NA, valid_aphiaID)
+    out$valid_name <- qres$valid_name[1]
+    
+    return(out)
+}
+
+worrms_validate <- function(taxonomy){
     taxonomy %>% 
-        do(get_valid_taxon(.$base)) %>% 
+        do(get_valid_taxon(.$base_name)) %>% 
         bind_cols(taxonomy, .)
 }
 
-correct_manual <- function(taxonomy){
-    taxo_correct <- readr::read_csv(here::here("data-raw",
-                                               "worrms_nomatches_verified.csv"))
+recode_manual <- function(taxonomy, path){
+    taxo_correct <- readr::read_csv(path)
     taxo_recode <- taxo_correct %>% 
-        pull(verified_base) %>% 
-        setNames(taxo_correct$base)
+        pull(verified_base_name) %>% 
+        setNames(taxo_correct$base_name)
     
     taxonomy %>% 
-        mutate(species_prey = plyr::revalue(species_prey, taxo_recode))
+        mutate(species = plyr::revalue(species, taxo_recode))
 }
