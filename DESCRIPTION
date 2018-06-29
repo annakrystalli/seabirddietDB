@@ -16,7 +16,8 @@ Suggests:
     here,
     DT,
     rlang,
-    plyr
+    plyr,
+    testthat
 Imports: 
     readr,
     magrittr,
