@@ -29,18 +29,39 @@ get_valid_taxon <- function(base_name){
     return(out)
 }
 
+
+get_row_base <- function(taxonomy){
+    taxonomy %>%
+        dplyr::rowwise() %>% 
+        dplyr::do({
+            result = dplyr::as_data_frame(.)
+            result$base_name = get_tx_base_name(.) %>% unlist
+            result$base_rank = get_tx_base_rank(., ranks = names(.)) %>% unlist
+            result}) 
+}
+
 worrms_validate <- function(taxonomy){
     taxonomy %>% 
         do(get_valid_taxon(.$base_name)) %>% 
         bind_cols(taxonomy, .)
 }
 
-recode_manual <- function(taxonomy, path){
+recode_spp_manual <- function(df, path = here::here("data-raw", 
+                                                    "worrms_nomatches_verified.csv"), 
+                              df_type = c("taxonomy", "data")){
+    
+    df_type <- match.arg(df_type)
     taxo_correct <- readr::read_csv(path)
     taxo_recode <- taxo_correct %>% 
-        pull(verified_base_name) %>% 
+        dplyr::pull(verified_base_name) %>% 
         setNames(taxo_correct$base_name)
-    
-    taxonomy %>% 
-        mutate(species = plyr::revalue(species, taxo_recode))
+    switch(df_type,
+           "taxonomy" = {
+               df %>% 
+                   dplyr::mutate(species = plyr::revalue(species, taxo_recode))
+           },
+           "data" = {
+               df %>% 
+                   dplyr::mutate(prey_species = plyr::revalue(prey_species, taxo_recode))
+           }) 
 }
