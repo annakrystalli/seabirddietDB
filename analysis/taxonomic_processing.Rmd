@@ -10,6 +10,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 ```
 
+To ensure valid taxonomic information, we'll check and store taxonomic metadata in `metadata/taxonomy.csv` on:
+
+- all prey species against the WoRMS database (using pkg [`worrms`](https://github.com/ropensci/worrms))
+    - retain:
+        + original `base_name`
+        + original `aphiaID`
+- all predator species using pkg [`taxize`](https://github.com/ropensci/taxize)
+- that species in `seabirddiet` and `taxonomy` match
+
+Include validated taxonomic information in `seabirddiet`
+- `aphiaID`
+- `valid_name`
+- `valid_aphiaID`
+- `tx_base_rank`
+
+
+# Prey
+
 ## functions
 
 ```{r}
@@ -60,7 +78,7 @@ worrms_taxonomy <- function(taxonomy,
 
 Read in data and extract `base` taxon to search WoRMS for `aphiaID`.
 ```{r}
-taxonomy <- readr::read_tsv(here::here("data", "metadata", "taxonomy.tsv")) %>%
+taxonomy <- readr::read_tsv(here::here("data-raw", "taxonomy.tsv")) %>%
     rowwise %>% 
     do({
         result = as_data_frame(.)
@@ -85,6 +103,8 @@ taxonomy %>% select(base:aphiaID)
 
 ### invalid names
 
+Check for species which did not return a match from the query to WoRMS
+
 ```{r}
 na_worrms <- taxonomy %>% filter(is.na(valid_name)) 
 na_worrms %>% select(base:aphiaID)
@@ -96,30 +116,42 @@ na_worrms %>% pull(base)
 
 ### odd behaviour
 
+There are some inconsistencies in the result of queries using different function in `worrms`.
+
 #### `"record"` method returns NA 
+
+The initial function I wrote used the name and function `worrms::wm_records_names()` to look up species.
+
+But for some species, `worrms::wm_records_names()`  returns `NA` for where `worrms::wm_name2id()` with with the same name returns a valid `aphiaID`.
+
+e.g.
+
 ```{r}
+# queried using worrms::wm_records_names()
 na_worrms %>% 
     filter(base == "Gammaracanthus caspius") %>%
     pull(aphiaID)
 ```
-
-where `worrms::wm_name2id()` with with the same name returns a valid `aphiaID`
 
 
 ```{r}
 worrms::wm_name2id("Gammaracanthus caspius")
 ```
 
-## test method `"id"`
+#### 1. test querying using `worrms::wm_name2id()`
 
-```{r, cache=TRUE}
+Update the function to allow for querying using `worrms::wm_name2id()`. Use argument `method = "id"` to specify.
+
+Test it against the initial `"record"` method by rerunning query on `taxonomy`.
+
+```{r,  cache=TRUE}
 taxonomy_id <- taxonomy %>% worrms_taxonomy(method = "id")
 ```
 
 - `aphiaID` is with `method = "record"`
 - `aphiaID1` is with `method = "id"`
 
-#### `"id"` method returns `-999` values
+##### `"id"` method returns `-999` values
 
 For species for which method `"record"` returns a valid record
 
@@ -128,7 +160,7 @@ taxonomy_id %>% select(base:aphiaID1) %>%
     filter(aphiaID1 < 0)
 ```
 
-But no NAs
+But no NAs. `r emo::ji("person_shrugging")`
 
 ```{r}
 taxonomy_id %>% select(base:aphiaID1) %>%
@@ -148,6 +180,8 @@ taxonomy_id %>% select(base:aphiaID1) %>%
 ```
 
 ### try composite function of both methods
+
+Try first with `worrms::wm_records_names(base)` and if it fails to return valid entry, try with `worrms::wm_name2id(base)`.
 
 ```{r function2}
 get_valid_taxon <- function(base){
@@ -191,6 +225,9 @@ na_worrms <- readr::read_tsv(here::here("data-raw", "taxonomy.tsv")) %>%
 na_worrms %>% select(base:aphiaID)
 ```
 
+This does the best job
+
+These species can now be matched manually on the WoRMS website. Add this step to the taxonomic processing workflow. 
 
 ```{r, eval=F}
 na_worrms %>% 
@@ -201,3 +238,33 @@ na_worrms %>%
                                               "%Y-%m-%d_"),
                                        "worrms_nomatches.csv")))
 ```
+
+
+
+## Validate `seabirddiet` taxonomic info
+
+
+### correct mispelled species
+
+First, we also need to correct any mispelled species in `seabirddiet`.
+
+### check that species list in `taxonomy` and `seabirddiet` match.
+
+```{r}
+taxonomy <- readr::read_csv(here::here("data", "metadata", "taxonomy.csv"))
+seabirddiet <- readr::read_csv(
+    here::here("data-raw", 
+               "Seabird Diets British Isles revised 20180620.csv")) %>% 
+    janitor::clean_names() %>%
+    bind_cols(ID =  1:nrow(seabirddiet), .) %>% 
+    mutate(species = plyr::revalue(prey_species, taxo_recode))
+
+
+```
+
+```{r}
+dat_tax <- seabirddiet %>% left_join(
+    select(taxonomy, base_name:valid_aphiaID),
+           by = c("prey_species" = "base_name")) 
+```
+
