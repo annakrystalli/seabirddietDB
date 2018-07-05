@@ -1,230 +1,238 @@
-phylum,class,order,family,genus,species,base_name,base_rank,aphiaID,valid_name,valid_aphiaID
-Chordata,Actinopterygii,Pleuronectiformes,Bothidae,Arnoglossus,Arnoglossus laterna,Arnoglossus laterna,species,127126,Arnoglossus laterna,127126
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Hippoglossoides,Hippoglossoides platessoides,Hippoglossoides platessoides,species,127137,Hippoglossoides platessoides,127137
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Pleuronectes,Pleuronectes platessa,Pleuronectes platessa,species,127143,Pleuronectes platessa,127143
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Microstomus,Microstomus kitt,Microstomus kitt,species,127140,Microstomus kitt,127140
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,Limanda limanda,Limanda limanda,species,127139,Limanda limanda,127139
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,NA,Limanda,genus,126117,Limanda,126117
-Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,NA,NA,Pleuronectidae,family,125579,Pleuronectidae,125579
-Chordata,Actinopterygii,Pleuronectiformes,Scophthalmidae,Phrynorhombus,Phrynorhombus norvegicus,Phrynorhombus norvegicus,species,127147,Phrynorhombus norvegicus,127147
-Chordata,Actinopterygii,Pleuronectiformes,NA,NA,NA,Pleuronectiformes,order,10331,Pleuronectiformes,10331
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes marinus,Ammodytes marinus,species,126751,Ammodytes marinus,126751
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes hexapterus,Ammodytes hexapterus,species,254510,Ammodytes hexapterus,254510
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes americanus,Ammodytes americanus,species,159587,Ammodytes americanus,159587
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes tobianus,Ammodytes tobianus,species,126752,Ammodytes tobianus,126752
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes lanceolatus,Ammodytes lanceolatus,species,146485,Hyperoplus lanceolatus,126756
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Hyperoplus,Hyperoplus lanceolatus,Hyperoplus lanceolatus,species,126756,Hyperoplus lanceolatus,126756
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Hyperoplus,Hyperoplus immaculatus,Hyperoplus immaculatus,species,126755,Hyperoplus immaculatus,126755
-Chordata,Actinopterygii,Perciformes,Ammodytidae,Gymnoammodytes,Gymnammodytes semisquamatus,Gymnammodytes semisquamatus,species,126754,Gymnammodytes semisquamatus,126754
-Chordata,Actinopterygii,Perciformes,Ammodytidae,NA,NA,Ammodytidae,family,125516,Ammodytidae,125516
-Chordata,Actinopterygii,Perciformes,Gobiidae,Gobius,Gobius niger,Gobius niger,species,126892,Gobius niger,126892
-Chordata,Actinopterygii,Perciformes,Gobiidae,Gobius,NA,Gobius,genus,125988,Gobius,125988
-Chordata,Actinopterygii,Perciformes,Gobiidae,Crystallogobius,Crystallogobius linearis,Crystallogobius linearis,species,126878,Crystallogobius linearis,126878
-Chordata,Actinopterygii,Perciformes,Gobiidae,Gobiusculus,Gobiusculus flavescens,Gobiusculus flavescens,species,126898,Gobiusculus flavescens,126898
-Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus minutus,Pomatoschistus minutus,species,126928,Pomatoschistus minutus,126928
-Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus microps,Pomatoschistus microps,species,126927,Pomatoschistus microps,126927
-Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus pictus,Pomatoschistus pictus,species,126930,Pomatoschistus pictus,126930
-Chordata,Actinopterygii,Perciformes,Gobiidae,Aphia,Aphia minuta,Aphia minuta,species,126868,Aphia minuta,126868
-Chordata,Actinopterygii,Perciformes,Gobiidae,NA,NA,Gobiidae,family,125537,Gobiidae,125537
-Chordata,Actinopterygii,Perciformes,Labridae,Labrus,Labrus mixtus,Labrus mixtus,species,151501,Labrus mixtus,151501
-Chordata,Actinopterygii,Perciformes,Labridae,Labrus,Labrus bergylta,Labrus bergylta,species,126965,Labrus bergylta,126965
-Chordata,Actinopterygii,Perciformes,Labridae,Labrus,NA,Labrus,genus,126021,Labrus,126021
-Chordata,Actinopterygii,Perciformes,Labridae,Ctenolabrus,Ctenolabrus rupestris,Ctenolabrus rupestris,species,126964,Ctenolabrus rupestris,126964
-Chordata,Actinopterygii,Perciformes,Labridae,Symphodus,Symphodus melops,Symphodus melops,species,273571,Symphodus melops,273571
-Chordata,Actinopterygii,Perciformes,Labridae,Coris,Coris julis,Coris julis,species,126963,Coris julis,126963
-Chordata,Actinopterygii,Perciformes,Labridae,NA,NA,Labridae,family,125541,Labridae,125541
-Chordata,Actinopterygii,Perciformes,Zoarcidae,Lycodes,NA,Lycodes,genus,126104,Lycodes,126104
-Chordata,Actinopterygii,Perciformes,Zoarcidae,Gymnelus,Gymnelus viridis,Gymnelus viridis,species,127096,Gymnelus viridis,127096
-Chordata,Actinopterygii,Perciformes,Zoarcidae,Eumesogrammus,Eumesogrammus praecisus,Eumesogrammus praecisus,species,159817,Eumesogrammus praecisus,159817
-Chordata,Actinopterygii,Perciformes,Zoarcidae,Zoarces,Zoarces viviparus,Zoarces viviparus,species,127123,Zoarces viviparus,127123
-Chordata,Actinopterygii,Perciformes,Stichaeidae,Anisarchus,Anisarchus medius,Anisarchus medius,species,127070,Anisarchus medius,127070
-Chordata,Actinopterygii,Perciformes,Stichaeidae,Lumpenus,Lumpenus lampretaeformis,Lumpenus lampretaeformis,species,154675,Lumpenus lampretaeformis,154675
-Chordata,Actinopterygii,Perciformes,Stichaeidae,Leptoclinus,Leptoclinus maculatus,Leptoclinus maculatus,species,127072,Leptoclinus maculatus,127072
-Chordata,Actinopterygii,Perciformes,Pholidae,Pholis,Pholis gunnellus,Pholis gunnellus,species,126996,Pholis gunnellus,126996
-Chordata,Actinopterygii,Perciformes,Pholidae,NA,NA,Pholidae,family,125550,Pholidae,125550
-Chordata,Actinopterygii,Perciformes,Stromateidae,Peprilus,Peprilus triacanthus,Peprilus triacanthus,species,159828,Peprilus triacanthus,159828
-Chordata,Actinopterygii,Perciformes,Scombridae,Scomber,Scomber scombrus,Scomber scombrus,species,127023,Scomber scombrus,127023
-Chordata,Actinopterygii,Perciformes,Anarhichadidae,Anarhichas,Anarhichas lupus,Anarhichas lupus,species,126758,Anarhichas lupus,126758
-Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,Callionymus lyra,Callionymus lyra,species,126792,Callionymus lyra,126792
-Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,Callionymus maculatus,Callionymus maculatus,species,126793,Callionymus maculatus,126793
-Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,NA,Callionymus,genus,125930,Callionymus,125930
-Chordata,Actinopterygii,Perciformes,Callionymidae,NA,NA,Callionymidae,family,125522,Callionymidae,125522
-Chordata,Actinopterygii,Perciformes,Carangidae,Trachurus,Trachurus trachurus,Trachurus trachurus,species,126822,Trachurus trachurus,126822
-Chordata,Actinopterygii,Perciformes,Carangidae,NA,NA,Carangidae,family,125523,Carangidae,125523
-Chordata,Actinopterygii,Perciformes,Trachinidae,Echiichthys,Echiichthys vipera,Echiichthys vipera,species,150630,Echiichthys vipera,150630
-Chordata,Actinopterygii,Perciformes,Trachinidae,NA,NA,Trachinidae,family,125570,Trachinidae,125570
-Chordata,Actinopterygii,Perciformes,Blenniidae,NA,NA,Blenniidae,family,125519,Blenniidae,125519
-Chordata,Actinopterygii,Perciformes,Sparidae,Diplodus,Diplodus sargus,Diplodus sargus,species,127053,Diplodus sargus,127053
-Chordata,Actinopterygii,Perciformes,Mugilidae,NA,NA,Mugilidae,family,125546,Mugilidae,125546
-Chordata,Actinopterygii,Gadiformes,Gadidae,Boregadus,Boreogadus saida,Boreogadus saida,species,126433,Boreogadus saida,126433
-Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius virens,Pollachius virens,species,126441,Pollachius virens,126441
-Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius pollachius,Pollachius pollachius,species,126440,Pollachius pollachius,126440
-Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,NA,Pollachius,genus,125736,Pollachius,125736
-Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus minutus,Trisopterus minutus,species,126446,Trisopterus minutus,126446
-Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus esmarkii,Trisopterus esmarkii,species,126444,Trisopterus esmarkii,126444
-Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus luscus,Trisopterus luscus,species,126445,Trisopterus luscus,126445
-Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,NA,Trisopterus,genus,125739,Trisopterus,125739
-Chordata,Actinopterygii,Gadiformes,Gadidae,Merlangius,Merlangius merlangus,Merlangius merlangus,species,126438,Merlangius merlangus,126438
-Chordata,Actinopterygii,Gadiformes,Gadidae,Gadus,Gadus morhua,Gadus morhua,species,126436,Gadus morhua,126436
-Chordata,Actinopterygii,Gadiformes,Gadidae,Micromesistius,Micromesistius poutassou,Micromesistius poutassou,species,126439,Micromesistius poutassou,126439
-Chordata,Actinopterygii,Gadiformes,Gadidae,Melanogrammus,Melanogrammus aeglefinus,Melanogrammus aeglefinus,species,126437,Melanogrammus aeglefinus,126437
-Chordata,Actinopterygii,Gadiformes,Gadidae,Gadiculus,Gadiculus argenteus,Gadiculus argenteus,species,126435,Gadiculus argenteus,126435
-Chordata,Actinopterygii,Gadiformes,Gadidae,Raniceps,Raniceps raninus,Raniceps raninus,species,126442,Raniceps raninus,126442
-Chordata,Actinopterygii,Gadiformes,Gadidae,NA,NA,Gadidae,family,125469,Gadidae,125469
-Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,Gaidropsarus vulgaris,Gaidropsarus vulgaris,species,126458,Gaidropsarus vulgaris,126458
-Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,Gaidropsarus mediterraneus,Gaidropsarus mediterraneus,species,126457,Gaidropsarus mediterraneus,126457
-Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,NA,Gaidropsarus,genus,125743,Gaidropsarus,125743
-Chordata,Actinopterygii,Gadiformes,Lotidae,Ciliata,Ciliata mustela,Ciliata mustela,species,126448,Ciliata mustela,126448
-Chordata,Actinopterygii,Gadiformes,Lotidae,Enchelyopus,Enchelyopus cimbrius,Enchelyopus cimbrius,species,126450,Enchelyopus cimbrius,126450
-Chordata,Actinopterygii,Gadiformes,Lotidae,NA,NA,Lotidae,family,125470,Lotidae,125470
-Chordata,Actinopterygii,Gadiformes,Phycidae,Phycis,Phycis blennoides,Phycis blennoides,species,126501,Phycis blennoides,126501
-Chordata,Actinopterygii,Gadiformes,Phycidae,Urophycis,Urophycis tenuis,Urophycis tenuis,species,126504,Urophycis tenuis,126504
-Chordata,Actinopterygii,Gadiformes,Merlucciidae,Merluccius,Merluccius merluccius,Merluccius merluccius,species,126484,Merluccius merluccius,126484
-Chordata,Actinopterygii,Gadiformes,Merlucciidae,NA,NA,Merlucciidae,family,125473,Merlucciidae,125473
-Chordata,Actinopterygii,Osmeriformes,Osmeridae,Mallotus,Mallotus villosus,Mallotus villosus,species,126735,Mallotus villosus,126735
-Chordata,Actinopterygii,Osmeriformes,Argentinidae,Argentina,Argentina sphyraena,Argentina sphyraena,species,126716,Argentina sphyraena,126716
-Chordata,Actinopterygii,Osmeriformes,Argentinidae,NA,NA,Argentinidae,family,125508,Argentinidae,125508
-Chordata,Actinopterygii,Clupeiformes,Clupeidae,Clupea,Clupea harengus,Clupea harengus,species,126417,Clupea harengus,126417
-Chordata,Actinopterygii,Clupeiformes,Clupeidae,Sprattus,Sprattus sprattus,Sprattus sprattus,species,126425,Sprattus sprattus,126425
-Chordata,Actinopterygii,Clupeiformes,Clupeidae,NA,NA,Clupeidae,family,125464,Clupeidae,125464
-Chordata,Actinopterygii,Clupeiformes,Engraulidae,Engraulis,Engraulis encrasicolus,Engraulis encrasicolus,species,126426,Engraulis encrasicolus,126426
-Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Myoxocephalus,Myoxocephalus scorpius,Myoxocephalus scorpius,species,127203,Myoxocephalus scorpius,127203
-Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Taurulus,Taurulus bubalis,Taurulus bubalis,species,127204,Taurulus bubalis,127204
-Chordata,Actinopterygii,Scorpaeniformes,Cottidae,NA,NA,Cottidae,family,125589,Cottidae,125589
-Chordata,Actinopterygii,Scorpaeniformes,Cyclopteridae,Cyclopterus,Cyclopterus lumpus,Cyclopterus lumpus,species,127214,Cyclopterus lumpus,127214
-Chordata,Actinopterygii,Scorpaeniformes,Agonidae,Leptagonus,Leptagonus decagonus,Leptagonus decagonus,species,127191,Leptagonus decagonus,127191
-Chordata,Actinopterygii,Scorpaeniformes,Agonidae,Agonus,Agonus cataphractus,Agonus cataphractus,species,127190,Agonus cataphractus,127190
-Chordata,Actinopterygii,Scorpaeniformes,Agonidae,NA,NA,Agonidae,family,125588,Agonidae,125588
-Chordata,Actinopterygii,Scorpaeniformes,Liparidae,Liparis,Liparis liparis,Liparis liparis,species,127219,Liparis liparis liparis,293624
-Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes fasciatus,Sebastes fasciatus,species,127252,Sebastes fasciatus,127252
-Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes marinus,Sebastes marinus,species,127253,Sebastes norvegicus,151324
-Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes viviparus,Sebastes viviparus,species,127255,Sebastes viviparus,127255
-Chordata,Actinopterygii,Scorpaeniformes,Neosebastidae,NA,NA,Neosebastidae,family,154248,Neosebastidae,154248
-Chordata,Actinopterygii,Scorpaeniformes,Triglidae,Eutrigla,Eutrigla gurnardus,Eutrigla gurnardus,species,150637,Eutrigla gurnardus,150637
-Chordata,Actinopterygii,Scorpaeniformes,Triglidae,Chelidonichthys,Chelidonichthys cuculus,Chelidonichthys cuculus,species,127259,Chelidonichthys cuculus,127259
-Chordata,Actinopterygii,Scorpaeniformes,Triglidae,NA,NA,Triglidae,family,125598,Triglidae,125598
-Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Entelurus,Entelurus aequoreus,Entelurus aequoreus,species,127379,Entelurus aequoreus,127379
-Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Syngnathus,Syngnathus rostellatus,Syngnathus rostellatus,species,127389,Syngnathus rostellatus,127389
-Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Syngnathus,Syngnathus acus,Syngnathus acus,species,127387,Syngnathus acus,127387
-Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Nerophis,Nerophis lumbriciformis,Nerophis lumbriciformis,species,127383,Nerophis lumbriciformis,127383
-Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,NA,NA,Syngnathidae,family,125606,Syngnathidae,125606
-Chordata,Actinopterygii,Syngnathiformes,NA,NA,NA,Syngnathiformes,order,10327,Syngnathiformes,10327
-Chordata,Actinopterygii,Stomiiformes,Sternoptychidae,Maurolicus,Maurolicus muelleri,Maurolicus muelleri,species,127312,Maurolicus muelleri,127312
-Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,Gasterosteus,Gasterosteus aculeatus,Gasterosteus aculeatus,species,126505,Gasterosteus aculeatus,126505
-Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,Spinachia,Spinachia spinachia,Spinachia spinachia,species,126508,Spinachia spinachia,126508
-Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,NA,NA,Gasterosteidae,family,125476,Gasterosteidae,125476
-Chordata,Actinopterygii,Myctophiformes,Myctophidae,Benthosema,Benthosema glaciale,Benthosema glaciale,species,126580,Benthosema glaciale,126580
-Chordata,Actinopterygii,Beloniformes,Scomberescoidae,Scomberesox,Scomberesox saurus,Scomberesox saurus,species,126392,Scomberesox saurus saurus,236461
-Chordata,Actinopterygii,Beloniformes,Belonidae,Belone,Belone belone,Belone belone,species,126375,Belone belone,126375
-Chordata,Actinopterygii,Salmoniformes,Salmonidae,Salmo,Salmo salar,Salmo salar,species,127186,Salmo salar,127186
-Chordata,Actinopterygii,Salmoniformes,Salmonidae,Coregonus,NA,Coregonus,genus,126139,Coregonus,126139
-Chordata,Actinopterygii,Salmoniformes,Salmonidae,NA,NA,Salmonidae,family,125587,Salmonidae,125587
-Chordata,Actinopterygii,Atheriniformes,Atherinidae,Atherina,Atherina presbyter,Atherina presbyter,species,272030,Atherina presbyter,272030
-Chordata,Actinopterygii,Stephanoberyciformes,Melamphaidae,Scopelogadus,Scopelogadus beanii,Scopelogadus beanii,species,127278,Scopelogadus beanii,127278
-Chordata,Actinopterygii,Anguilliformes,Anguillidae,Anguilla,Anguilla anguilla,Anguilla anguilla,species,126281,Anguilla anguilla,126281
-Chordata,Actinopterygii,NA,NA,NA,NA,Actinopterygii,class,10194,Actinopterygii,10194
-Chordata,Elasmobranchii,Myliobatiformes,Myliobatidae,Raja,NA,Raja,genus,105766,Raja,105766
-Chordata,Elasmobranchii,Squaliformes,Squalidae,Squalus,Squalus acanthias,Squalus acanthias,species,105923,Squalus acanthias,105923
-Chordata,Mammalia,NA,NA,NA,NA,Mammalia,class,1837,Mammalia,1837
-Chordata,NA,NA,NA,NA,NA,Chordata,phylum,1821,Chordata,1821
-Arthropoda,Malacostraca,Amphipoda,Calliopiidae,Apherusa,Apherusa glacialis,Apherusa glacialis,species,102166,Apherusa glacialis,102166
-Arthropoda,Malacostraca,Amphipoda,Gammarellidae,Gammarellus,Gammarellus homari,Gammarellus homari,species,102253,Gammarellus homari,102253
-Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,Gammarus wilkitzkii,Gammarus wilkitzkii,species,102297,Gammarus wilkitzkii,102297
-Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,Gammarus setosus,Gammarus setosus,species,102293,Gammarus setosus,102293
-Arthropoda,Malacostraca,Amphipoda,Lysianassidae,Hippomedon,Hippomedon denticulatus,Hippomedon denticulatus,species,102570,Hippomedon denticulatus,102570
-Arthropoda,Malacostraca,Amphipoda,Gammaracanthidae,Gammaracanthus,Gammaracanthus caspius,Gammaracanthus caspius,species,489919,Gammaracanthus caspius,489919
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Themisto,Themisto libellula,Themisto libellula,species,156452,Themisto libellula,156452
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Themisto,Themisto abyssorum,Themisto abyssorum,species,103259,Themisto abyssorum,103259
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia medusarum,Hyperia medusarum,species,103253,Hyperia medusarum,103253
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia spinigera,Hyperia spinigera,species,103254,Hyperia spinigera,103254
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia galba,Hyperia galba,species,103251,Hyperia galba,103251
-Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperoche,Hyperoche medusarum,Hyperoche medusarum,species,103256,Hyperoche medusarum,103256
-Arthropoda,Malacostraca,Amphipoda,Lysianassidae,NA,NA,Lysianassidae,family,101395,Lysianassidae,101395
-Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus glacialis,Onisimus glacialis,species,102644,Onisimus glacialis,102644
-Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus nanseni,Onisimus nanseni,species,102647,Onisimus nanseni,102647
-Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus litoralis,Onisimus litoralis,species,102646,Onisimus litoralis,102646
-Arthropoda,Malacostraca,Amphipoda,Ischyroceridae,Ischyrocerus,Ischyrocerus anguipes,Ischyrocerus anguipes,species,102412,Ischyrocerus anguipes,102412
-Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Paroediceros,Paroediceros lynceus,Paroediceros lynceus,species,102911,Paroediceros lynceus,102911
-Arthropoda,Malacostraca,Amphipoda,Eusiridae,Eusirus,NA,Eusirus,genus,101519,Eusirus,101519
-Arthropoda,Malacostraca,Amphipoda,Talitridae,Orchestia,Orchestia gammarellus,Orchestia gammarellus,species,103202,Orchestia gammarellus,103202
-Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Megannyctiphares,Meganyctiphanes norvegica,Meganyctiphanes norvegica,species,110690,Meganyctiphanes norvegica,110690
-Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Thysanoessa,Thysanoessa inermis,Thysanoessa inermis,species,110708,Thysanoessa inermis,110708
-Arthropoda,Malacostraca,Euphausiacea,NA,NA,NA,Euphausiacea,order,1128,Euphausiacea,1128
-Arthropoda,Malacostraca,Decapoda,Nephropidae,Nephrops,Nephrops norvegicus,Nephrops norvegicus,species,107254,Nephrops norvegicus,107254
-Arthropoda,Malacostraca,Decapoda,Nephropidae,Nephrops,NA,Nephrops,genus,106863,Nephrops,106863
-Arthropoda,Malacostraca,Decapoda,Thoridae,Eualus,Eualus pusiolus,Eualus pusiolus,species,107507,Eualus pusiolus,107507
-Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus borealis,Pandalus borealis,species,107649,Pandalus borealis,107649
-Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus montagui,Pandalus montagui,species,107651,Pandalus montagui,107651
-Arthropoda,Malacostraca,Decapoda,Hippolytidae,NA,NA,Hippolytidae,family,106777,Hippolytidae,106777
-Arthropoda,Malacostraca,Decapoda,Munididae,Munida,Munida intermedia,Munida intermedia,species,107157,Munida intermedia,107157
-Arthropoda,Malacostraca,Decapoda,Pasiphaeidae,Parapasiphae,Parapasiphae sulcatifrons,Parapasiphae sulcatifrons,species,107673,Parapasiphae sulcatifrons,107673
-Arthropoda,Malacostraca,Decapoda,Paguridae,Pagurus,Pagurus bernhardus,Pagurus bernhardus,species,107232,Pagurus bernhardus,107232
-Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,NA,Liocarcinus,genus,106925,Liocarcinus,106925
-Arthropoda,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,Acanthephyra pelagica,Acanthephyra pelagica,species,107581,Acanthephyra pelagica,107581
-Arthropoda,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,NA,Acanthephyra,genus,107018,Acanthephyra,107018
-Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus borealis,Pandalus borealis,species,107649,Pandalus borealis,107649
-Arthropoda,Malacostraca,Decapoda,Carcinidae,Carcinus,Carcinus maenas,Carcinus maenas,species,107381,Carcinus maenas,107381
-Arthropoda,Malacostraca,Decapoda,Cancridae,Cancer,Cancer pagurus,Cancer pagurus,species,107276,Cancer pagurus,107276
-Arthropoda,Malacostraca,Decapoda,Portunidae,Portunus,Portunus puber,Portunus puber,species,148470,Necora puber,107398
-Arthropoda,Malacostraca,Decapoda,Crangonidae,Crangon,Crangon crangon,Crangon crangon,species,107552,Crangon crangon,107552
-Arthropoda,Malacostraca,Decapoda,NA,NA,NA,Decapoda,order,1130,Decapoda,1130
-Arthropoda,Malacostraca,Mysida,Mysidae,Mysis,Mysis oculata,Mysis oculata,species,120115,Mysis oculata,120115
-Arthropoda,Malacostraca,Mysida,NA,NA,NA,Mysida,order,149668,Mysida,149668
-Arthropoda,Malacostraca,Isopoda,Idoteidae,Idotea,Idotea metallica,Idotea metallica,species,119047,Idotea metallica,119047
-Arthropoda,Malacostraca,Isopoda,Cirolanidae,Eurydice,Eurydice pulchra,Eurydice pulchra,species,118852,Eurydice pulchra,118852
-Arthropoda,Malacostraca,Isopoda,Cirolanidae,Eurydice,NA,Eurydice,genus,118401,Eurydice,118401
-Arthropoda,Malacostraca,Isopoda,Ligiidae,Ligia,Ligia oceanica,Ligia oceanica,species,146999,Ligia oceanica,146999
-Arthropoda,Malacostraca,Isopoda,NA,NA,NA,Isopoda,order,1131,Isopoda,1131
-Arthropoda,Malacostraca,Lophogastrida,Gnathophausiidae,Gnathophausia,Gnathophausia zoea,Gnathophausia zoea,species,119930,Gnathophausia zoea,119930
-Arthropoda,Malacostraca,NA,NA,NA,NA,Malacostraca,class,1071,Malacostraca,1071
-Arthropoda,Hexanauplia,Calanoida,Calanidae,Calanus,NA,Calanus,genus,104152,Calanus,104152
-Arthropoda,Hexanauplia,Calanoida,Metridinidae,Metridia,Metridia longa,Metridia longa,species,104632,Metridia longa,104632
-Arthropoda,Hexanauplia,Siphonostomatoida,Caligidae,Caligus,Caligus elongatus,Caligus elongatus,species,478342,Caligus coryphaenae,135748
-Arthropoda,Pycnogonida,NA,NA,NA,NA,Pycnogonida,class,1302,Pycnogonida,1302
-Arthropoda,NA,NA,NA,NA,NA,Arthropoda,phylum,1065,Arthropoda,1065
-Mollusca,Cephalopoda,Oegopsida,Gonatidae,Gonatus,Gonatus steenstrupi,Gonatus steenstrupi,species,140027,Gonatus steenstrupi,140027
-Mollusca,Cephalopoda,Oegopsida,Gonatidae,Gonatus,Gonatus fabricii,Gonatus fabricii,species,395177,Gonatus steenstrupi,140027
-Mollusca,Cephalopoda,Oegopsida,Gonatidae,NA,NA,Gonatidae,family,11743,Gonatidae,11743
-Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Illex,Illex illecebrosus,Illex illecebrosus,species,748978,Illex coindetii,140621
-Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Todarodes,Todarodes sagittatus,Todarodes sagittatus,species,140624,Todarodes sagittatus,140624
-Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Todaropsis,Todaropsis eblanae,Todaropsis eblanae,species,140625,Todaropsis eblanae,140625
-Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,NA,NA,Ommastrephidae,family,11760,Ommastrephidae,11760
-Mollusca,Cephalopoda,Oegopsida,Cranchiidae,Teuthowenia,Teuthowenia megalops,Teuthowenia megalops,species,139429,Teuthowenia megalops,139429
-Mollusca,Cephalopoda,Oegopsida,Cranchiidae,Taonius,Taonius pavo,Taonius pavo,species,139428,Taonius pavo,139428
-Mollusca,Cephalopoda,Oegopsida,Onychoteuthidae,Onychoteuthis,Onychoteuthis banksii,Onychoteuthis banksii,species,140649,Onychoteuthis banksii,140649
-Mollusca,Cephalopoda,Oegopsida,Mastigoteuthidae,Mastigoteuthis,NA,Mastigoteuthis,genus,138168,Mastigoteuthis,138168
-Mollusca,Cephalopoda,Teuthida,NA,NA,NA,Teuthida,order,11716,Teuthida,11716
-Mollusca,Cephalopoda,Sepiida,Sepiidae,Sepia,Sepia officinalis,Sepia officinalis,species,141444,Sepia officinalis,141444
-Mollusca,Cephalopoda,Myopsida,Loliginidae,Alloteuthis,Alloteuthis subulata,Alloteuthis subulata,species,153131,Alloteuthis subulata,153131
-Mollusca,Cephalopoda,NA,NA,NA,NA,Cephalopoda,class,11707,Cephalopoda,11707
-Mollusca,Gastropoda,Thecosomata,Limacinidae,Limacina,Limacina limata,Limacina limata,species,832992,Limacina limata,832992
-Mollusca,Gastropoda,Pteropoda,NA,NA,NA,Pteropoda,order,325345,Pteropoda,325345
-Mollusca,Gastropoda,Neogastropoda,Buccinidae,Buccinum,Buccinum undatum,Buccinum undatum,species,138878,Buccinum undatum,138878
-Mollusca,Gastropoda,Neogastropoda,Trochidae,Monodonta,Monodonta lineata,Monodonta lineata,species,153534,Phorcus lineatus,689176
-Mollusca,Gastropoda,Neogastropoda,Muricidae,Nucella,Nucella lapillus,Nucella lapillus,species,140403,Nucella lapillus,140403
-Mollusca,Gastropoda,Littorinimorpha,Littorinidae,Littorina,Littorina saxatilis,Littorina saxatilis,species,140264,Littorina saxatilis,140264
-Mollusca,Gastropoda,Littorinimorpha,Patellidae,Patella,NA,Patella,genus,138312,Patella,138312
-Mollusca,Bivalvia,Mytilida,Mytilidae,Mytilus,Mytilus edulis,Mytilus edulis,species,140480,Mytilus edulis,140480
-Mollusca,Bivalvia,Cardiida,Cardiidae,Cerastoderma,Cerastoderma edule,Cerastoderma edule,species,138998,Cerastoderma edule,138998
-Mollusca,Bivalvia,Cardiida,Tellinidae,Macomangulus,Macomangulus tenuis,Macomangulus tenuis,species,878470,Macomangulus tenuis,878470
-Mollusca,Bivalvia,Adapedonta,Pharidae,NA,NA,Pharidae,family,23091,Pharidae,23091
-Mollusca,Bivalvia,Venerida,Veneridae,Paphia,NA,Paphia,genus,516180,Atactodea,138173
-Mollusca,Bivalvia,NA,NA,NA,NA,Bivalvia,class,105,Bivalvia,105
-Mollusca,NA,NA,NA,NA,NA,Mollusca,phylum,51,Mollusca,51
-Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis irrorata,Nereis irrorata,species,196797,Neanthes nubila,334102
-Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis pelagica,Nereis pelagica,species,130404,Nereis pelagica,130404
-Annelida,Polychaeta,Phyllodocida,Nereididae,Hediste,Hediste diversicolor,Hediste diversicolor,species,152302,Hediste diversicolor,152302
-Annelida,Polychaeta,Phyllodocida,Nereididae,Neanthes,Neanthes nubila,Neanthes nubila,species,334102,Neanthes nubila,334102
-Annelida,Polychaeta,Phyllodocida,Nereididae,NA,NA,Nereididae,family,22496,Nereididae,22496
-Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe imbricata,Harmothoe imbricata,species,130769,Harmothoe imbricata,130769
-Annelida,Polychaeta,Phyllodocida,Aphroditidae,Aphrodita,Aphrodita aculeata,Aphrodita aculeata,species,129840,Aphrodita aculeata,129840
-Annelida,Polychaeta,Phyllodocida,Arenicolidae,Arenicola,NA,Arenicola,genus,129206,Arenicola,129206
-Annelida,Polychaeta,Terebellida,Ampharetidae,NA,NA,Ampharetidae,family,981,Ampharetidae,981
-Annelida,Polychaeta,NA,NA,NA,NA,Polychaeta,class,883,Polychaeta,883
-Annelida,Clitellata,Haplotaxida,Naididae,Nais,Nais elinguis,Nais elinguis,species,137481,Nais elinguis,137481
-Annelida,NA,NA,NA,NA,NA,Annelida,phylum,882,Annelida,882
-Echinodermata,Asteroidea,Forcipulatida,Asteriidae,Asterias,Asterias rubens,Asterias rubens,species,123776,Asterias rubens,123776
-Echinodermata,Echinoidea,NA,NA,NA,NA,Echinoidea,class,123082,Echinoidea,123082
-Echinodermata,NA,NA,NA,NA,NA,Echinodermata,phylum,1806,Echinodermata,1806
-Cnidaria,Hydrozoa,Anthoathecata,Porpitidae,Velella,Velella velella,Velella velella,species,117832,Velella velella,117832
-Cnidaria,NA,NA,NA,NA,NA,Cnidaria,phylum,1267,Cnidaria,1267
+phylum,class,order,family,genus,species,base_name,base_rank,aphiaID,valid_name,valid_aphiaID,role
+Chordata,Actinopterygii,Pleuronectiformes,Bothidae,Arnoglossus,Arnoglossus laterna,Arnoglossus laterna,species,127126,Arnoglossus laterna,127126,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Hippoglossoides,Hippoglossoides platessoides,Hippoglossoides platessoides,species,127137,Hippoglossoides platessoides,127137,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Pleuronectes,Pleuronectes platessa,Pleuronectes platessa,species,127143,Pleuronectes platessa,127143,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Microstomus,Microstomus kitt,Microstomus kitt,species,127140,Microstomus kitt,127140,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,Limanda limanda,Limanda limanda,species,127139,Limanda limanda,127139,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,NA,Limanda,genus,126117,Limanda,126117,prey
+Chordata,Actinopterygii,Pleuronectiformes,Pleuronectidae,NA,NA,Pleuronectidae,family,125579,Pleuronectidae,125579,prey
+Chordata,Actinopterygii,Pleuronectiformes,Scophthalmidae,Phrynorhombus,Phrynorhombus norvegicus,Phrynorhombus norvegicus,species,127147,Phrynorhombus norvegicus,127147,prey
+Chordata,Actinopterygii,Pleuronectiformes,NA,NA,NA,Pleuronectiformes,order,10331,Pleuronectiformes,10331,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes marinus,Ammodytes marinus,species,126751,Ammodytes marinus,126751,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes hexapterus,Ammodytes hexapterus,species,254510,Ammodytes hexapterus,254510,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes americanus,Ammodytes americanus,species,159587,Ammodytes americanus,159587,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes tobianus,Ammodytes tobianus,species,126752,Ammodytes tobianus,126752,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes lanceolatus,Ammodytes lanceolatus,species,146485,Hyperoplus lanceolatus,126756,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Hyperoplus,Hyperoplus lanceolatus,Hyperoplus lanceolatus,species,126756,Hyperoplus lanceolatus,126756,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Hyperoplus,Hyperoplus immaculatus,Hyperoplus immaculatus,species,126755,Hyperoplus immaculatus,126755,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,Gymnoammodytes,Gymnammodytes semisquamatus,Gymnammodytes semisquamatus,species,126754,Gymnammodytes semisquamatus,126754,prey
+Chordata,Actinopterygii,Perciformes,Ammodytidae,NA,NA,Ammodytidae,family,125516,Ammodytidae,125516,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Gobius,Gobius niger,Gobius niger,species,126892,Gobius niger,126892,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Gobius,NA,Gobius,genus,125988,Gobius,125988,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Crystallogobius,Crystallogobius linearis,Crystallogobius linearis,species,126878,Crystallogobius linearis,126878,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Gobiusculus,Gobiusculus flavescens,Gobiusculus flavescens,species,126898,Gobiusculus flavescens,126898,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus minutus,Pomatoschistus minutus,species,126928,Pomatoschistus minutus,126928,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus microps,Pomatoschistus microps,species,126927,Pomatoschistus microps,126927,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Pomatoschistus,Pomatoschistus pictus,Pomatoschistus pictus,species,126930,Pomatoschistus pictus,126930,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,Aphia,Aphia minuta,Aphia minuta,species,126868,Aphia minuta,126868,prey
+Chordata,Actinopterygii,Perciformes,Gobiidae,NA,NA,Gobiidae,family,125537,Gobiidae,125537,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Labrus,Labrus mixtus,Labrus mixtus,species,151501,Labrus mixtus,151501,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Labrus,Labrus bergylta,Labrus bergylta,species,126965,Labrus bergylta,126965,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Labrus,NA,Labrus,genus,126021,Labrus,126021,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Ctenolabrus,Ctenolabrus rupestris,Ctenolabrus rupestris,species,126964,Ctenolabrus rupestris,126964,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Symphodus,Symphodus melops,Symphodus melops,species,273571,Symphodus melops,273571,prey
+Chordata,Actinopterygii,Perciformes,Labridae,Coris,Coris julis,Coris julis,species,126963,Coris julis,126963,prey
+Chordata,Actinopterygii,Perciformes,Labridae,NA,NA,Labridae,family,125541,Labridae,125541,prey
+Chordata,Actinopterygii,Perciformes,Zoarcidae,Lycodes,NA,Lycodes,genus,126104,Lycodes,126104,prey
+Chordata,Actinopterygii,Perciformes,Zoarcidae,Gymnelus,Gymnelus viridis,Gymnelus viridis,species,127096,Gymnelus viridis,127096,prey
+Chordata,Actinopterygii,Perciformes,Zoarcidae,Eumesogrammus,Eumesogrammus praecisus,Eumesogrammus praecisus,species,159817,Eumesogrammus praecisus,159817,prey
+Chordata,Actinopterygii,Perciformes,Zoarcidae,Zoarces,Zoarces viviparus,Zoarces viviparus,species,127123,Zoarces viviparus,127123,prey
+Chordata,Actinopterygii,Perciformes,Stichaeidae,Anisarchus,Anisarchus medius,Anisarchus medius,species,127070,Anisarchus medius,127070,prey
+Chordata,Actinopterygii,Perciformes,Stichaeidae,Lumpenus,Lumpenus lampretaeformis,Lumpenus lampretaeformis,species,154675,Lumpenus lampretaeformis,154675,prey
+Chordata,Actinopterygii,Perciformes,Stichaeidae,Leptoclinus,Leptoclinus maculatus,Leptoclinus maculatus,species,127072,Leptoclinus maculatus,127072,prey
+Chordata,Actinopterygii,Perciformes,Pholidae,Pholis,Pholis gunnellus,Pholis gunnellus,species,126996,Pholis gunnellus,126996,prey
+Chordata,Actinopterygii,Perciformes,Pholidae,NA,NA,Pholidae,family,125550,Pholidae,125550,prey
+Chordata,Actinopterygii,Perciformes,Stromateidae,Peprilus,Peprilus triacanthus,Peprilus triacanthus,species,159828,Peprilus triacanthus,159828,prey
+Chordata,Actinopterygii,Perciformes,Scombridae,Scomber,Scomber scombrus,Scomber scombrus,species,127023,Scomber scombrus,127023,prey
+Chordata,Actinopterygii,Perciformes,Anarhichadidae,Anarhichas,Anarhichas lupus,Anarhichas lupus,species,126758,Anarhichas lupus,126758,prey
+Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,Callionymus lyra,Callionymus lyra,species,126792,Callionymus lyra,126792,prey
+Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,Callionymus maculatus,Callionymus maculatus,species,126793,Callionymus maculatus,126793,prey
+Chordata,Actinopterygii,Perciformes,Callionymidae,Callionymus,NA,Callionymus,genus,125930,Callionymus,125930,prey
+Chordata,Actinopterygii,Perciformes,Callionymidae,NA,NA,Callionymidae,family,125522,Callionymidae,125522,prey
+Chordata,Actinopterygii,Perciformes,Carangidae,Trachurus,Trachurus trachurus,Trachurus trachurus,species,126822,Trachurus trachurus,126822,prey
+Chordata,Actinopterygii,Perciformes,Carangidae,NA,NA,Carangidae,family,125523,Carangidae,125523,prey
+Chordata,Actinopterygii,Perciformes,Trachinidae,Echiichthys,Echiichthys vipera,Echiichthys vipera,species,150630,Echiichthys vipera,150630,prey
+Chordata,Actinopterygii,Perciformes,Trachinidae,NA,NA,Trachinidae,family,125570,Trachinidae,125570,prey
+Chordata,Actinopterygii,Perciformes,Blenniidae,NA,NA,Blenniidae,family,125519,Blenniidae,125519,prey
+Chordata,Actinopterygii,Perciformes,Sparidae,Diplodus,Diplodus sargus,Diplodus sargus,species,127053,Diplodus sargus,127053,prey
+Chordata,Actinopterygii,Perciformes,Mugilidae,NA,NA,Mugilidae,family,125546,Mugilidae,125546,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Boregadus,Boreogadus saida,Boreogadus saida,species,126433,Boreogadus saida,126433,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius virens,Pollachius virens,species,126441,Pollachius virens,126441,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius pollachius,Pollachius pollachius,species,126440,Pollachius pollachius,126440,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Pollachius,NA,Pollachius,genus,125736,Pollachius,125736,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus minutus,Trisopterus minutus,species,126446,Trisopterus minutus,126446,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus esmarkii,Trisopterus esmarkii,species,126444,Trisopterus esmarkii,126444,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus luscus,Trisopterus luscus,species,126445,Trisopterus luscus,126445,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,NA,Trisopterus,genus,125739,Trisopterus,125739,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Merlangius,Merlangius merlangus,Merlangius merlangus,species,126438,Merlangius merlangus,126438,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Gadus,Gadus morhua,Gadus morhua,species,126436,Gadus morhua,126436,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Micromesistius,Micromesistius poutassou,Micromesistius poutassou,species,126439,Micromesistius poutassou,126439,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Melanogrammus,Melanogrammus aeglefinus,Melanogrammus aeglefinus,species,126437,Melanogrammus aeglefinus,126437,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Gadiculus,Gadiculus argenteus,Gadiculus argenteus,species,126435,Gadiculus argenteus,126435,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,Raniceps,Raniceps raninus,Raniceps raninus,species,126442,Raniceps raninus,126442,prey
+Chordata,Actinopterygii,Gadiformes,Gadidae,NA,NA,Gadidae,family,125469,Gadidae,125469,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,Gaidropsarus vulgaris,Gaidropsarus vulgaris,species,126458,Gaidropsarus vulgaris,126458,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,Gaidropsarus mediterraneus,Gaidropsarus mediterraneus,species,126457,Gaidropsarus mediterraneus,126457,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,NA,Gaidropsarus,genus,125743,Gaidropsarus,125743,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,Ciliata,Ciliata mustela,Ciliata mustela,species,126448,Ciliata mustela,126448,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,Enchelyopus,Enchelyopus cimbrius,Enchelyopus cimbrius,species,126450,Enchelyopus cimbrius,126450,prey
+Chordata,Actinopterygii,Gadiformes,Lotidae,NA,NA,Lotidae,family,125470,Lotidae,125470,prey
+Chordata,Actinopterygii,Gadiformes,Phycidae,Phycis,Phycis blennoides,Phycis blennoides,species,126501,Phycis blennoides,126501,prey
+Chordata,Actinopterygii,Gadiformes,Phycidae,Urophycis,Urophycis tenuis,Urophycis tenuis,species,126504,Urophycis tenuis,126504,prey
+Chordata,Actinopterygii,Gadiformes,Merlucciidae,Merluccius,Merluccius merluccius,Merluccius merluccius,species,126484,Merluccius merluccius,126484,prey
+Chordata,Actinopterygii,Gadiformes,Merlucciidae,NA,NA,Merlucciidae,family,125473,Merlucciidae,125473,prey
+Chordata,Actinopterygii,Osmeriformes,Osmeridae,Mallotus,Mallotus villosus,Mallotus villosus,species,126735,Mallotus villosus,126735,prey
+Chordata,Actinopterygii,Osmeriformes,Argentinidae,Argentina,Argentina sphyraena,Argentina sphyraena,species,126716,Argentina sphyraena,126716,prey
+Chordata,Actinopterygii,Osmeriformes,Argentinidae,NA,NA,Argentinidae,family,125508,Argentinidae,125508,prey
+Chordata,Actinopterygii,Clupeiformes,Clupeidae,Clupea,Clupea harengus,Clupea harengus,species,126417,Clupea harengus,126417,prey
+Chordata,Actinopterygii,Clupeiformes,Clupeidae,Sprattus,Sprattus sprattus,Sprattus sprattus,species,126425,Sprattus sprattus,126425,prey
+Chordata,Actinopterygii,Clupeiformes,Clupeidae,NA,NA,Clupeidae,family,125464,Clupeidae,125464,prey
+Chordata,Actinopterygii,Clupeiformes,Engraulidae,Engraulis,Engraulis encrasicolus,Engraulis encrasicolus,species,126426,Engraulis encrasicolus,126426,prey
+Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Myoxocephalus,Myoxocephalus scorpius,Myoxocephalus scorpius,species,127203,Myoxocephalus scorpius,127203,prey
+Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Taurulus,Taurulus bubalis,Taurulus bubalis,species,127204,Taurulus bubalis,127204,prey
+Chordata,Actinopterygii,Scorpaeniformes,Cottidae,NA,NA,Cottidae,family,125589,Cottidae,125589,prey
+Chordata,Actinopterygii,Scorpaeniformes,Cyclopteridae,Cyclopterus,Cyclopterus lumpus,Cyclopterus lumpus,species,127214,Cyclopterus lumpus,127214,prey
+Chordata,Actinopterygii,Scorpaeniformes,Agonidae,Leptagonus,Leptagonus decagonus,Leptagonus decagonus,species,127191,Leptagonus decagonus,127191,prey
+Chordata,Actinopterygii,Scorpaeniformes,Agonidae,Agonus,Agonus cataphractus,Agonus cataphractus,species,127190,Agonus cataphractus,127190,prey
+Chordata,Actinopterygii,Scorpaeniformes,Agonidae,NA,NA,Agonidae,family,125588,Agonidae,125588,prey
+Chordata,Actinopterygii,Scorpaeniformes,Liparidae,Liparis,Liparis liparis,Liparis liparis,species,127219,Liparis liparis liparis,293624,prey
+Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes fasciatus,Sebastes fasciatus,species,127252,Sebastes fasciatus,127252,prey
+Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes marinus,Sebastes marinus,species,127253,Sebastes norvegicus,151324,prey
+Chordata,Actinopterygii,Scorpaeniformes,Sebastidae,Sebastes,Sebastes viviparus,Sebastes viviparus,species,127255,Sebastes viviparus,127255,prey
+Chordata,Actinopterygii,Scorpaeniformes,Neosebastidae,NA,NA,Neosebastidae,family,154248,Neosebastidae,154248,prey
+Chordata,Actinopterygii,Scorpaeniformes,Triglidae,Eutrigla,Eutrigla gurnardus,Eutrigla gurnardus,species,150637,Eutrigla gurnardus,150637,prey
+Chordata,Actinopterygii,Scorpaeniformes,Triglidae,Chelidonichthys,Chelidonichthys cuculus,Chelidonichthys cuculus,species,127259,Chelidonichthys cuculus,127259,prey
+Chordata,Actinopterygii,Scorpaeniformes,Triglidae,NA,NA,Triglidae,family,125598,Triglidae,125598,prey
+Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Entelurus,Entelurus aequoreus,Entelurus aequoreus,species,127379,Entelurus aequoreus,127379,prey
+Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Syngnathus,Syngnathus rostellatus,Syngnathus rostellatus,species,127389,Syngnathus rostellatus,127389,prey
+Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Syngnathus,Syngnathus acus,Syngnathus acus,species,127387,Syngnathus acus,127387,prey
+Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,Nerophis,Nerophis lumbriciformis,Nerophis lumbriciformis,species,127383,Nerophis lumbriciformis,127383,prey
+Chordata,Actinopterygii,Syngnathiformes,Syngnathidae,NA,NA,Syngnathidae,family,125606,Syngnathidae,125606,prey
+Chordata,Actinopterygii,Syngnathiformes,NA,NA,NA,Syngnathiformes,order,10327,Syngnathiformes,10327,prey
+Chordata,Actinopterygii,Stomiiformes,Sternoptychidae,Maurolicus,Maurolicus muelleri,Maurolicus muelleri,species,127312,Maurolicus muelleri,127312,prey
+Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,Gasterosteus,Gasterosteus aculeatus,Gasterosteus aculeatus,species,126505,Gasterosteus aculeatus,126505,prey
+Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,Spinachia,Spinachia spinachia,Spinachia spinachia,species,126508,Spinachia spinachia,126508,prey
+Chordata,Actinopterygii,Gasterosteiformes,Gasterosteidae,NA,NA,Gasterosteidae,family,125476,Gasterosteidae,125476,prey
+Chordata,Actinopterygii,Myctophiformes,Myctophidae,Benthosema,Benthosema glaciale,Benthosema glaciale,species,126580,Benthosema glaciale,126580,prey
+Chordata,Actinopterygii,Beloniformes,Scomberescoidae,Scomberesox,Scomberesox saurus,Scomberesox saurus,species,126392,Scomberesox saurus saurus,236461,prey
+Chordata,Actinopterygii,Beloniformes,Belonidae,Belone,Belone belone,Belone belone,species,126375,Belone belone,126375,prey
+Chordata,Actinopterygii,Salmoniformes,Salmonidae,Salmo,Salmo salar,Salmo salar,species,127186,Salmo salar,127186,prey
+Chordata,Actinopterygii,Salmoniformes,Salmonidae,Coregonus,NA,Coregonus,genus,126139,Coregonus,126139,prey
+Chordata,Actinopterygii,Salmoniformes,Salmonidae,NA,NA,Salmonidae,family,125587,Salmonidae,125587,prey
+Chordata,Actinopterygii,Atheriniformes,Atherinidae,Atherina,Atherina presbyter,Atherina presbyter,species,272030,Atherina presbyter,272030,prey
+Chordata,Actinopterygii,Stephanoberyciformes,Melamphaidae,Scopelogadus,Scopelogadus beanii,Scopelogadus beanii,species,127278,Scopelogadus beanii,127278,prey
+Chordata,Actinopterygii,Anguilliformes,Anguillidae,Anguilla,Anguilla anguilla,Anguilla anguilla,species,126281,Anguilla anguilla,126281,prey
+Chordata,Actinopterygii,NA,NA,NA,NA,Actinopterygii,class,10194,Actinopterygii,10194,prey
+Chordata,Elasmobranchii,Myliobatiformes,Myliobatidae,Raja,NA,Raja,genus,105766,Raja,105766,prey
+Chordata,Elasmobranchii,Squaliformes,Squalidae,Squalus,Squalus acanthias,Squalus acanthias,species,105923,Squalus acanthias,105923,prey
+Chordata,Mammalia,NA,NA,NA,NA,Mammalia,class,1837,Mammalia,1837,prey
+Chordata,NA,NA,NA,NA,NA,Chordata,phylum,1821,Chordata,1821,prey
+Arthropoda,Malacostraca,Amphipoda,Calliopiidae,Apherusa,Apherusa glacialis,Apherusa glacialis,species,102166,Apherusa glacialis,102166,prey
+Arthropoda,Malacostraca,Amphipoda,Gammarellidae,Gammarellus,Gammarellus homari,Gammarellus homari,species,102253,Gammarellus homari,102253,prey
+Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,Gammarus wilkitzkii,Gammarus wilkitzkii,species,102297,Gammarus wilkitzkii,102297,prey
+Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,Gammarus setosus,Gammarus setosus,species,102293,Gammarus setosus,102293,prey
+Arthropoda,Malacostraca,Amphipoda,Lysianassidae,Hippomedon,Hippomedon denticulatus,Hippomedon denticulatus,species,102570,Hippomedon denticulatus,102570,prey
+Arthropoda,Malacostraca,Amphipoda,Gammaracanthidae,Gammaracanthus,Gammaracanthus caspius,Gammaracanthus caspius,species,489919,Gammaracanthus caspius,489919,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Themisto,Themisto libellula,Themisto libellula,species,156452,Themisto libellula,156452,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Themisto,Themisto abyssorum,Themisto abyssorum,species,103259,Themisto abyssorum,103259,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia medusarum,Hyperia medusarum,species,103253,Hyperia medusarum,103253,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia spinigera,Hyperia spinigera,species,103254,Hyperia spinigera,103254,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia galba,Hyperia galba,species,103251,Hyperia galba,103251,prey
+Arthropoda,Malacostraca,Amphipoda,Hyperiidae,Hyperoche,Hyperoche medusarum,Hyperoche medusarum,species,103256,Hyperoche medusarum,103256,prey
+Arthropoda,Malacostraca,Amphipoda,Lysianassidae,NA,NA,Lysianassidae,family,101395,Lysianassidae,101395,prey
+Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus glacialis,Onisimus glacialis,species,102644,Onisimus glacialis,102644,prey
+Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus nanseni,Onisimus nanseni,species,102647,Onisimus nanseni,102647,prey
+Arthropoda,Malacostraca,Amphipoda,Uristidae,Onisimus,Onisimus litoralis,Onisimus litoralis,species,102646,Onisimus litoralis,102646,prey
+Arthropoda,Malacostraca,Amphipoda,Ischyroceridae,Ischyrocerus,Ischyrocerus anguipes,Ischyrocerus anguipes,species,102412,Ischyrocerus anguipes,102412,prey
+Arthropoda,Malacostraca,Amphipoda,Oedicerotidae,Paroediceros,Paroediceros lynceus,Paroediceros lynceus,species,102911,Paroediceros lynceus,102911,prey
+Arthropoda,Malacostraca,Amphipoda,Eusiridae,Eusirus,NA,Eusirus,genus,101519,Eusirus,101519,prey
+Arthropoda,Malacostraca,Amphipoda,Talitridae,Orchestia,Orchestia gammarellus,Orchestia gammarellus,species,103202,Orchestia gammarellus,103202,prey
+Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Megannyctiphares,Meganyctiphanes norvegica,Meganyctiphanes norvegica,species,110690,Meganyctiphanes norvegica,110690,prey
+Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Thysanoessa,Thysanoessa inermis,Thysanoessa inermis,species,110708,Thysanoessa inermis,110708,prey
+Arthropoda,Malacostraca,Euphausiacea,NA,NA,NA,Euphausiacea,order,1128,Euphausiacea,1128,prey
+Arthropoda,Malacostraca,Decapoda,Nephropidae,Nephrops,Nephrops norvegicus,Nephrops norvegicus,species,107254,Nephrops norvegicus,107254,prey
+Arthropoda,Malacostraca,Decapoda,Nephropidae,Nephrops,NA,Nephrops,genus,106863,Nephrops,106863,prey
+Arthropoda,Malacostraca,Decapoda,Thoridae,Eualus,Eualus pusiolus,Eualus pusiolus,species,107507,Eualus pusiolus,107507,prey
+Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus borealis,Pandalus borealis,species,107649,Pandalus borealis,107649,prey
+Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus montagui,Pandalus montagui,species,107651,Pandalus montagui,107651,prey
+Arthropoda,Malacostraca,Decapoda,Hippolytidae,NA,NA,Hippolytidae,family,106777,Hippolytidae,106777,prey
+Arthropoda,Malacostraca,Decapoda,Munididae,Munida,Munida intermedia,Munida intermedia,species,107157,Munida intermedia,107157,prey
+Arthropoda,Malacostraca,Decapoda,Pasiphaeidae,Parapasiphae,Parapasiphae sulcatifrons,Parapasiphae sulcatifrons,species,107673,Parapasiphae sulcatifrons,107673,prey
+Arthropoda,Malacostraca,Decapoda,Paguridae,Pagurus,Pagurus bernhardus,Pagurus bernhardus,species,107232,Pagurus bernhardus,107232,prey
+Arthropoda,Malacostraca,Decapoda,Polybiidae,Liocarcinus,NA,Liocarcinus,genus,106925,Liocarcinus,106925,prey
+Arthropoda,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,Acanthephyra pelagica,Acanthephyra pelagica,species,107581,Acanthephyra pelagica,107581,prey
+Arthropoda,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,NA,Acanthephyra,genus,107018,Acanthephyra,107018,prey
+Arthropoda,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus borealis,Pandalus borealis,species,107649,Pandalus borealis,107649,prey
+Arthropoda,Malacostraca,Decapoda,Carcinidae,Carcinus,Carcinus maenas,Carcinus maenas,species,107381,Carcinus maenas,107381,prey
+Arthropoda,Malacostraca,Decapoda,Cancridae,Cancer,Cancer pagurus,Cancer pagurus,species,107276,Cancer pagurus,107276,prey
+Arthropoda,Malacostraca,Decapoda,Portunidae,Portunus,Portunus puber,Portunus puber,species,148470,Necora puber,107398,prey
+Arthropoda,Malacostraca,Decapoda,Crangonidae,Crangon,Crangon crangon,Crangon crangon,species,107552,Crangon crangon,107552,prey
+Arthropoda,Malacostraca,Decapoda,NA,NA,NA,Decapoda,order,1130,Decapoda,1130,prey
+Arthropoda,Malacostraca,Mysida,Mysidae,Mysis,Mysis oculata,Mysis oculata,species,120115,Mysis oculata,120115,prey
+Arthropoda,Malacostraca,Mysida,NA,NA,NA,Mysida,order,149668,Mysida,149668,prey
+Arthropoda,Malacostraca,Isopoda,Idoteidae,Idotea,Idotea metallica,Idotea metallica,species,119047,Idotea metallica,119047,prey
+Arthropoda,Malacostraca,Isopoda,Cirolanidae,Eurydice,Eurydice pulchra,Eurydice pulchra,species,118852,Eurydice pulchra,118852,prey
+Arthropoda,Malacostraca,Isopoda,Cirolanidae,Eurydice,NA,Eurydice,genus,118401,Eurydice,118401,prey
+Arthropoda,Malacostraca,Isopoda,Ligiidae,Ligia,Ligia oceanica,Ligia oceanica,species,146999,Ligia oceanica,146999,prey
+Arthropoda,Malacostraca,Isopoda,NA,NA,NA,Isopoda,order,1131,Isopoda,1131,prey
+Arthropoda,Malacostraca,Lophogastrida,Gnathophausiidae,Gnathophausia,Gnathophausia zoea,Gnathophausia zoea,species,119930,Gnathophausia zoea,119930,prey
+Arthropoda,Malacostraca,NA,NA,NA,NA,Malacostraca,class,1071,Malacostraca,1071,prey
+Arthropoda,Hexanauplia,Calanoida,Calanidae,Calanus,NA,Calanus,genus,104152,Calanus,104152,prey
+Arthropoda,Hexanauplia,Calanoida,Metridinidae,Metridia,Metridia longa,Metridia longa,species,104632,Metridia longa,104632,prey
+Arthropoda,Hexanauplia,Siphonostomatoida,Caligidae,Caligus,Caligus elongatus,Caligus elongatus,species,478342,Caligus coryphaenae,135748,prey
+Arthropoda,Pycnogonida,NA,NA,NA,NA,Pycnogonida,class,1302,Pycnogonida,1302,prey
+Arthropoda,NA,NA,NA,NA,NA,Arthropoda,phylum,1065,Arthropoda,1065,prey
+Mollusca,Cephalopoda,Oegopsida,Gonatidae,Gonatus,Gonatus steenstrupi,Gonatus steenstrupi,species,140027,Gonatus steenstrupi,140027,prey
+Mollusca,Cephalopoda,Oegopsida,Gonatidae,Gonatus,Gonatus fabricii,Gonatus fabricii,species,395177,Gonatus steenstrupi,140027,prey
+Mollusca,Cephalopoda,Oegopsida,Gonatidae,NA,NA,Gonatidae,family,11743,Gonatidae,11743,prey
+Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Illex,Illex illecebrosus,Illex illecebrosus,species,748978,Illex coindetii,140621,prey
+Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Todarodes,Todarodes sagittatus,Todarodes sagittatus,species,140624,Todarodes sagittatus,140624,prey
+Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,Todaropsis,Todaropsis eblanae,Todaropsis eblanae,species,140625,Todaropsis eblanae,140625,prey
+Mollusca,Cephalopoda,Oegopsida,Ommastrephidae,NA,NA,Ommastrephidae,family,11760,Ommastrephidae,11760,prey
+Mollusca,Cephalopoda,Oegopsida,Cranchiidae,Teuthowenia,Teuthowenia megalops,Teuthowenia megalops,species,139429,Teuthowenia megalops,139429,prey
+Mollusca,Cephalopoda,Oegopsida,Cranchiidae,Taonius,Taonius pavo,Taonius pavo,species,139428,Taonius pavo,139428,prey
+Mollusca,Cephalopoda,Oegopsida,Onychoteuthidae,Onychoteuthis,Onychoteuthis banksii,Onychoteuthis banksii,species,140649,Onychoteuthis banksii,140649,prey
+Mollusca,Cephalopoda,Oegopsida,Mastigoteuthidae,Mastigoteuthis,NA,Mastigoteuthis,genus,138168,Mastigoteuthis,138168,prey
+Mollusca,Cephalopoda,Teuthida,NA,NA,NA,Teuthida,order,11716,Teuthida,11716,prey
+Mollusca,Cephalopoda,Sepiida,Sepiidae,Sepia,Sepia officinalis,Sepia officinalis,species,141444,Sepia officinalis,141444,prey
+Mollusca,Cephalopoda,Myopsida,Loliginidae,Alloteuthis,Alloteuthis subulata,Alloteuthis subulata,species,153131,Alloteuthis subulata,153131,prey
+Mollusca,Cephalopoda,NA,NA,NA,NA,Cephalopoda,class,11707,Cephalopoda,11707,prey
+Mollusca,Gastropoda,Thecosomata,Limacinidae,Limacina,Limacina limata,Limacina limata,species,832992,Limacina limata,832992,prey
+Mollusca,Gastropoda,Pteropoda,NA,NA,NA,Pteropoda,order,325345,Pteropoda,325345,prey
+Mollusca,Gastropoda,Neogastropoda,Buccinidae,Buccinum,Buccinum undatum,Buccinum undatum,species,138878,Buccinum undatum,138878,prey
+Mollusca,Gastropoda,Neogastropoda,Trochidae,Monodonta,Monodonta lineata,Monodonta lineata,species,153534,Phorcus lineatus,689176,prey
+Mollusca,Gastropoda,Neogastropoda,Muricidae,Nucella,Nucella lapillus,Nucella lapillus,species,140403,Nucella lapillus,140403,prey
+Mollusca,Gastropoda,Littorinimorpha,Littorinidae,Littorina,Littorina saxatilis,Littorina saxatilis,species,140264,Littorina saxatilis,140264,prey
+Mollusca,Gastropoda,Littorinimorpha,Patellidae,Patella,NA,Patella,genus,138312,Patella,138312,prey
+Mollusca,Bivalvia,Mytilida,Mytilidae,Mytilus,Mytilus edulis,Mytilus edulis,species,140480,Mytilus edulis,140480,prey
+Mollusca,Bivalvia,Cardiida,Cardiidae,Cerastoderma,Cerastoderma edule,Cerastoderma edule,species,138998,Cerastoderma edule,138998,prey
+Mollusca,Bivalvia,Cardiida,Tellinidae,Macomangulus,Macomangulus tenuis,Macomangulus tenuis,species,878470,Macomangulus tenuis,878470,prey
+Mollusca,Bivalvia,Adapedonta,Pharidae,NA,NA,Pharidae,family,23091,Pharidae,23091,prey
+Mollusca,Bivalvia,Venerida,Veneridae,Paphia,NA,Paphia,genus,516180,Atactodea,138173,prey
+Mollusca,Bivalvia,NA,NA,NA,NA,Bivalvia,class,105,Bivalvia,105,prey
+Mollusca,NA,NA,NA,NA,NA,Mollusca,phylum,51,Mollusca,51,prey
+Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis irrorata,Nereis irrorata,species,196797,Neanthes nubila,334102,prey
+Annelida,Polychaeta,Phyllodocida,Nereididae,Nereis,Nereis pelagica,Nereis pelagica,species,130404,Nereis pelagica,130404,prey
+Annelida,Polychaeta,Phyllodocida,Nereididae,Hediste,Hediste diversicolor,Hediste diversicolor,species,152302,Hediste diversicolor,152302,prey
+Annelida,Polychaeta,Phyllodocida,Nereididae,Neanthes,Neanthes nubila,Neanthes nubila,species,334102,Neanthes nubila,334102,prey
+Annelida,Polychaeta,Phyllodocida,Nereididae,NA,NA,Nereididae,family,22496,Nereididae,22496,prey
+Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe imbricata,Harmothoe imbricata,species,130769,Harmothoe imbricata,130769,prey
+Annelida,Polychaeta,Phyllodocida,Aphroditidae,Aphrodita,Aphrodita aculeata,Aphrodita aculeata,species,129840,Aphrodita aculeata,129840,prey
+Annelida,Polychaeta,Phyllodocida,Arenicolidae,Arenicola,NA,Arenicola,genus,129206,Arenicola,129206,prey
+Annelida,Polychaeta,Terebellida,Ampharetidae,NA,NA,Ampharetidae,family,981,Ampharetidae,981,prey
+Annelida,Polychaeta,NA,NA,NA,NA,Polychaeta,class,883,Polychaeta,883,prey
+Annelida,Clitellata,Haplotaxida,Naididae,Nais,Nais elinguis,Nais elinguis,species,137481,Nais elinguis,137481,prey
+Annelida,NA,NA,NA,NA,NA,Annelida,phylum,882,Annelida,882,prey
+Echinodermata,Asteroidea,Forcipulatida,Asteriidae,Asterias,Asterias rubens,Asterias rubens,species,123776,Asterias rubens,123776,prey
+Echinodermata,Echinoidea,NA,NA,NA,NA,Echinoidea,class,123082,Echinoidea,123082,prey
+Echinodermata,NA,NA,NA,NA,NA,Echinodermata,phylum,1806,Echinodermata,1806,prey
+Cnidaria,Hydrozoa,Anthoathecata,Porpitidae,Velella,Velella velella,Velella velella,species,117832,Velella velella,117832,prey
+Cnidaria,NA,NA,NA,NA,NA,Cnidaria,phylum,1267,Cnidaria,1267,prey
+Chordata,Aves,Charadriiformes,Alcidae,Alca,Alca torda,Alca torda,species,137128,Alca torda,137128,pred
+Chordata,Aves,Charadriiformes,Alcidae,Fratercula,Fratercula arctica,Fratercula arctica,species,137131,Fratercula arctica,137131,pred
+Chordata,Aves,Charadriiformes,Alcidae,Uria,Uria aalge,Uria aalge,species,137133,Uria aalge,137133,pred
+Chordata,Aves,Charadriiformes,Laridae,Rissa,Rissa tridactyla,Rissa tridactyla,species,137156,Rissa tridactyla,137156,pred
+Chordata,Aves,Pelecaniformes,Phalacrocoracidae,Phalacrocorax,Phalacrocorax aristotelis,Phalacrocorax aristotelis,species,137178,Phalacrocorax aristotelis,137178,pred
+Chordata,Aves,Procellariiformes,Procellariidae,Fulmarus,Fulmarus glacialis,Fulmarus glacialis,species,137195,Fulmarus glacialis,137195,pred
+Chordata,Aves,Procellariiformes,Procellariidae,Puffinus,Puffinus puffinus,Puffinus puffinus,species,137203,Puffinus puffinus,137203,pred
+Chordata,Aves,Pelecaniformes,Sulidae,Morus,Morus bassanus,Morus bassanus,species,148776,Morus bassanus,148776,pred
