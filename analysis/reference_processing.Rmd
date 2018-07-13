@@ -1,0 +1,418 @@
+---
+title: "Bibliography processing"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Load data
+
+```{r}
+library(dplyr)
+load(here::here("data", "seabirddiet.rda"))
+```
+
+## Manual corrections
+
+Required to deal with:
+
+- multiple references in a single row
+- drag down error in `Daunt & Wanless IMLOT 1973-2014`
+
+### create manual edit table
+
+Create editable table of references to record any changes to be made to raw data values. Try to identify multiple references using a couple of regex expressions.
+
+```{r}
+# setup manual correction table
+seabirddiet %>% 
+    select(reference) %>% 
+    distinct() %>% 
+    mutate(rename = reference, 
+           multi = stringr::str_detect(reference, "([0-9]+-[0-9]+,) | ([0-9]+-[0-9]+ &+ [A-z])")) %>%
+    # render data table
+    DT::datatable(class = 'cell-border stripe', rownames = F, 
+                  editable = T,
+                  extensions = 'Buttons', 
+                  options = list(
+                      dom = 'Bfrtip',
+                      buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+                  )) %>%
+    DT::formatStyle(
+        'multi',
+        backgroundColor = DT::styleEqual(
+            c(0, 1), c('white', 'lightpink')
+        )
+    )
+
+```
+
+<br>
+
+### make manual corrections
+
+In particular:
+
+- **delimit multiple references in single cell with `;`**. 
+- Correct excel drag down error in references: `Daunt & Wanless IMLOT 1973-2015:2127`.
+
+### save table
+
+Save as **CSV** using table widget at path **`r here::here("data-raw", "validation", "reference_manual_clean.csv")`**
+
+
+
+```{r}
+ref_manual <- readr::read_csv(here::here("data-raw", 
+                                         "validation", 
+                                         "reference_manual_clean.csv")) %>%  
+    mutate(rename = stringr::str_replace(rename, "–", "-")) %>%
+    mutate(rename = stringr::str_replace(rename, "\\.$", ""))
+
+```
+### check manual corrections
+```{r}
+ref_manual %>%
+    filter(reference != rename) %>%
+    DT::datatable()
+```
+
+### separate references and gather into long format
+
+Easiest way to separate is to use `tidyr::separate` and `tidyr::gather()`. Also I'll use a function to mark identifiers to link back to the original data.
+
+```{r}
+
+get_ref_code <- function(x, type = c("ref_tab", "raw"), width = 3){
+    type <- match.arg(type)
+    prefix <- switch(type,
+                     "ref_tab" = "REF",
+                     "raw" = "RAW")
+    glue::glue("{prefix}{stringr::str_pad(x, {width}, pad = 0)}")
+}
+
+```
+
+
+
+#### determine number of columns to spread to.
+
+```{r}
+stringr::str_count(ref_manual$rename, ";") %>% max() + 1
+```
+
+
+#### separate and gather
+
+```{r}
+ref_sep <- ref_manual %>% 
+    mutate(raw_id = get_ref_code(1:nrow(.), type = "raw")) %>%
+    tidyr::separate(rename, into = as.character(1:n_ref), sep = ";") %>%
+    tidyr::gather(key = ref_n, value = ref_valid, as.character(1:4)) %>%
+    filter(!is.na(ref_valid)) %>%
+    mutate(ref_valid = stringr::str_trim(ref_valid)) 
+
+ref_sep %>%    
+    DT::datatable()
+```
+
+
+
+
+```{r}
+ref <- ref_sep %>% distinct(ref_valid) %>%
+    mutate(ref_id = get_ref_code(1:nrow(.), type = "ref")) %>%
+    select(ref_id, ref_valid) %>%
+    distinct()  
+
+ref
+```
+
+### check for distinctness of references
+
+Return to editable manual edit table if need be.
+
+```{r}
+ref_sep %>% 
+    select(reference, ref_valid) %>% 
+    distinct(ref_valid) %>% 
+    arrange(ref_valid) %>%
+    DT::datatable(editable = T)
+```
+
+***
+
+## Process references
+
+
+
+## get vector of refs
+
+
+```{r}
+refs <- ref_sep$ref_valid %>% unique()
+```
+
+
+```{r}
+refs %>% head(15)
+```
+
+## get crossref record
+
+Because what we have of references is the citation information, we use a bibliographic field query through argument `flq`.
+
+```{r, cache=TRUE}
+dois <- refs %>% purrr::map_df(
+    ~rcrossref::cr_works(flq = c(query.bibliographic = .x),
+                         limit = 5, 
+                         .progress="text",
+                         sort = "score")$data)
+```
+
+```{r}
+
+ref_tbl <- bind_cols(tibble(reference = rep(refs, each = 5)), dois) %>% 
+    left_join(distinct(seabirddiet, reference, source),
+              by = "reference") %>% 
+    select(reference, 
+           author, title, everything())
+```
+
+
+```{r}
+DT::datatable(ref_tbl, class = 'cell-border stripe', rownames = F, extensions = 'Buttons', options = list(
+    dom = 'Bfrtip',
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+))
+```
+
+***
+
+## Query using mutlple fields
+### split refs into components
+
+#### authors
+```{r}
+auth <- stringr::str_extract(refs, "^[^[:digit:]]+") %>% stringr::str_trim()
+auth %>% head
+```
+
+#### date
+```{r}
+date <- stringr::str_extract(refs, "[:digit:]{4}+") %>% stringr::str_trim()
+date
+
+```
+
+#### container
+```{r}
+container <- stringr::str_extract(refs, "(?<=[:digit:]) [^[:digit:]]+") %>% 
+    stringr::str_trim() %>% stringr::str_replace(", No.", "") 
+
+container %>% head()
+
+```
+
+### Functions to split the references into fields
+
+```{r}
+extr_auth <- function(x){
+    stringr::str_extract(x, "^[^[:digit:]]+") %>% 
+        stringr::str_trim()}
+
+extr_year <- function(x){
+    stringr::str_extract(x, "[:digit:]{4}+") %>% 
+        stringr::str_trim()}
+
+extr_container <- function(x){
+    stringr::str_extract(x, "(?<=[:digit:]) [^[:digit:]]+") %>% 
+        stringr::str_trim() %>% stringr::str_replace(", No.", "") 
+}
+
+extr_pages <- function(x){
+    stringr::str_extract(x, "([:digit:]+-[:digit:]+)") %>% 
+        stringr::str_trim() 
+}
+
+
+get_crfields_table <- function(refs){
+    tibble(reference = refs) %>%
+        mutate(author = extr_auth(reference),
+               year = extr_year(reference),
+               container = extr_container(reference),
+               pages = extr_pages(reference))
+}
+```
+
+```{r}
+crfields <- get_crfields_table(refs)
+
+DT::datatable(crfields)
+```
+```{r}
+x <- crfields[1,]
+x <- crfields[23,]
+x
+```
+
+
+
+
+```{r}
+
+crq_query_fail <- function(x){
+    tibble::tibble(reference = x$reference, 
+                   author = NA,
+                   author_f = NA,
+                   year = NA,
+                   container = NA,
+                   volume = NA,
+                   issue = NA,
+                   pages = NA,
+                   doi = NA,
+                   title = NA
+    )
+}
+
+crq_query_extr <- function(x, q){
+    tibble::tibble(
+        reference = x$reference, 
+        author = crq_auth_conc(q$author),
+        author_f = crq_auth_first(q$author),
+        year = lubridate::as_date(q$created) %>% 
+            lubridate::year(),
+        container = q$container.title,
+        volume = if(any(names(q) %in% "volume")){q$volume}else{NA},
+        issue = if(any(names(q) %in% "issue")){q$issue}else{NA},
+        pages = q$page,
+        doi = q$doi,
+        title = q$title,
+        r_author = x$author,
+        r_author_f = stringr::word(x$author, 1, 1),
+        r_year = lubridate::as_date(x$year, format = "%Y", 
+                                    tz = "GMT") %>% 
+            lubridate::year(),
+        r_container = x$container,
+        r_pages = x$pages)
+}   
+
+crq_auth_conc <- function(author){
+    author %>% purrr::map_chr(~.x %>% pull(family) %>% paste0( collapse = "; "))
+}
+
+crq_auth_first <- function(author){
+    author %>% purrr::map_chr(~.x %>% filter(sequence == "first") %>% 
+                                  slice(1) %>% pull(family))
+}
+
+crq_validate_ref <- function(q.out){
+    q.out %>% filter(r_author_f == author_f, 
+                     r_year == year,
+                     #r_pages == pages
+                     )
+}
+
+
+query_works <- function(x, limit = 5){
+    q <- rcrossref::cr_works(
+        flq = c(`query.container-title` = x$container[1],
+                query.author = x$author[1],
+                query.bibliographic =  lubridate::as_date(as.numeric(x$year[1]))),
+        limit = limit)$data
+    
+    if(nrow(q) == 0){
+        return(crq_query_fail(x))
+    }
+    
+    q.extr <-  crq_query_extr(x, q) %>% 
+        crq_validate_ref()
+    
+    if(nrow(q.extr) == 0){
+        return(crq_query_fail(x))
+    }else{
+        q.extr %>% select(-starts_with("r_")) 
+    }
+}
+
+```
+
+
+
+
+
+```{r}
+rbind(query_works(crfields[2,]),
+      query_works(crfields[23,]))
+```
+```{r}
+out <- crfields[,] %>% 
+    rowwise %>%
+    do({query_works(., limit = 10)})
+    
+```
+
+
+Try without `et al`
+
+```{r}
+rcrossref::cr_works(
+    flq = c(`query.container-title` = crfields$container[2],
+            query.author = "Wilson",
+            query.bibliographic = lubridate::as_date(2004)
+    ))
+```
+```{r}
+rcrossref::cr_works(flq = c(query.title = "Self-feeding and chick provisioning diet differ in the Common Guillemot Uria aalge",
+                            query.author = "Wilson"))
+
+
+rcrossref::cr_works(flq = c(`query.container-title` = crfields$container[2],
+                            query.title = "Self-feeding and chick ",
+                            query.author = "Wilson"))
+```
+
+
+
+```{r, cache=TRUE}
+dois <- refs %>% purrr::map_df(
+    ~rcrossref::cr_works(flq = c(query.bibliographic = .x),
+                         limit = 5, 
+                         .progress="text",
+                         sort = "score")$data)
+```
+
+***
+
+# Issues
+
+### `Exp.` not matched to `Experimental` in `rcrossref`
+
+References with `Exp.` in the citation does not return correct reference
+```{r}
+rcrossref::cr_works(flq = c(query.bibliographic = 
+                                "Blake BF 1984 Journal. Exp. Mar. Biol. Ecol. 76, 89-103"), 
+                    limit = 1, 
+                    sort = "score")$data
+```
+Changing `Exp.` to `Experimental.` in the citation returns the correct reference
+
+```{r}
+rcrossref::cr_works(flq = c(query.bibliographic = 
+                                "Blake BF 1984 Journal. Experimental. Mar. Biol. Ecol. 76, 89-103"), 
+                    limit = 1, 
+                    sort = "score")$data
+```
+
+
+
+## 
+
+```{r}
+rcrossref::cr_works(flq = c(query.bibliographic = "Diet and fish stock availability"), 
+                    limit = 1, 
+                    sort = "score")$data
+
+```
+
+
