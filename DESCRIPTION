@@ -10,18 +10,25 @@ ByteCompile: true
 URL: https://github.com/annakrystalli/seabirdPrey
 BugReports: https://github.com/annakrystalli/seabirdPrey/issues
 Suggests: 
+    rlang,
+    rcrossref (>= 0.8.1.9513)
+Imports: 
     readxl,
     janitor,
     dplyr,
     here,
     DT,
-    rlang,
     plyr,
-    testthat
-Imports: 
+    testthat,
+    tidyr
     readr,
     magrittr,
     worrms,
-    glue
+    glue,
+    purrr,
+    assertr,
+    stringr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
+Remotes: 
+    ropensci/rcrossref
