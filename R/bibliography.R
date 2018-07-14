@@ -1,4 +1,79 @@
 
+#' Tidy references
+#' 
+#' Separate and tidy references into a long format.
+#' @param ref_manual dataframe of manual corrections, output in the reference 
+#' processing workbook.
+#'
+#' @return a long, tidy tibble of references
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' tidy_refs(ref_manual)
+#' }
+#' @import dplyr
+tidy_refs <- function(ref_manual){
+    n_ref <- stringr::str_count(ref_manual$rename, ";") %>% 
+        max() + 1
+    ref_manual %>% 
+    mutate(raw_id = get_ref_code(1:nrow(.), type = "raw")) %>%
+    tidyr::separate(rename, into = as.character(1:n_ref), sep = ";") %>%
+    tidyr::gather(key = ref_n, value = ref_valid, as.character(1:4)) %>%
+    filter(!is.na(ref_valid)) %>%
+    mutate(ref_valid = stringr::str_trim(ref_valid))
+}
+
+
+
+#' Extract table of distinct references
+#'
+#' @param ref_tidy tidy reference tibble
+#'
+#' @return a tibble containing the ref_id and valid reference fields of distinct 
+#' references.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' get_ref_tbl(ref_tidy)
+#' }
+#' @import dplyr
+get_ref_tbl <- function(ref_tidy){
+    ref_tidy %>% distinct(ref_valid) %>%
+        mutate(ref_id = get_ref_code(1:nrow(.), type = "ref")) %>%
+        select(ref_id, ref_valid) %>%
+        distinct()
+}
+
+
+#' Get join_ref table
+#'
+#' Get join_ref table to be joined to seabird data at the final processing stage
+#'
+#' @param ref_tidy tidy reference tibble
+#' @param ref ref_table exported by `get_ref_table()`
+#'
+#' @return a tibble containing the ref_id and valid reference fields for 
+#' each row in the seabird data. This table is prepared to be joined to the data
+#' at the final processing stage.
+#' @export 
+#'
+#' @examples
+#' \dontrun{
+#' get_join_ref(ref_tidy)
+#' }
+#' @import dplyr
+get_join_ref <- function(ref_tidy, ref){
+    ref_tidy %>% left_join(ref, by = "ref_valid") %>% 
+        group_by(raw_id) %>%
+    mutate(ref_ids = paste0(unique(ref_id), collapse = "; "),
+           ref_n = as.integer(max(ref_n))) %>%
+    ungroup() %>%
+    select(reference, ref_n, ref_ids) %>%
+        distinct()
+}
+
 
 get_dois <- function(seabirddiet){
     refs <- seabirddiet$reference %>% 
@@ -13,17 +88,17 @@ get_dois <- function(seabirddiet){
                              .progress="text",
                              sort = "score")$data)
     
-    ref_tbl <- bind_cols(tibble(reference = refs), dois) %>% 
+    ref_tbl <- bind_cols(tibble::tibble(reference = refs), dois) %>% 
         left_join(distinct(seabirddiet, reference, source),
                   by = "reference")
     
 }
 
 
-get_ref_code <- function(x, type = c("ref_tab", "raw"), width = 3){
+get_ref_code <- function(x, type = c("ref", "raw"), width = 3){
     type <- match.arg(type)
     prefix <- switch(type,
-                     "ref_tab" = "REF",
+                     "ref" = "REF",
                      "raw" = "RAW")
     glue::glue("{prefix}{stringr::str_pad(x, {width}, pad = 0)}")
 }
@@ -49,7 +124,7 @@ extr_pages <- function(x){
 
 
 get_crfields_table <- function(refs){
-    tibble(reference = refs) %>%
+    tibble::tibble(reference = refs) %>%
         mutate(author = extr_auth(reference),
                year = extr_year(reference),
                container = extr_container(reference),
