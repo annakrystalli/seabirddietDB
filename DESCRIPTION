@@ -20,7 +20,7 @@ Imports:
     DT,
     plyr,
     testthat,
-    tidyr
+    tidyr,
     readr,
     magrittr,
     worrms,
