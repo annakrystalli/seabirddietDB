@@ -3,3 +3,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^code$
+^data/metadata$
+^_workflowr\.yml$
+^output$
+^docs$

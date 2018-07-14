@@ -6,6 +6,5 @@
 data-raw/*
 !data-raw/*.R
 *_cache
-data/*
 !data/metadata/
 code
