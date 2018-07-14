@@ -2,8 +2,6 @@ library(dplyr)
 library(seabirdPrey)
 load(here::here("data", "seabirddiet.rda"))
 
-check.dims <- dim(seabirddiet) + c(0, 1)
-
 # read-manual-corrections ----
 # read in and post process manual corrections
 # ref_manual <- readr::read_csv(here::here("data-raw", 
