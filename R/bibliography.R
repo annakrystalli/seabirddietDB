@@ -40,7 +40,8 @@ tidy_refs <- function(ref_manual){
 #' }
 #' @import dplyr
 get_ref_tbl <- function(ref_tidy){
-    ref_tidy %>% distinct(ref_valid) %>%
+    ref_tidy %>% distinct(ref_valid) %>% 
+        arrange(ref_valid) %>%
         mutate(ref_id = get_ref_code(1:nrow(.), type = "ref")) %>%
         select(ref_id, ref_valid) %>%
         distinct()
