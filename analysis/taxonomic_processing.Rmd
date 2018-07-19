@@ -252,11 +252,19 @@ First, we also need to correct any mispelled species in `seabirddiet`.
 
 ```{r}
 taxonomy <- readr::read_csv(here::here("data", "metadata", "taxonomy.csv"))
+
+
+taxo_correct <- readr::read_csv(here::here("data-raw", "worrms_nomatches_verified.csv"))
+
+    taxo_recode <- taxo_correct %>% 
+        dplyr::pull(verified_base_name) %>% 
+        setNames(taxo_correct$base_name)
+
 seabirddiet <- readr::read_csv(
     here::here("data-raw", 
                "Seabird Diets British Isles revised 20180620.csv")) %>% 
     janitor::clean_names() %>%
-    bind_cols(ID =  1:nrow(seabirddiet), .) %>% 
+    bind_cols(ID =  1:nrow(.), .) %>% 
     mutate(species = plyr::revalue(prey_species, taxo_recode))
 
 
@@ -266,5 +274,6 @@ seabirddiet <- readr::read_csv(
 dat_tax <- seabirddiet %>% left_join(
     select(taxonomy, base_name:valid_aphiaID),
            by = c("prey_species" = "base_name")) 
+dat_tax
 ```
 
