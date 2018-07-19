@@ -17,7 +17,8 @@ load(here::here("data", "seabirddiet.rda"))
 Required to deal with:
 
 - multiple references in a single row
-- drag down error in `Daunt & Wanless IMLOT 1973-2014`
+- drag down errors
+- other typos
 
 ### create manual edit table
 
@@ -54,7 +55,7 @@ seabirddiet %>%
 In particular:
 
 - **delimit multiple references in single cell with `;`**. 
-- Correct excel drag down error in references: `Daunt & Wanless IMLOT 1973-2015:2127`.
+- Correct excel drag down error in references eg: `Daunt & Wanless IMLOT 1973-2015:2127`.
 
 ### save table
 
@@ -98,7 +99,7 @@ get_ref_code <- function(x, type = c("ref_tab", "raw"), width = 3){
 #### determine number of columns to spread to.
 
 ```{r}
-stringr::str_count(ref_manual$rename, ";") %>% max() + 1
+n_ref <- stringr::str_count(ref_manual$rename, ";") %>% max() + 1
 ```
 
 
@@ -250,11 +251,6 @@ crfields <- get_crfields_table(refs)
 
 DT::datatable(crfields)
 ```
-```{r}
-x <- crfields[1,]
-x <- crfields[23,]
-x
-```
 
 
 
@@ -338,20 +334,38 @@ query_works <- function(x, limit = 5){
 ```
 
 
+```{r}
+crfields[c(1:2, 23),]
+```
 
 
 
 ```{r}
-rbind(query_works(crfields[2,]),
+rbind(query_works(crfields[1,]),
+      query_works(crfields[2,]),
       query_works(crfields[23,]))
 ```
-```{r}
+```{r, message=F}
 out <- crfields[,] %>% 
     rowwise %>%
     do({query_works(., limit = 10)})
     
 ```
 
+Clearly not worth any of this effort for the returns
+
+```{r}
+out
+```
+
+
+<div class="alert alert-danger">
+
+## ABANDON `rcrossref` matching 
+
+</div>
+
+### `rcrossref earlier experimentation
 
 Try without `et al`
 
