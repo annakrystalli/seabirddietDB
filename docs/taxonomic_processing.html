@@ -284,7 +284,10 @@ div.tocify {
   <a href="about.html">About</a>
 </li>
 <li>
-  <a href="taxonomic_processing.html">taxonomic matching report</a>
+  <a href="taxonomic_processing.html">taxonomic processing</a>
+</li>
+<li>
+  <a href="reference_processing.html">reference processing</a>
 </li>
 <li>
   <a href="license.html">License</a>
@@ -292,7 +295,7 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jdblischak/workflowr">
+  <a href="https://github.com/annakrystalli/seabirdPrey">
     <span class="fa fa-github"></span>
      
   </a>
@@ -320,7 +323,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-06-23</p>
+<p><strong>Last updated:</strong> 2018-07-19</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -344,32 +347,36 @@ div.section {
 </details>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/tree/13efc80be2e9ce086b52f9a92f8564db1d63f2f4" target="_blank">13efc80</a> </summary></p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/tree/913dee8fde3d65a335ebfd202000c8969387751f" target="_blank">913dee8</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    R/.DS_Store
+    Ignored:    analysis/reference_processing_cache/
     Ignored:    analysis/taxonomic_processing_cache/
     Ignored:    code/from_ruedi/
     Ignored:    code/from_tom/
     Ignored:    data-raw/.DS_Store
-    Ignored:    data-raw/2018-06-22_worrms_nomatches1.csv
     Ignored:    data-raw/Seabird Diets British Isles revised 20180620.csv
     Ignored:    data-raw/from_ruedi/
     Ignored:    data-raw/from_tom/
+    Ignored:    data-raw/joins/
+    Ignored:    data-raw/refs.bib
     Ignored:    data-raw/taxonomy.tsv
     Ignored:    data-raw/validation/
     Ignored:    data-raw/worrms_nomatches_verified.csv
+    Ignored:    data/metadata/.DS_Store
 
 Untracked files:
+    Untracked:  R/eml.R
     Untracked:  R/process-data.R
+    Untracked:  data-raw/04_eml.R
+    Untracked:  data/metadata/Data base creators.csv
 
 Unstaged changes:
-    Deleted:    analysis/02_taxonomic_processing.Rmd
     Modified:   analysis/_site.yml
-    Modified:   seabirdPrey.Rproj
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
@@ -403,6 +410,57 @@ Message
 Rmd
 </td>
 <td style="text-align:left;">
+<a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/blob/913dee8fde3d65a335ebfd202000c8969387751f/analysis/taxonomic_processing.Rmd" target="_blank">913dee8</a>
+</td>
+<td style="text-align:left;">
+annakrystalli
+</td>
+<td style="text-align:left;">
+2018-07-19
+</td>
+<td style="text-align:left;">
+workflowr::wflow_publish(c(“analysis/taxonomic_processing.Rmd”))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/blob/a034635cedc724a65d5040088f13458140f0d348/analysis/taxonomic_processing.Rmd" target="_blank">a034635</a>
+</td>
+<td style="text-align:left;">
+annakrystalli
+</td>
+<td style="text-align:left;">
+2018-06-29
+</td>
+<td style="text-align:left;">
+add detail, start data taxo validation section
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/https://annakrystalli@github.com/annakrystalli/seabirdPrey/6b1bbb33f972b0321a5e1412dd830561f027301c/docs/taxonomic_processing.html" target="_blank">6b1bbb3</a>
+</td>
+<td style="text-align:left;">
+annakrystalli
+</td>
+<td style="text-align:left;">
+2018-06-23
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
 <a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/blob/13efc80be2e9ce086b52f9a92f8564db1d63f2f4/analysis/taxonomic_processing.Rmd" target="_blank">13efc80</a>
 </td>
 <td style="text-align:left;">
@@ -420,6 +478,22 @@ publish site, add taxonomic worms matching vignette to header
 </ul>
 <p></details></p>
 <hr />
+<p>To ensure valid taxonomic information, we’ll check and store taxonomic metadata in <code>metadata/taxonomy.csv</code> on:</p>
+<ul>
+<li>all prey species against the WoRMS database (using pkg <a href="https://github.com/ropensci/worrms"><code>worrms</code></a>)
+<ul>
+<li>retain:
+<ul>
+<li>original <code>base_name</code></li>
+<li>original <code>aphiaID</code></li>
+</ul></li>
+</ul></li>
+<li>all predator species using pkg <a href="https://github.com/ropensci/taxize"><code>taxize</code></a></li>
+<li>that species in <code>seabirddiet</code> and <code>taxonomy</code> match</li>
+</ul>
+<p>Include validated taxonomic information in <code>seabirddiet</code> - <code>aphiaID</code> - <code>valid_name</code> - <code>valid_aphiaID</code> - <code>tx_base_rank</code></p>
+<div id="prey" class="section level1">
+<h1>Prey</h1>
 <div id="functions" class="section level2">
 <h2>functions</h2>
 <pre class="r"><code>library(dplyr)
@@ -466,17 +540,17 @@ worrms_taxonomy &lt;- function(taxonomy,
 <div id="read-data" class="section level2">
 <h2>read data</h2>
 <p>Read in data and extract <code>base</code> taxon to search WoRMS for <code>aphiaID</code>.</p>
-<pre class="r"><code>taxonomy &lt;- readr::read_tsv(here::here(&quot;data&quot;, &quot;metadata&quot;, &quot;taxonomy.tsv&quot;)) %&gt;%
+<pre class="r"><code>taxonomy &lt;- readr::read_tsv(here::here(&quot;data-raw&quot;, &quot;taxonomy.tsv&quot;)) %&gt;%
     rowwise %&gt;% 
     do({
         result = as_data_frame(.)
         result$base = get_taxo_base(.) %&gt;% unlist
         result}) 
 taxonomy</code></pre>
-<pre><code>Source: local data frame [229 x 9]
+<pre><code>Source: local data frame [229 x 7]
 Groups: &lt;by row&gt;
 
-# A tibble: 229 x 9
+# A tibble: 229 x 7
    phylum_prey class_prey  order_prey  family_prey genus_prey species_prey
  * &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       
  1 Chordata    Actinopter… Pleuronect… Bothidae    Arnogloss… Arnoglossus…
@@ -489,8 +563,7 @@ Groups: &lt;by row&gt;
  8 Chordata    Actinopter… Pleuronect… Scophthalm… Phrynorho… Phrynorhomb…
  9 Chordata    Actinopter… Pleuronect… &lt;NA&gt;        &lt;NA&gt;       &lt;NA&gt;        
 10 Chordata    Actinopter… Perciformes Ammodytidae Ammodytes  Ammodytes m…
-# ... with 219 more rows, and 3 more variables: base &lt;chr&gt;,
-#   valid_name &lt;chr&gt;, aphiaID &lt;int&gt;</code></pre>
+# ... with 219 more rows, and 1 more variable: base &lt;chr&gt;</code></pre>
 </div>
 <div id="match-prey-taxonomic-data-to-worms" class="section level2">
 <h2>match prey taxonomic data to WoRMS</h2>
@@ -501,111 +574,136 @@ Groups: &lt;by row&gt;
 Groups: &lt;by row&gt;
 
 # A tibble: 229 x 3
-   base   valid_name                   aphiaID
-   &lt;chr&gt;  &lt;chr&gt;                          &lt;int&gt;
- 1 127126 Arnoglossus laterna           127126
- 2 127137 Hippoglossoides platessoides  127137
- 3 127143 Pleuronectes platessa         127143
- 4 127140 Microstomus kitt              127140
- 5 127139 Limanda limanda               127139
- 6 126117 Limanda                       126117
- 7 125579 Pleuronectidae                125579
- 8 127147 Phrynorhombus norvegicus      127147
- 9 10331  Pleuronectiformes              10331
-10 126751 Ammodytes marinus             126751
+   base                         valid_name                   aphiaID
+   &lt;chr&gt;                        &lt;chr&gt;                          &lt;int&gt;
+ 1 Arnoglossus laterna          Arnoglossus laterna           127126
+ 2 Hippoglossoides platessoides Hippoglossoides platessoides  127137
+ 3 Pleuronectes platessa        Pleuronectes platessa         127143
+ 4 Microstomus kitt             Microstomus kitt              127140
+ 5 Limanda limanda              Limanda limanda               127139
+ 6 Limanda                      Limanda                       126117
+ 7 Pleuronectidae               Pleuronectidae                125579
+ 8 Phrynorhombus norvegicus     Phrynorhombus norvegicus      127147
+ 9 Pleuronectiformes            Pleuronectiformes              10331
+10 Ammodytes marinus            Ammodytes marinus             126751
 # ... with 219 more rows</code></pre>
 <div id="invalid-names" class="section level3">
 <h3>invalid names</h3>
+<p>Check for species which did not return a match from the query to WoRMS</p>
 <pre class="r"><code>na_worrms &lt;- taxonomy %&gt;% filter(is.na(valid_name)) 
 na_worrms %&gt;% select(base:aphiaID)</code></pre>
-<pre><code>Source: local data frame [3 x 3]
+<pre><code>Source: local data frame [5 x 3]
 Groups: &lt;by row&gt;
 
-# A tibble: 3 x 3
+# A tibble: 5 x 3
   base                         valid_name aphiaID
   &lt;chr&gt;                        &lt;chr&gt;        &lt;int&gt;
 1 Gymnoammodytes semisquamatus &lt;NA&gt;            NA
-2 Themisto libellua            &lt;NA&gt;            NA
-3 Nereis peliagica             &lt;NA&gt;            NA</code></pre>
+2 Gammaracanthus caspius       &lt;NA&gt;            NA
+3 Themisto libellua            &lt;NA&gt;            NA
+4 Ligia oceanica               &lt;NA&gt;            NA
+5 Nereis peliagica             &lt;NA&gt;            NA</code></pre>
 <pre class="r"><code>na_worrms %&gt;% pull(base)</code></pre>
-<pre><code>[1] &quot;Gymnoammodytes semisquamatus&quot; &quot;Themisto libellua&quot;           
-[3] &quot;Nereis peliagica&quot;            </code></pre>
+<pre><code>[1] &quot;Gymnoammodytes semisquamatus&quot; &quot;Gammaracanthus caspius&quot;      
+[3] &quot;Themisto libellua&quot;            &quot;Ligia oceanica&quot;              
+[5] &quot;Nereis peliagica&quot;            </code></pre>
 </div>
 <div id="odd-behaviour" class="section level3">
 <h3>odd behaviour</h3>
+<p>There are some inconsistencies in the result of queries using different function in <code>worrms</code>.</p>
 <div id="record-method-returns-na" class="section level4">
 <h4><code>&quot;record&quot;</code> method returns NA</h4>
-<pre class="r"><code>na_worrms %&gt;% 
+<p>The initial function I wrote used the name and function <code>worrms::wm_records_names()</code> to look up species.</p>
+<p>But for some species, <code>worrms::wm_records_names()</code> returns <code>NA</code> for where <code>worrms::wm_name2id()</code> with with the same name returns a valid <code>aphiaID</code>.</p>
+<p>e.g.</p>
+<pre class="r"><code># queried using worrms::wm_records_names()
+na_worrms %&gt;% 
     filter(base == &quot;Gammaracanthus caspius&quot;) %&gt;%
     pull(aphiaID)</code></pre>
-<pre><code>integer(0)</code></pre>
-<p>where <code>worrms::wm_name2id()</code> with with the same name returns a valid <code>aphiaID</code></p>
+<pre><code>[1] NA</code></pre>
 <pre class="r"><code>worrms::wm_name2id(&quot;Gammaracanthus caspius&quot;)</code></pre>
 <pre><code>[1] 489919</code></pre>
 </div>
-</div>
-</div>
-<div id="test-method-id" class="section level2">
-<h2>test method <code>&quot;id&quot;</code></h2>
+<div id="test-querying-using-worrmswm_name2id" class="section level4">
+<h4>1. test querying using <code>worrms::wm_name2id()</code></h4>
+<p>Update the function to allow for querying using <code>worrms::wm_name2id()</code>. Use argument <code>method = &quot;id&quot;</code> to specify.</p>
+<p>Test it against the initial <code>&quot;record&quot;</code> method by rerunning query on <code>taxonomy</code>.</p>
 <pre class="r"><code>taxonomy_id &lt;- taxonomy %&gt;% worrms_taxonomy(method = &quot;id&quot;)</code></pre>
 <ul>
 <li><code>aphiaID</code> is with <code>method = &quot;record&quot;</code></li>
 <li><code>aphiaID1</code> is with <code>method = &quot;id&quot;</code></li>
 </ul>
-<div id="id-method-returns--999-values" class="section level4">
-<h4><code>&quot;id&quot;</code> method returns <code>-999</code> values</h4>
+<div id="id-method-returns--999-values" class="section level5">
+<h5><code>&quot;id&quot;</code> method returns <code>-999</code> values</h5>
 <p>For species for which method <code>&quot;record&quot;</code> returns a valid record</p>
 <pre class="r"><code>taxonomy_id %&gt;% select(base:aphiaID1) %&gt;%
     filter(aphiaID1 &lt; 0)</code></pre>
-<pre><code>Source: local data frame [0 x 5]
+<pre><code>Source: local data frame [10 x 4]
 Groups: &lt;by row&gt;
 
-# A tibble: 0 x 5
-# ... with 5 variables: base &lt;chr&gt;, valid_name &lt;chr&gt;, aphiaID &lt;int&gt;,
-#   valid_name1 &lt;lgl&gt;, aphiaID1 &lt;lgl&gt;</code></pre>
-<p>But no NAs</p>
+# A tibble: 10 x 4
+   base                valid_name          aphiaID aphiaID1
+   &lt;chr&gt;               &lt;chr&gt;                 &lt;int&gt;    &lt;int&gt;
+ 1 Gobius niger        Gobius niger         126892     -999
+ 2 Coregonus           Coregonus            126139     -999
+ 3 Gammarus wilkitzkii Gammarus wilkitzkii  102297     -999
+ 4 Nephrops            Nephrops             106863     -999
+ 5 Caligus elongatus   Caligus coryphaenae  135748     -999
+ 6 Gonatus fabricii    Gonatus steenstrupi  140027     -999
+ 7 Illex illecebrosus  Illex coindetii      140621     -999
+ 8 Littorina saxatilis Littorina saxatilis  140264     -999
+ 9 Paphia              Atactodea            138173     -999
+10 Asterias rubens     Asterias rubens      123776     -999</code></pre>
+<p>But no NAs. 🤷</p>
 <pre class="r"><code>taxonomy_id %&gt;% select(base:aphiaID1) %&gt;%
     filter(is.na(aphiaID1))</code></pre>
-<pre><code>Source: local data frame [229 x 5]
+<pre><code>Source: local data frame [3 x 4]
 Groups: &lt;by row&gt;
 
-# A tibble: 229 x 5
-   base   valid_name                   aphiaID valid_name1 aphiaID1
-   &lt;chr&gt;  &lt;chr&gt;                          &lt;int&gt; &lt;lgl&gt;       &lt;lgl&gt;   
- 1 127126 Arnoglossus laterna           127126 NA          NA      
- 2 127137 Hippoglossoides platessoides  127137 NA          NA      
- 3 127143 Pleuronectes platessa         127143 NA          NA      
- 4 127140 Microstomus kitt              127140 NA          NA      
- 5 127139 Limanda limanda               127139 NA          NA      
- 6 126117 Limanda                       126117 NA          NA      
- 7 125579 Pleuronectidae                125579 NA          NA      
- 8 127147 Phrynorhombus norvegicus      127147 NA          NA      
- 9 10331  Pleuronectiformes              10331 NA          NA      
-10 126751 Ammodytes marinus             126751 NA          NA      
-# ... with 219 more rows</code></pre>
+# A tibble: 3 x 4
+  base                         valid_name aphiaID aphiaID1
+  &lt;chr&gt;                        &lt;chr&gt;        &lt;int&gt;    &lt;int&gt;
+1 Gymnoammodytes semisquamatus &lt;NA&gt;            NA       NA
+2 Themisto libellua            &lt;NA&gt;            NA       NA
+3 Nereis peliagica             &lt;NA&gt;            NA       NA</code></pre>
 <p>and has filled a couple NAs not returned through <code>&quot;method&quot;</code> query.</p>
 <pre class="r"><code>taxonomy_id %&gt;% select(base:aphiaID1) %&gt;%
     filter(is.na(aphiaID))</code></pre>
-<pre><code>Source: local data frame [3 x 5]
+<pre><code>Source: local data frame [5 x 4]
 Groups: &lt;by row&gt;
 
-# A tibble: 3 x 5
-  base                         valid_name aphiaID valid_name1 aphiaID1
-  &lt;chr&gt;                        &lt;chr&gt;        &lt;int&gt; &lt;lgl&gt;       &lt;lgl&gt;   
-1 Gymnoammodytes semisquamatus &lt;NA&gt;            NA NA          NA      
-2 Themisto libellua            &lt;NA&gt;            NA NA          NA      
-3 Nereis peliagica             &lt;NA&gt;            NA NA          NA      </code></pre>
+# A tibble: 5 x 4
+  base                         valid_name aphiaID aphiaID1
+  &lt;chr&gt;                        &lt;chr&gt;        &lt;int&gt;    &lt;int&gt;
+1 Gymnoammodytes semisquamatus &lt;NA&gt;            NA       NA
+2 Gammaracanthus caspius       &lt;NA&gt;            NA   489919
+3 Themisto libellua            &lt;NA&gt;            NA       NA
+4 Ligia oceanica               &lt;NA&gt;            NA   146999
+5 Nereis peliagica             &lt;NA&gt;            NA       NA</code></pre>
 <pre class="r"><code>taxonomy_id %&gt;% select(base:aphiaID1) %&gt;%
     filter(aphiaID1 &lt; 0)</code></pre>
-<pre><code>Source: local data frame [0 x 5]
+<pre><code>Source: local data frame [10 x 4]
 Groups: &lt;by row&gt;
 
-# A tibble: 0 x 5
-# ... with 5 variables: base &lt;chr&gt;, valid_name &lt;chr&gt;, aphiaID &lt;int&gt;,
-#   valid_name1 &lt;lgl&gt;, aphiaID1 &lt;lgl&gt;</code></pre>
+# A tibble: 10 x 4
+   base                valid_name          aphiaID aphiaID1
+   &lt;chr&gt;               &lt;chr&gt;                 &lt;int&gt;    &lt;int&gt;
+ 1 Gobius niger        Gobius niger         126892     -999
+ 2 Coregonus           Coregonus            126139     -999
+ 3 Gammarus wilkitzkii Gammarus wilkitzkii  102297     -999
+ 4 Nephrops            Nephrops             106863     -999
+ 5 Caligus elongatus   Caligus coryphaenae  135748     -999
+ 6 Gonatus fabricii    Gonatus steenstrupi  140027     -999
+ 7 Illex illecebrosus  Illex coindetii      140621     -999
+ 8 Littorina saxatilis Littorina saxatilis  140264     -999
+ 9 Paphia              Atactodea            138173     -999
+10 Asterias rubens     Asterias rubens      123776     -999</code></pre>
+</div>
+</div>
 </div>
 <div id="try-composite-function-of-both-methods" class="section level3">
 <h3>try composite function of both methods</h3>
+<p>Try first with <code>worrms::wm_records_names(base)</code> and if it fails to return valid entry, try with <code>worrms::wm_name2id(base)</code>.</p>
 <pre class="r"><code>get_valid_taxon &lt;- function(base){
     qres &lt;- try(worrms::wm_records_names(base), silent = T)
     if(class(qres) == &quot;try-error&quot;) {
@@ -647,6 +745,8 @@ Groups: &lt;by row&gt;
 1 Gymnoammodytes semisquamatus &lt;NA&gt;            NA
 2 Themisto libellua            &lt;NA&gt;            NA
 3 Nereis peliagica             &lt;NA&gt;            NA</code></pre>
+<p>This does the best job</p>
+<p>These species can now be matched manually on the WoRMS website. Add this step to the taxonomic processing workflow.</p>
 <pre class="r"><code>na_worrms %&gt;% 
     select(base) %&gt;% 
     mutate(verified_base = NA) %&gt;%
@@ -654,6 +754,54 @@ Groups: &lt;by row&gt;
                                 paste0(format(Sys.time(), 
                                               &quot;%Y-%m-%d_&quot;),
                                        &quot;worrms_nomatches.csv&quot;)))</code></pre>
+</div>
+</div>
+<div id="validate-seabirddiet-taxonomic-info" class="section level2">
+<h2>Validate <code>seabirddiet</code> taxonomic info</h2>
+<div id="correct-mispelled-species" class="section level3">
+<h3>correct mispelled species</h3>
+<p>First, we also need to correct any mispelled species in <code>seabirddiet</code>.</p>
+</div>
+<div id="check-that-species-list-in-taxonomy-and-seabirddiet-match." class="section level3">
+<h3>check that species list in <code>taxonomy</code> and <code>seabirddiet</code> match.</h3>
+<pre class="r"><code>taxonomy &lt;- readr::read_csv(here::here(&quot;data&quot;, &quot;metadata&quot;, &quot;taxonomy.csv&quot;))
+
+
+taxo_correct &lt;- readr::read_csv(here::here(&quot;data-raw&quot;, &quot;worrms_nomatches_verified.csv&quot;))
+
+    taxo_recode &lt;- taxo_correct %&gt;% 
+        dplyr::pull(verified_base_name) %&gt;% 
+        setNames(taxo_correct$base_name)
+
+seabirddiet &lt;- readr::read_csv(
+    here::here(&quot;data-raw&quot;, 
+               &quot;Seabird Diets British Isles revised 20180620.csv&quot;)) %&gt;% 
+    janitor::clean_names() %&gt;%
+    bind_cols(ID =  1:nrow(.), .) %&gt;% 
+    mutate(species = plyr::revalue(prey_species, taxo_recode))</code></pre>
+<pre class="r"><code>dat_tax &lt;- seabirddiet %&gt;% left_join(
+    select(taxonomy, base_name:valid_aphiaID),
+           by = c(&quot;prey_species&quot; = &quot;base_name&quot;)) 
+dat_tax</code></pre>
+<pre><code># A tibble: 2,923 x 27
+      ID common_name  species   year  startyear endyear location  latitude
+   &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;     &lt;int&gt;   &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
+ 1     1 Atlantic pu… Ammodyti… 1961…      1961    1963 Farne Is…     55.6
+ 2     2 Atlantic pu… Clupeidae 1961…      1961    1963 Farne Is…     55.6
+ 3     3 Atlantic pu… Gasteros… 1961…      1961    1963 Farne Is…     55.6
+ 4     4 Atlantic pu… Trachini… 1961…      1961    1963 Farne Is…     55.6
+ 5     5 Atlantic pu… Nereidid… 1975       1975    1975 Farne Is…     55.6
+ 6     6 Atlantic pu… Ammodyti… 1975       1975    1975 Farne Is…     55.6
+ 7     7 Atlantic pu… Clupeidae 1983       1983    1983 East Ang…     52.5
+ 8     8 Atlantic pu… Ammodyti… 1983       1983    1983 East Ang…     52.5
+ 9     9 Atlantic pu… Polychae… 1983       1983    1983 East Ang…     52.5
+10    10 Atlantic pu… &lt;NA&gt;      1973       1973    1973 Isle of …     56.2
+# ... with 2,913 more rows, and 19 more variables: longitude &lt;dbl&gt;,
+#   breeding_status &lt;chr&gt;, age_group &lt;chr&gt;, prey_type &lt;chr&gt;,
+#   prey_species &lt;chr&gt;, fo_o &lt;dbl&gt;, num_freq &lt;dbl&gt;, freq_biomass &lt;chr&gt;,
+#   prey_size &lt;chr&gt;, sd &lt;chr&gt;, sample_size &lt;int&gt;, sample_type &lt;chr&gt;,
+#   source &lt;chr&gt;, reference &lt;chr&gt;, notes &lt;chr&gt;, base_rank &lt;chr&gt;,
+#   aphiaID &lt;int&gt;, valid_name &lt;chr&gt;, valid_aphiaID &lt;int&gt;</code></pre>
 </div>
 </div>
 <div id="session-information" class="section level2">
@@ -674,23 +822,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] bindrcpp_0.2.2 dplyr_0.7.5   
+[1] bindrcpp_0.2.2 dplyr_0.7.6   
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.17      compiler_3.4.4    pillar_1.2.1     
- [4] git2r_0.21.0      workflowr_1.0.1   bindr_0.1.1      
- [7] R.methodsS3_1.7.1 R.utils_2.6.0     tools_3.4.4      
-[10] digest_0.6.15     jsonlite_1.5      evaluate_0.10.1  
-[13] tibble_1.4.2      pkgconfig_2.0.1   rlang_0.2.1      
-[16] cli_1.0.0         crul_0.4.0        curl_3.2         
-[19] yaml_2.1.18       stringr_1.3.1     knitr_1.20       
-[22] worrms_0.2.0      hms_0.4.0         triebeard_0.3.0  
-[25] rprojroot_1.3-2   tidyselect_0.2.4  glue_1.2.0.9000  
-[28] here_0.1          R6_2.2.2          rmarkdown_1.9    
-[31] purrr_0.2.5       readr_1.1.1       magrittr_1.5     
-[34] whisker_0.3-2     backports_1.1.2   urltools_1.6.0   
-[37] htmltools_0.3.6   assertthat_0.2.0  utf8_1.1.3       
-[40] stringi_1.2.2     crayon_1.3.4      R.oo_1.21.0      </code></pre>
+ [1] Rcpp_0.12.17      plyr_1.8.4        compiler_3.4.4   
+ [4] pillar_1.2.1      git2r_0.21.0      workflowr_1.0.1  
+ [7] bindr_0.1.1       R.methodsS3_1.7.1 R.utils_2.6.0    
+[10] tools_3.4.4       digest_0.6.15     lubridate_1.7.4  
+[13] jsonlite_1.5      evaluate_0.10.1   tibble_1.4.2     
+[16] pkgconfig_2.0.1   rlang_0.2.1       cli_1.0.0        
+[19] crul_0.5.2        curl_3.2          yaml_2.1.19      
+[22] emo_0.0.0.9000    janitor_1.0.0     stringr_1.3.1    
+[25] knitr_1.20        worrms_0.2.0      hms_0.4.0        
+[28] triebeard_0.3.0   rprojroot_1.3-2   tidyselect_0.2.4 
+[31] snakecase_0.9.1   glue_1.2.0.9000   here_0.1         
+[34] R6_2.2.2          rmarkdown_1.9     purrr_0.2.5      
+[37] readr_1.1.1       magrittr_1.5      whisker_0.3-2    
+[40] backports_1.1.2   urltools_1.7.0    htmltools_0.3.6  
+[43] assertthat_0.2.0  utf8_1.1.3        stringi_1.2.2    
+[46] crayon_1.3.4      R.oo_1.21.0      </code></pre>
+</div>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
