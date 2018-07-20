@@ -31,7 +31,9 @@ Goals
 -   \[ \] shiny app for data exploration
 -   \[ \] r data package?
 
-<!-- -->
+------------------------------------------------------------------------
+
+### Repo contents
 
     .
     ├── DESCRIPTION

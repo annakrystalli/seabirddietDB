@@ -43,6 +43,10 @@ The goal of seabirdPrey is to ...
 - [ ] r data package?
 
 
+***
+
+### Repo contents
+
 ```
 .
 ├── DESCRIPTION
@@ -142,4 +146,5 @@ The goal of seabirdPrey is to ...
     └── testthat.R
 
 ```
+
 
