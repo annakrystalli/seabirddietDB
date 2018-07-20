@@ -7,4 +7,5 @@ data-raw/*
 !data-raw/*.R
 *_cache
 !data/metadata/
+!data-raw/joins/
 code
