@@ -11,6 +11,8 @@ navbar:
       href: about.html
     - text: "taxonomic processing"
       href: taxonomic_processing.html
+    - text: "reference processing"
+      href: reference_processing.html
     - text: "License"
       href: license.html
   right:
