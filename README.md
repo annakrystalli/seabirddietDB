@@ -69,6 +69,7 @@ Goals
     │   └── from_tom
     ├── data
     │   ├── metadata -> metadata files used to create eml
+    │   │   ├── abstract.txt
     │   │   ├── access.csv
     │   │   ├── attributes.csv
     │   │   ├── biblio.csv
