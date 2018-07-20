@@ -27,8 +27,11 @@ Imports:
     glue,
     purrr,
     assertr,
-    stringr
+    stringr,
+    sf,
+    eml2
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
-Remotes: 
-    ropensci/rcrossref
+Remotes:  
+    ropensci/rcrossref,
+    cboettig/eml2
