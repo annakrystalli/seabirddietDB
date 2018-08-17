@@ -1,5 +1,4 @@
 library(dplyr)
-source(here::here("R", "taxonomy.R"))
 
 ## read-in-raw-prey-taxonomy ----
 taxonomy_raw <- readr::read_tsv(here::here("data-raw", "taxonomy.tsv")) %>%
@@ -50,4 +49,4 @@ taxonomy_pred <- taxonomy_raw %>%
 ## combine-prey-pred-taxonomy-write_out    
 taxonomy_prey %>% 
     bind_rows(taxonomy_pred) %>%
-    readr::write_csv(here::here("data", "metadata", "taxonomy.csv"))
+    readr::write_csv(here::here("data-raw", "metadata", "taxonomy.csv"))
