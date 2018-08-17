@@ -24,3 +24,32 @@ yr_to_isorange <- function(x, type = c("both", "start", "end")){
         "end" = range["end"])
         )
 }
+
+
+#' Extract creators to list format
+#'
+#' Function to be applied to the `creators_df` to exctract tabular information 
+#' into creators format. 
+#' @param x a row in the `creators_df` data.frame 
+#' (read from `data-raw/metadata/creators.csv``)
+#'
+#' @return an eml creator list element
+#' @export
+extr_creator <- function(x){   
+    eml_address <- eml$address(
+        deliveryPoint =  x["address"],
+        administrativeArea = "Scotland",
+        country = "UK")
+    
+    eml2::eml$creator(
+        individualName = eml2::eml$individualName(
+            givenName = x["givenName"],
+            surName = x["familyName"]),
+        electronicMailAddress = x["email"],
+        userId = eml2::eml$userId( 
+            directory = "http://orcid.org/"),
+        id = x["ORCID-ID"],
+        address = eml_address,
+        organizationName = x["affilitation"]
+        )
+}
