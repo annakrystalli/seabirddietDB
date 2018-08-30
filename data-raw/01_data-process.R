@@ -49,7 +49,8 @@ seabirddiet <- seabirddiet_raw %>%
 
 #source(here::here("data-raw", "01c_process_references.R"))
 
-ref_join <- readr::read_csv(here::here("data-raw", "joins", "ref_join.csv"))
+ref_join <- readr::read_csv(here::here("data-raw", "joins", "ref_join.csv")) %>% 
+    assertr::assert(assertr::is_uniq, reference)
 taxonomy <- readr::read_csv(here::here("data-raw", "metadata", "taxonomy.csv")) %>%
     janitor::clean_names() %>% 
     assertr::assert(assertr::is_uniq, base_name) 
