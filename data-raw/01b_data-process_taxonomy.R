@@ -9,7 +9,8 @@ taxonomy_prey <- taxonomy_raw %>%
     recode_spp_manual() %>%
     get_row_base() %>% 
     worrms_validate() %>% 
-    mutate(role = "prey")
+    mutate(role = "prey") %>%
+    distinct()
 
 ## read-in--pred-species ----
 pred_spp <- readr::read_csv(
