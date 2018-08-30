@@ -6,6 +6,8 @@
 data-raw/*
 !data-raw/*.R
 *_cache
-!data/metadata/
+!data-raw/metadata/
 !data-raw/joins/
+!data-raw/worrms_nomatches_verified.csv
+data-raw/metadata/*.txt
 code
