@@ -39,7 +39,7 @@ worrms_validate <- function(taxonomy){
 #'
 #' @return the data.frame supplied with the species names recoded
 #' @export
-recode_spp_manual <- function(df, path = here::here("data-raw", 
+recode_spp_manual <- function(df, path = here::here("data-raw", "manual_corrections",
                                                     "worrms_nomatches_verified.csv"), 
                               df_type = c("taxonomy", "data")){
     

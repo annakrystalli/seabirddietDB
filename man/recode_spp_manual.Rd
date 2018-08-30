@@ -4,7 +4,7 @@
 \alias{recode_spp_manual}
 \title{Recode species with manual corrections table}
 \usage{
-recode_spp_manual(df, path = here::here("data-raw",
+recode_spp_manual(df, path = here::here("data-raw", "manual_corrections",
   "worrms_nomatches_verified.csv"), df_type = c("taxonomy", "data"))
 }
 \arguments{
