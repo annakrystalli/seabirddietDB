@@ -3,11 +3,8 @@
 .RData
 .Ruserdata
 *.DS_Store
-data-raw/*
-!data-raw/*.R
 *_cache
-!data-raw/metadata/
-!data-raw/joins/
-!data-raw/worrms_nomatches_verified.csv
 data-raw/metadata/*.txt
+data-raw/from_*
+data-raw/refs.bib
 code
