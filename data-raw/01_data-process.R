@@ -67,7 +67,8 @@ seabirddiet <- seabirddiet %>%
                   setNames(paste0('pred_', names(.))), 
               by = c("species" = "pred_base_name")) %>%
     left_join(ref_join, by = "reference") %>% 
-    select(-reference) 
+    select(-reference)  %>%
+    assertr::verify(nrow(.) == nrow(seabirddiet_raw))
 
 # rename-vars ----
 # create manual recode table
