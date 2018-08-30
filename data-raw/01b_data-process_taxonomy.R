@@ -50,4 +50,5 @@ taxonomy_pred <- taxonomy_raw %>%
 ## combine-prey-pred-taxonomy-write_out    
 taxonomy_prey %>% 
     bind_rows(taxonomy_pred) %>%
+    assertr::assert(assertr::is_uniq, base_name) %>%
     readr::write_csv(here::here("data-raw", "metadata", "taxonomy.csv"))

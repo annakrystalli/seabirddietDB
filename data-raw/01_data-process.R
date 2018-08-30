@@ -3,7 +3,7 @@ library(seabirdPrey)
 library(dplyr)
 
 # read-data ----
-seabirddiet <- readr::read_csv(
+seabirddiet_raw <- readr::read_csv(
     here::here("data-raw", 
                "Seabird Diets British Isles revised 20180620.csv")) %>% 
     janitor::clean_names() %>%
@@ -11,7 +11,7 @@ seabirddiet <- readr::read_csv(
 
 
 # clean-prey-type ----
-seabirddiet <- seabirddiet %>% 
+seabirddiet <- seabirddiet_raw %>% 
     # fill missing prey type entries found in prey species
     mutate(prey_type = 
                case_when(
@@ -21,13 +21,15 @@ seabirddiet <- seabirddiet %>%
            # clean prey type
            prey_type = stringr::str_to_lower(prey_type),
            prey_type = stringr::str_replace(prey_type, "o group", "0 group"),
+           prey_type = stringr::str_replace(prey_type, "o-group", "0 group"),
            # clean prey_species to remove
            prey_species = dplyr::recode(prey_species,
                                         `0 Group Sandeel` = "Ammodytidae",
                                         `1+ Group Sandeel` = "Ammodytidae",
                                         `Sandeel 0 Group` = "Ammodytidae",
                                         `Sandeel 1+ Group` = "Ammodytidae",
-                                        others = "other"),
+                                        others = "other",
+                                        Other = "other"),
            # fill in NAs
            prey_species = 
                case_when(is.na(prey_species) & 
@@ -37,6 +39,7 @@ seabirddiet <- seabirddiet %>%
                          is.na(prey_species) & 
                          stringr::str_detect(prey_type, "other") ~ "Others",
                          TRUE ~ prey_species),
+           
            # fill prey_age_group column
            prey_age_group = 
                case_when(stringr::str_detect(prey_type, "0") ~ "0",
@@ -48,13 +51,14 @@ seabirddiet <- seabirddiet %>%
 
 ref_join <- readr::read_csv(here::here("data-raw", "joins", "ref_join.csv"))
 taxonomy <- readr::read_csv(here::here("data-raw", "metadata", "taxonomy.csv")) %>%
-    janitor::clean_names()
+    janitor::clean_names() %>% 
+    assertr::assert(assertr::is_uniq, base_name) 
 
 
 # join-taxo-ref ----
 seabirddiet <- seabirddiet %>% 
     left_join(taxonomy %>% 
-                  select(base_name, aphia_id:valid_aphia_id) %>% 
+                  select(base_name, base_rank, aphia_id:valid_aphia_id) %>% 
                   setNames(paste0('prey_', names(.))), 
               by = c("prey_species" = "prey_base_name")) %>% 
     left_join(taxonomy %>% 
