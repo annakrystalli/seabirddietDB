@@ -2,15 +2,19 @@
 title: "Data validation"
 author: "Anna Krystalli"
 date: "29/06/2018"
-runtime: shiny
 output: html_document
 ---
 
+
+
+```{r, echo = F}
+knitr::opts_chunk$set(message =  F)
+```
 ```{r}
 library(dplyr)
 ```
 
-
+# Load data
 
 ```{r}
 seabirddiet <- readr::read_csv(here::here("output", "seabirddiet.csv"))
@@ -20,37 +24,68 @@ seabirddiet <- readr::read_csv(here::here("output", "seabirddiet.csv"))
 names(seabirddiet)
 ```
 
-## check for duplicate species records
+# Check for duplicate prey taxon data points
 
-Check for duplicate entries in the following variable combination:
+Check for duplicate entries in the combination following variables. It is my impression that there should be only one datapoint for each unique combination of the following variables:
 
-- startyear,  
-- endyear,  
-- location,  
-- pred_species,  
-- prey_taxon,  
-- pred_breeding_status,  
-- pred_age_group,  
-- prey_age_group,  
-- ref_ids 
-- sample_size 
+- `startyear`,  
+- `endyear`,  
+- `location`,  
+- `pred_species`,  
+- `prey_taxon`,  
+- `pred_breeding_status`,  
+- `pred_age_group`,  
+- `prey_age_group`,  
+- `ref_ids`, 
+- `sample_size` 
+
+```{r get_dupe_ids-function, echo=FALSE}
+get_dupe_id <- function(x){
+    dupe_i <- x$dupe_count
+    i <- 1
+    state <- 0
+    dupe_ids <- NULL 
+    
+    while(i < nrow(x)){
+        dupe_ids <- c(dupe_ids, rep(state, dupe_i[i]))
+        state <- (state + 1) %% 2
+        i <- i + dupe_i[i]
+    }
+    dupe_ids
+}
+
+```
 
 ```{r}
 dupes <- seabirddiet %>% 
     # identify duplicates
     janitor::get_dupes(startyear, endyear, location, pred_species, prey_taxon, pred_breeding_status, pred_age_group, 
                        prey_age_group, ref_ids, sample_size) %>% 
+    mutate(dupe_ids = get_dupe_id(.)) %>%
     # reorder table for easier visual examination
     select(ref_ids, dupe_count, startyear, endyear, location, pred_valid_name, prey_taxon, freq_occ, sample_size, pred_age_group,  prey_age_group, everything()) 
 ```
 
-### all dupes
+## all dupes
 
-```{r}
-dupes %>% DT::datatable()
+```{r, echo = F}
+dupes %>% 
+    mutate(comments = "") %>% select(comments, everything()) %>%
+    seabirdPrey::mn_edit_df() %>%
+    DT::formatStyle(
+        'dupe_ids',
+        target = 'row',
+        backgroundColor = DT::styleEqual(c(0, 1), c('lightgray', 'white'))
+    ) %>% 
+    DT::formatStyle(
+        "comments",
+        backgroundColor =  "pink")
+
 ```
 
-### REF067 (Snow 1960 Ibis 102, 554-575)
+<br>
+
+## REF067 (Snow 1960 Ibis 102, 554-575)
 
 <https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1474-919X.1960.tb07132.x>
 
@@ -58,10 +93,15 @@ dupes %>% DT::datatable()
 dupes %>% slice(1:2) %>% DT::datatable()
 ```
 
+
+
+
+
 Looking at the original source below, it seems that the `prey_taxon` for `freq_occ` entry of 0.037 _(1/27 = `r 1/27`)_ should be **crustacea** rather than Ammodytidae.
 
 ![](assets/ref067.png)
 
+<br>
 
 ### REF048 (Mills 1969 Scottish Birds 5,264-268)
 
@@ -98,49 +138,103 @@ dupes %>% slice(5:6) %>%
     mutate(no_orig = freq_occ * sample_size)
 ```
 
+## REF030 ([Harris & Wanless 1986 Ornis Scand 17, 41-46](https://www.jstor.org/stable/3676751?seq=2#metadata_info_tab_contents))
 
 
-
-## `prey_orig_descr` validation
-
-I've noticed a number of odd matches of the values in `prey_taxon` to the values in `prey_orig_descr`. `prey_orig_descr` was `Prey.type` in the original dataset, defined as the "terms used by the study" and I'm using `prey_taxon` instead of `Prey.species` as it seems more appropriate given prey is not consistently identified to species level. I'm a little confused by some of the current matches (see below).
-
-- Q1: Am I misunderstanding what `prey_orig_descr` (ie `Prey.type`) represents? 
-- Q2: If it is not directly related to `prey_taxon` (ie `prey_taxon` is the more accurate taxonomic descriptor) and given the messiness of it as a variable anyways, I am wondering what it is adding and whether we should just remove it?
+For this publication, 3 separate values are given for _Ammodytidae_ with no other distinguishing features between the data points. Looking at the orginal data, I can tie one row with value for **`freq_occ` = 0.96** but really struggling to 
 
 ```{r}
+dupes %>% slice(7:9) %>% DT::datatable()
+```
+
+
+![](assets/ref030.png)
+
+<br>
+
+***
+
+# validation of `prey_taxon` from `prey_orig_descr` 
+
+I've noticed a number of odd matches of the values in `prey_taxon` to the values in `prey_orig_descr`. `prey_orig_descr` was `Prey.type` in the original dataset, defined as the **"terms used by the study"** and I'm using `prey_taxon` instead of `Prey.species` as it seems more appropriate given prey is not consistently identified to species level. I'm a little confused by some of the current matches (see below).
+
+Here is a table of all the unique combinations of variables `prey_taxon` and `prey_orig_descr` where `prey_taxon` corresponds to more than a single `prey_orig_descr`. I suggest you have a browse through yourselves to get a feel for some of the inconsistencies. 
+
+```{r get_ref-function, echo = F}
+
+conc_col_values <- function(x, colname = "ref_ids"){
+    get_row <- function(x){
+        seabirddiet[seabirddiet$prey_orig_descr == x["prey_orig_descr"] & 
+                        seabirddiet$prey_taxon == x["prey_taxon"], 
+                    c(colname), drop = T] %>% 
+            unique() %>% na.omit() %>%
+            paste0(collapse = " - ")
+    }
+    x %>% apply(1, FUN = get_row)
+}
+
+tabulate_suspect <- function(df) {  
+    df %>%
+        mutate(suspect = 0,
+               new_prey_orig_descr = prey_orig_descr, 
+               new_prey_taxon = prey_taxon,
+               dupe_ids = get_dupe_id(.)) %>%
+        select(id, suspect, new_prey_orig_descr, new_prey_taxon, dupe_ids) %>%
+        seabirdPrey::mn_edit_df() %>% 
+        DT::formatStyle(
+            'dupe_ids',
+            target = 'row',
+            backgroundColor = DT::styleEqual(c(0, 1), c('lightgray', 'white')),
+            fontWeight = DT::styleEqual(c(0, 1), c('bold', 'normal'))
+        ) %>% 
+        DT::formatStyle(
+            c("suspect", "new_prey_orig_descr", "new_prey_taxon"),
+            backgroundColor =  "pink")
+}
+
+```
+
+```{r, echo = FALSE}
+
 prey_taxon_qa <- seabirddiet %>% 
     filter(!is.na(prey_orig_descr)) %>%
-    select(prey_orig_descr, prey_taxon, prey_valid_name, 
-           prey_valid_aphia_id, prey_age_group) %>% 
+    select(prey_orig_descr, prey_taxon) %>% 
     distinct() %>% 
     arrange(prey_taxon) %>%
-    mutate(sub_id = 1:nrow(.)) %>%
-    select(sub_id, everything())
-    
+    mutate(id = conc_col_values(., colname = "id"),
+           ref = conc_col_values(.)) %>%
+    select(prey_taxon, everything()) %>% 
+    janitor::get_dupes(prey_orig_descr)
 ```
 
-Here is a table of all the current unique combinations of variables `prey_taxon` and `prey_orig_descr`, with additional taxonomic information validated through WoRMS. I suggest you have a browse through yourselves to get a feel for some of the inconsistencies. This table is editable but please don't edit `prey_taxon` and `prey_orig_descr` directly. Instead use columns `new_prey_orig_descr` and `new_prey_taxon` respectively to make edits that will be applied later programmatically. Or you can just mark a row as `suspect` by overwriting the **0** with a **1**. 
 
-Further down I've also pulled out some specific inconsistencies. You can use `sub_id` to locate them in this editable table and correct them or mark them as suspect if required.
-
-
-
-```{r}
+```{r, echo = FALSE}
 
 prey_taxon_qa %>%
-    mutate(suspect = 0,
-        new_prey_orig_descr = prey_orig_descr, 
-           new_prey_taxon = prey_taxon) %>%
-    seabirdPrey::mn_edit_df()
+    tabulate_suspect()
+
 ```
+
+
+- Q1: Am I misunderstanding what `prey_orig_descr` (ie `Prey.type`) represents? 
+
+- Q2: If it is not directly related to `prey_taxon` (ie `prey_taxon` is the more accurate taxonomic descriptor) and given the messiness of it as a variable anyways, I am wondering what it is adding and whether we should just remove it?
+
+
+This table is editable but please don't edit `prey_taxon` and `prey_orig_descr` directly. Instead use columns `new_prey_orig_descr` and `new_prey_taxon` respectively to make edits that will be applied later programmatically. Or you can just mark a row as ***suspect** by overwriting the **0** with a **1** in the `suspect`. Once you are finished, **export the table to csv** using an informative name and send it over to me. You can of course just export the table as is and work with it in your prefered editor (ie excel). Beware that if you refresh the page, all your edits will be lost.
+
+Further down I've also pulled out some specific inconsistencies. You can use the `sub_id` to locate them in this editable table and correct them or mark them as suspect if required.
+
+
 
 ### sandeels
 
 While most seem ok, there are a number of entries where the same `prey_orig_descr` is matched to different `prey_taxon`
 
+
 ```{r}
-prey_taxon_qa %>% filter(stringr::str_detect(prey_orig_descr, "sandeel")) %>% knitr::kable()
+prey_taxon_qa %>% filter(stringr::str_detect(prey_orig_descr, "sandeel")) %>% 
+    knitr::kable()
 ```
 
 I'll highlight especially the row where it 
@@ -157,42 +251,10 @@ seabirddiet %>% filter(stringr::str_detect(prey_orig_descr, "sandeel"), prey_val
 
 
 ```{r}
-prey_taxon_qa %>% filter(prey_orig_descr %in% c("clupeidae", "clupeidea"))
+prey_taxon_qa %>% filter(prey_orig_descr %in% c("clupeidae", "clupeidea")) %>% 
+    knitr::kable()
 ```
 
-
-
-```{r}
-find_suspect_preytype_ref <- function(seabirddiet){
-    
-    library(shiny)
-    library(dplyr)
-    
-    shinyApp(
-        ui = fluidPage(
-            fluidRow(
-                column(4, textInput("prey_orig_descr", label = h3(code("prey_orig_descr")), value = "sandeel")),
-                column(4, textInput("prey_taxon", label = h3(code("prey_taxon")), value = "Arthropoda"))),
-            fluidRow(tableOutput("table"))),
-        
-        server = function(input, output, session) {
-            output$table <- renderTable({ 
-                seabirddiet[seabirddiet$prey_orig_descr == input$prey_orig_descr & 
-                                seabirddiet$prey_valid_name == input$prey_taxon, 
-                            c("prey_orig_descr", "prey_taxon", "id", "ref_ids")]})
-            
-        })
-}
-```
-
-```{r, eval = T}
-find_suspect_preytype_ref(seabirddiet)
-```
-
-```{r, eval = F}
-                seabirddiet %>% filter(prey_orig_descr == input$prey_orig_descr, 
-                                       prey_valid_name == input$prey_taxon)
-```
 
 
 
