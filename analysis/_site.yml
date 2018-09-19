@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "data validation"
+      href: data-validation.html
     - text: "taxonomic processing"
       href: taxonomic_processing.html
     - text: "reference processing"
