@@ -68,6 +68,8 @@ dupes <- seabirddiet %>%
 
 ## all dupes
 
+Here is a table of all the duplicates flagged for the combination described above.
+
 ```{r, echo = F}
 dupes %>% 
     mutate(comments = "") %>% select(comments, everything()) %>%
@@ -82,6 +84,12 @@ dupes %>%
         backgroundColor =  "pink")
 
 ```
+
+
+This table is editable. It would be great if you could review and if there are comments about datapoints you want to flag, please just edit the highlighted `comments` column. Once you are finished, **export the table to csv** using an informative name and send it over to me. You can of course just export the table as is and work with it in your prefered editor (ie excel). Beware that if you refresh the page, all your edits will be lost.
+
+
+I've pulled a few examples to discuss
 
 <br>
 
@@ -113,7 +121,9 @@ Looking at the original source below, it seems that the `prey_taxon` for `freq_o
 dupes %>% slice(3:4) %>% DT::datatable()
 ```
 
-Looking at the original source table really can't figure out what these duplicate entries are refering to. Using `freq_occ` in our data that would equate to the following percentages:
+Looking at the original source table really can't figure out what these duplicate entries are refering to. Using `freq_occ` in our data that would equate to the following percentages: 
+
+Note also that although the table lists data for 62 stomachs, in the data set the sample size is 79, which in the papaer in listed as the total number of stomachs examined including empty ones.
 ```{r}
 dupes %>% slice(3:4) %>% 
     select(prey_taxon, freq_occ, sample_size) %>%
@@ -152,13 +162,26 @@ dupes %>% slice(7:9) %>% DT::datatable()
 
 <br>
 
+
+Please use issue [#16](https://github.com/annakrystalli/seabirdPrey/issues/16) to discuss
+
+
 ***
 
-# validation of `prey_taxon` from `prey_orig_descr` 
+# validation of `prey_taxon` 
+#### (esp in relation to `prey_orig_descr`)
 
-I've noticed a number of odd matches of the values in `prey_taxon` to the values in `prey_orig_descr`. `prey_orig_descr` was `Prey.type` in the original dataset, defined as the **"terms used by the study"** and I'm using `prey_taxon` instead of `Prey.species` as it seems more appropriate given prey is not consistently identified to species level. I'm a little confused by some of the current matches (see below).
+I've noticed multiple matches values in `prey_taxon` to individual values in `prey_orig_descr`. `prey_orig_descr` was `Prey.type` in the original dataset, defined as the **"terms used by the study"** and I'm using `prey_taxon` instead of `Prey.species` as it seems more appropriate given prey is not consistently identified to species level. I'm a little confused by some of the current matches (see below).
 
-Here is a table of all the unique combinations of variables `prey_taxon` and `prey_orig_descr` where `prey_taxon` corresponds to more than a single `prey_orig_descr`. I suggest you have a browse through yourselves to get a feel for some of the inconsistencies. 
+Here is a table of all the unique combinations of variables `prey_taxon` and `prey_orig_descr` where `prey_taxon` corresponds to more than a single `prey_orig_descr`. I suggest you have a browse through yourselves to get a feel for them. 
+
+
+- Q1: Am I misunderstanding what `prey_orig_descr` (ie `Prey.type`) represents? 
+
+- Q2: If it is not directly related to `prey_taxon` (ie `prey_taxon` is the more accurate taxonomic descriptor) and given the messiness of it as a variable anyways, I am wondering what it is adding and whether we should just remove it?
+
+
+Is there anything that looks amiss. Tom said that species or lower taxa might also be inferred?
 
 ```{r get_ref-function, echo = F}
 
@@ -216,28 +239,11 @@ prey_taxon_qa %>%
 ```
 
 
-- Q1: Am I misunderstanding what `prey_orig_descr` (ie `Prey.type`) represents? 
-
-- Q2: If it is not directly related to `prey_taxon` (ie `prey_taxon` is the more accurate taxonomic descriptor) and given the messiness of it as a variable anyways, I am wondering what it is adding and whether we should just remove it?
 
 
-This table is editable but please don't edit `prey_taxon` and `prey_orig_descr` directly. Instead use columns `new_prey_orig_descr` and `new_prey_taxon` respectively to make edits that will be applied later programmatically. Or you can just mark a row as ***suspect** by overwriting the **0** with a **1** in the `suspect`. Once you are finished, **export the table to csv** using an informative name and send it over to me. You can of course just export the table as is and work with it in your prefered editor (ie excel). Beware that if you refresh the page, all your edits will be lost.
+This table is editable. Use columns `new_prey_orig_descr` and `new_prey_taxon` respectively to make edits that will be applied later programmatically. Or you can just mark a row as ***suspect** by overwriting the **0** with a **1** in the `suspect`. Once you are finished, **export the table to csv** using an informative name and send it over to me. You can of course just export the table as is and work with it in your prefered editor (ie excel). Beware that if you refresh the page, all your edits will be lost.
 
-Further down I've also pulled out some specific inconsistencies. You can use the `sub_id` to locate them in this editable table and correct them or mark them as suspect if required.
-
-
-
-### sandeels
-
-While most seem ok, there are a number of entries where the same `prey_orig_descr` is matched to different `prey_taxon`
-
-
-```{r}
-prey_taxon_qa %>% filter(stringr::str_detect(prey_orig_descr, "sandeel")) %>% 
-    knitr::kable()
-```
-
-I'll highlight especially the row where it 
+I'll note one row where there's probably an error. 
 
 ```{r}
 seabirddiet %>% filter(stringr::str_detect(prey_orig_descr, "sandeel"), prey_valid_name == "Arthropoda") %>%
@@ -247,20 +253,28 @@ seabirddiet %>% filter(stringr::str_detect(prey_orig_descr, "sandeel"), prey_val
 ```
 
 
-### clupeidea
+Please use issue [#17](https://github.com/annakrystalli/seabirdPrey/issues/17) to discuss
 
+
+# `prey_size`
 
 ```{r}
-prey_taxon_qa %>% filter(prey_orig_descr %in% c("clupeidae", "clupeidea")) %>% 
-    knitr::kable()
+seabirddiet %>% select(prey_size) %>% filter(!is.na(prey_size)) %>% pull() %>% sort
 ```
+
+
+
+To be usable numerically and to convert to a single coulmn, this column would need some pretty intense parsing and multiple columns. For the mere 100 or so data points, I don't feel it's worth it.
+
+I suggest keeping it, but just as a textual description. Please use issue [#18](https://github.com/annakrystalli/seabirdPrey/issues/18) to discuss
+
 
 
 
 
 # APPENDIX
 
-Useful information tables
+Useful information tables 
 
 ## variable recoding
 
