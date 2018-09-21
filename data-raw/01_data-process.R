@@ -74,12 +74,19 @@ seabirddiet <- seabirddiet %>%
 # create manual recode table
 # mn_recode_tbl(tibble(names = names(seabirddiet)), names)
 mn_names <- readr::read_csv(
-    here::here("data-raw", "validation",
+    here::here("data-raw", "manual_corrections",
                "mn_seabirddiet_rename.csv")) 
 seabirddiet <- seabirddiet %>% rename_at(vars(mn_names$names), ~ mn_names$rename)
 
 
-
+# clean-mutate-ind ----
+seabirddiet <- seabirddiet %>%
+    mutate(
+        # freq-biomass
+        freq_biomass = stringr::str_extract(freq_biomass, "\\d+\\.*\\d*") %>%
+            as.numeric(),
+        # prey_size
+        prey_size = stringr::str_replace(prey_size, "\xf1", "+/-"))
 
 
 # clean-factors
