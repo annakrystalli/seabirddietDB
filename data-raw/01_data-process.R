@@ -84,7 +84,7 @@ seabirddiet <- seabirddiet %>% rename_at(vars(mn_names$names), ~ mn_names$rename
 
 # clean-factors
 factor_vars <- c("pred_breeding_status", "pred_age_group", "prey_age_group",
-                 "source", "sample_type")
+                 "source", "sample_type", "prey_base_rank")
 seabirddiet <- seabirddiet %>%
     mutate_at(factor_vars, stringr::str_to_lower) 
 
