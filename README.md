@@ -9,19 +9,19 @@ Goals
 -----
 
 -   \[x\] assess data
-    -   \[ \] raise issues
-    -   \[ \] report on data characteristics
+    -   \[x\] raise issues
+    -   \[x\] report on data characteristics
     -   \[ \]
 -   \[ \] Validate data
     -   \[ \] compose validation tests
 -   \[ \] create metadata
     -   \[x\] taxonomic
     -   \[x\] references
-    -   \[ \] attributes
+    -   \[x\] attributes
     -   \[x\] creators
-    -   \[ \] bibliography
-    -   \[ \] method
-    -   \[ \] abstract
+    -   \[x\] bibliography
+    -   \[x\] method
+    -   \[xx\] abstract
 -   \[ \] create EML (`eml2`)
     -   \[ \] create `eml`
     -   \[ \] create webpage with `emldown`
