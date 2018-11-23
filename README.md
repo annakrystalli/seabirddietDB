@@ -68,15 +68,6 @@ Goals
     │   │   └── bird_data_workflow.R
     │   └── from_tom
     ├── data
-    │   ├── metadata -> metadata files used to create eml
-    │   │   ├── abstract.txt
-    │   │   ├── access.csv
-    │   │   ├── attributes.csv
-    │   │   ├── biblio.csv
-    │   │   ├── creators.csv
-    │   │   ├── methods.txt
-    │   │   ├── references.csv
-    │   │   └── taxonomy.csv
     │   └── seabirddiet.rda -> final data set in .rda format (package dataset)
     ├── data-raw -> processing scripts
     │   ├── 01_data-process.R
@@ -85,6 +76,15 @@ Goals
     │   ├── 02_create_metadata.R
     │   ├── 03_save_data.R
     │   ├── 04_eml.R
+    |   │   ├── metadata -> metadata files used to create eml
+    │   │   ├── abstract.txt
+    │   │   ├── access.csv
+    │   │   ├── attributes.csv
+    │   │   ├── biblio.csv
+    │   │   ├── creators.csv
+    │   │   ├── methods.txt
+    │   │   ├── references.csv
+    │   │   └── taxonomy.csv
     │   ├── Seabird Diets British Isles revised 20180620.csv
     │   ├── from_ruedi -> data from Ruedi
     │   │   ├── Seabird Diet Database Documentation.docx
