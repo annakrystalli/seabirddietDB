@@ -3,11 +3,13 @@ library(seabirdPrey)
 library(dplyr)
 
 # read-data ----
-seabirddiet_raw <- readr::read_csv(
-    here::here("data-raw", 
-               "Seabird Diets British Isles revised 20180620.csv")) %>% 
+seabirddiet_raw <- readxl::read_excel(here::here("data-raw", 
+                                                 "Seabird Diets British Isles revised 20180524.xlsx"),
+                                      guess_max = Inf) %>% 
     janitor::clean_names() %>%
     bind_cols(id =  1:nrow(.), .) 
+
+
 
 
 # clean-prey-type ----
