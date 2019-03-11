@@ -29,9 +29,9 @@ Imports:
     assertr,
     stringr,
     sf,
-    eml2
+    EML
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
-Remotes:  
+Remotes: 
     ropensci/rcrossref,
-    cboettig/eml2
+    ropensci/EML
