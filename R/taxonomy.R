@@ -1,7 +1,8 @@
 #' Get row taxonomic base
 #'
 #' Get the taxonomic base of each row in the original `taxonomy.tsv`.
-#' @param taxonomy 
+#'
+#' @param taxonomy taxonomy data.frame
 #'
 #' @return the data.frame supplied with a column containing the taxonomic base
 #' of each row appended.
@@ -13,21 +14,27 @@ get_row_base <- function(taxonomy){
             result = dplyr::as_data_frame(.)
             result$base_name = get_tx_base_name(.) %>% unlist
             result$base_rank = get_tx_base_rank(., ranks = names(.)) %>% unlist
-            result}) 
+            result}) %>%
+        bind_rows() %>% 
+        dplyr::select(dplyr::starts_with("base"))
 }
 
 #' Validate species in taxonomy against WoRMS database
 #'
-#' @param taxonomy 
+#' @param names vector of names to check
 #'
 #' @return the data.frame with the `aphia_id`, the valid aphia id and valid 
 #' name returned for the queried for the original species name
 #' @export
 #'
-worrms_validate <- function(taxonomy){
-    taxonomy %>% 
-        do(get_valid_taxon(.$base_name)) %>% 
-        bind_cols(taxonomy, .)
+worrms_validate <- function(names){
+    names %>%
+        unique() %>%
+        magrittr::extract(. != "other") %>%
+            purrr::map_df(~get_valid_taxon(.x)) %>%
+        dplyr::as_tibble()
+    
+       # do(get_valid_taxon(.[[name_col]]))
 }
 
 #' Recode species with manual corrections table
@@ -65,7 +72,8 @@ get_tx_base_rank <- function(x, ranks = names(taxonomy)){
     ranks[which(x == tail(na.omit(unlist(x)), 1))]
 }
 get_valid_taxon <- function(base_name){
-    out <- data.frame(aphiaID = NA, valid_name = NA, valid_aphiaID = NA)
+    out <- data.frame(base_name = base_name, rank = NA, aphiaID = NA, 
+                      valid_name = NA, valid_aphiaID = NA)
     
     qres <- try(worrms::wm_records_names(base_name)[[1]], silent = T)
     if(inherits(qres, "try-error")) {
@@ -86,6 +94,74 @@ get_valid_taxon <- function(base_name){
     out$aphiaID <- ifelse(aphiaID < 0, NA, aphiaID)
     out$valid_aphiaID <- ifelse(valid_aphiaID < 0, NA, valid_aphiaID)
     out$valid_name <- qres$valid_name[1]
+    out$rank <- qres$rank[1]
     
     return(out)
+}
+
+
+#' Title
+#'
+#' @param base_name 
+#' @param ranks 
+#'
+#' @return
+#' @export
+classify_validname <- function(valid_name, ranks = c("phylum", "class", "order", 
+                                                   "family", "genus", "species")){
+    
+    out <- worrms::wm_classification_(name = valid_name) %>% 
+        # convert rank to lower case
+        dplyr::mutate(rank = tolower(.data$rank)) %>%
+        # filter for taxonomic info matching raw taxonomy column names
+        dplyr::filter(.data$rank %in% as.vector(ranks))  %>%  
+        # remove non base taxonomic AphiaID
+        dplyr::select(-.data$AphiaID) %>%
+        # covenrt to wide to match taxonomy
+        tidyr::spread(., key = .data$rank, value = scientificname) 
+    
+    out[ranks] %>% dplyr::arrange(!!!as.name(ranks))
+    
+}
+
+#' Title
+#'
+#' @param taxonomy 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+validate_taxonomy <- function(taxonomy) {
+    taxonomy %>%
+    assertr::assert(assertr::is_uniq, base_name) %>% 
+        assertr::assert(assertr::not_na, rank, valid_name, valid_aphiaID) %>% 
+        assertr::verify(assertr::has_all_names("base_name", "rank", "aphiaID", 
+                                               "valid_name", "valid_aphiaID")) %>%
+        assertr::verify(valid_aphiaID > 0)
+}
+
+#' Bind taxonomy columns to dataset
+#'
+#' @param data dataset
+#' @param role whether the taxonomy relates to
+#'
+#' @return
+#' @export
+bind_taxonomy <- function(data, taxonomy, role = c("prey", "pred")) {
+    # set join column names
+    role <- match.arg(role)
+    data_base_name <- switch (role,
+                              pred = "species",
+                              prey = "prey_species")
+    taxo_base_name <- paste0(role, "_base_name")
+    
+    # get taxonomy
+    taxonomy <- worrms_validate(data[[data_base_name]]) %>%
+        validate_taxonomy() %>% 
+        stats::setNames(paste0(role, '_', names(.)))
+    names(taxonomy)[names(taxonomy) == taxo_base_name] <- data_base_name
+    
+    # join
+    dplyr::left_join(data, taxonomy)
 }
