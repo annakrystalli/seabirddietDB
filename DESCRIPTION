@@ -31,7 +31,7 @@ Imports:
     sf,
     EML
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Remotes: 
     ropensci/rcrossref,
     ropensci/EML
