@@ -4,10 +4,10 @@
 \alias{worrms_validate}
 \title{Validate species in taxonomy against WoRMS database}
 \usage{
-worrms_validate(taxonomy)
+worrms_validate(names)
 }
 \arguments{
-\item{taxonomy}{}
+\item{names}{vector of names to check}
 }
 \value{
 the data.frame with the \code{aphia_id}, the valid aphia id and valid

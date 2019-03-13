@@ -7,7 +7,7 @@
 get_row_base(taxonomy)
 }
 \arguments{
-\item{taxonomy}{}
+\item{taxonomy}{taxonomy data.frame}
 }
 \value{
 the data.frame supplied with a column containing the taxonomic base
