@@ -75,6 +75,75 @@ get_join_ref <- function(ref_tidy, ref){
         distinct()
 }
 
+#' Find references missing from the ref_manual db
+#'
+#' @param data 
+#' @param ref_manual 
+#'
+#' @return
+#' @export
+ref_find_missing_manual <- function(data, ref_manual) {
+    data[!data$reference %in% ref_manual$reference,] %>%
+        dplyr::select(reference) %>%  dplyr::distinct() 
+}   
+
+#' Title
+#'
+#' @param seabirddiet 
+#' @param ref_manual 
+#'
+#' @return
+#' @export
+ref_bind_matched_missing_manual <- function(seabirddiet, ref_manual) {
+    ref_find_missing_manual(seabirddiet, ref_manual) %>%
+        fuzzyjoin::stringdist_join(ref_manual, 
+                                   by = "reference",
+                                   mode = "left",
+                                   ignore_case = FALSE, 
+                                   method = "jw", 
+                                   max_dist = 0.1, 
+                                   distance_col = "dist") %>%
+        dplyr::group_by(reference.x) %>%
+        dplyr::top_n(1, -dist) %>% 
+        dplyr::ungroup() %>%
+        dplyr::select(-.data$reference.y, -.data$dist) %>%
+        dplyr::rename(reference = reference.x) %>%
+        dplyr::bind_rows(ref_manual, .) %>%
+        dplyr::distinct()
+}
+
+#' Title
+#'
+#' @param references 
+#' @param ref_manual 
+#'
+#' @return
+#' @export
+ref_add_manual <- function(references, ref_manual) {
+    dplyr::add_row(ref_manual, 
+                   reference = references,
+                   rename = references,
+                   multi = FALSE)
+}
+
+
+#' Title
+#'
+#' @param data 
+#'
+#' @return
+#' @export
+df_recode_report <- function(data) {
+    dplyr::mutate(seabirddiet,  
+                  notes2 = dplyr::case_when(.data$reference == "Report" ~ NA_character_,
+                                            TRUE ~ notes),
+                  source = dplyr::case_when(.data$reference == "Report" ~ "Report",
+                                            TRUE ~ source),
+                  reference = dplyr::case_when(.data$reference == "Report" ~ .data$notes,
+                                               TRUE ~  .data$reference),
+                  notes = notes2) %>% 
+        dplyr::select(-.data$notes2)   
+}
 
 get_dois <- function(seabirddiet){
     refs <- seabirddiet$reference %>% 
@@ -205,3 +274,4 @@ query_works <- function(x, limit = 5){
         q.extr %>% select(-starts_with("r_")) 
     }
 }
+

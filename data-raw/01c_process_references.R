@@ -2,21 +2,34 @@ library(dplyr)
 library(seabirdPrey)
 
 # read-manual-corrections ----
+
+## read-in-raw-prey-taxonomy ----
+seabirddiet <- readr::read_csv(here::here("data-raw", "intermediate", "seabirddiet.csv"),
+                               guess_max = Inf, na = c("", "NA")) 
 # read in and post process manual corrections
-# ref_manual <- readr::read_csv(here::here("data-raw", 
 ref_manual <- readr::read_csv(here::here("data-raw", 
-                                         "validation", 
+                                         "manual_corrections", 
                                          "reference_manual_clean.csv")) %>%  
-    mutate(rename = stringr::str_replace(rename, "–", "-")) %>% # get rid of long hyphen
-    mutate(rename = stringr::str_replace(rename, "\\.$", "")) # get rid of trailing .
+    # get rid of long hyphen
+    mutate(rename = stringr::str_replace(rename, "–", "-")) %>% 
+    # get rid of trailing .
+    mutate(rename = stringr::str_replace(rename, "\\.$", "")) %>% 
+    # fuzzy match missing references in seabirddiet to ref_manual
+    ref_bind_matched_missing_manual(seabirddiet, .) 
+
+
+missing <- ref_find_missing_manual(seabirddiet, ref_manual)
+#inspect missing
+missing
+# if all good, add to ref_manual
+#ref_add_manual(missing$reference, ref_manual) 
 
 # tidy-references ----
 ref_tidy <- tidy_refs(ref_manual)
 
+
 # get_ref_table ----
 ref <- get_ref_tbl(ref_tidy)
-
-
 
 # writeout-ref_table ----
 ref %>% 
@@ -36,7 +49,7 @@ join_ref <- join_ref %>% dplyr::bind_rows(
 join_ref %>% 
     # validate
     assertr::assert(is.numeric("ref_n")) %>%
-    assertr::verify(nrow(.) == 306) %>% 
+    assertr::verify(nrow(.) == 309) %>% 
     assertr::assert(assertr::is_uniq, reference) %>%
     assertr::verify(all(seabirddiet$reference %in% .$reference)) %>%
     assertr::verify(assertr::not_na("ref_ids")) %>% 
