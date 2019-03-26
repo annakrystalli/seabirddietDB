@@ -1,20 +1,15 @@
 library(dplyr)
-library(eml2)
+library(EML)
 library(metadatar)
+library(seabirdPrey)
 
 # load-final-data ----
-seabirddiet <- readr::read_csv(
-    here::here("data-raw", 
-               "Seabird Diets British Isles revised 20180620.csv")) %>% 
-    janitor::clean_names() %>%
-    bind_cols(ID =  1:nrow(.), .)
+data(seabirddiet)
 
 # latlon-to-sf ----
-seabirddiet <- seabirddiet %>% 
-    sf::st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
 
 # get-bbox ----
-bbox <- sf::st_bbox(seabirddiet)
+bbox <- sf::st_bbox(seabirdPrey::seabirddiet_)
 
 
 # set-geographic-description ----
@@ -27,9 +22,9 @@ distinguished between two or more specific locations where diet samples were col
 
 # set-coverage-description ----
 coverage <- 
-    eml2::set_coverage(begin = yr_to_isorange(seabirddiet$startyear, 
+    set_coverage(begin = seabirdPrey:::yr_to_isorange(seabirddiet$startyear, 
                                               type = "start"), 
-                       end = yr_to_isorange(seabirddiet$endyear, 
+                       end = seabirdPrey:::yr_to_isorange(seabirddiet$endyear, 
                                             type = "end"),
                        sci_names = readr::read_csv(
                            here::here("data", "metadata", "taxonomy.csv")) %>% 
@@ -48,7 +43,7 @@ methods <- set_methods(methods_file)
 
 
 # set-abstract ----
-abstract_file <-  system.file("examples/hf205-abstract.md", package = "EML")
+abstract_file <-  here::here("data-raw", "metadata","abstract.docx")
 abstract <- set_TextType(abstract_file)
 
 
@@ -56,10 +51,13 @@ abstract <- set_TextType(abstract_file)
 keywordSet <- list(
     list(
         keywordThesaurus = "LTER controlled vocabulary",
-        keyword = list("bacteria",
-                       "carnivorous plants",
-                       "genetics",
-                       "thresholds")
+        keyword = list("Marine birds",
+                       "Diets",
+                       "Food composition",
+                       "Predators",
+                       "Prey selection",
+                       "Predation",
+                       "Forage species")
     ),
     list(
         keywordThesaurus = "LTER core area",
