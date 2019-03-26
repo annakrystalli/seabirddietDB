@@ -31,10 +31,7 @@ worrms_validate <- function(names){
     names %>%
         unique() %>%
         magrittr::extract(. != "other") %>%
-            purrr::map_df(~get_valid_taxon(.x)) %>%
-        dplyr::as_tibble()
-    
-       # do(get_valid_taxon(.[[name_col]]))
+            purrr::map_df(~get_valid_taxon(.x))
 }
 
 #' Recode species with manual corrections table
@@ -72,8 +69,8 @@ get_tx_base_rank <- function(x, ranks = names(taxonomy)){
     ranks[which(x == tail(na.omit(unlist(x)), 1))]
 }
 get_valid_taxon <- function(base_name){
-    out <- data.frame(base_name = base_name, rank = NA, aphiaID = NA, 
-                      valid_name = NA, valid_aphiaID = NA)
+    out <- tibble::tibble(base_name = base_name, rank = NA, aphia_id = NA, 
+                      valid_name = NA, valid_aphia_id = NA)
     
     qres <- try(worrms::wm_records_names(base_name)[[1]], silent = T)
     if(inherits(qres, "try-error")) {
@@ -91,8 +88,8 @@ get_valid_taxon <- function(base_name){
     
     valid_aphiaID <- qres$valid_AphiaID[1]
     aphiaID <- qres$AphiaID[1]
-    out$aphiaID <- ifelse(aphiaID < 0, NA, aphiaID)
-    out$valid_aphiaID <- ifelse(valid_aphiaID < 0, NA, valid_aphiaID)
+    out$aphia_id <- ifelse(aphiaID < 0, NA, aphiaID)
+    out$valid_aphia_id <- ifelse(valid_aphiaID < 0, NA, valid_aphiaID)
     out$valid_name <- qres$valid_name[1]
     out$rank <- qres$rank[1]
     
@@ -135,10 +132,10 @@ classify_validname <- function(valid_name, ranks = c("phylum", "class", "order",
 validate_taxonomy <- function(taxonomy) {
     taxonomy %>%
     assertr::assert(assertr::is_uniq, base_name) %>% 
-        assertr::assert(assertr::not_na, rank, valid_name, valid_aphiaID) %>% 
-        assertr::verify(assertr::has_all_names("base_name", "rank", "aphiaID", 
-                                               "valid_name", "valid_aphiaID")) %>%
-        assertr::verify(valid_aphiaID > 0)
+        assertr::assert(assertr::not_na, rank, valid_name, valid_aphia_id, aphia_id) %>% 
+        assertr::verify(assertr::has_all_names("base_name", "rank", "aphia_id", 
+                                               "valid_name", "valid_aphia_id")) %>%
+        assertr::verify(valid_aphia_id > 0)
 }
 
 #' Bind taxonomy columns to dataset
