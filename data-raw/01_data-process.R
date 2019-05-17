@@ -83,6 +83,12 @@ seabirddiet <- seabirddiet_raw %>%
 readr::write_csv(seabirddiet, here::here("data-raw", "intermediate", "seabirddiet.csv"))
 #source(here::here("data-raw", "01c_process_references.R"))
 
+# calculate year ----
+seabirddiet <- dplyr::mutate(seabirddiet,
+                             year = ceiling(startyear + (endyear - startyear)/2),
+                             multiyear = case_when(endyear > startyear ~ TRUE,
+                                                   TRUE ~ FALSE)) %>%
+    select(id:endyear, multiyear, everything())
 
 # join-taxo ----
 seabirddiet <- seabirddiet %>% 
@@ -150,6 +156,6 @@ seabirddiet <- seabirddiet %>%
 seabirddiet %>%
     assertr::assert(is.numeric, year, startyear, endyear, 
                     latitude, longitude, freq_occ, freq_num, freq_biomass) %>%
-    assertr::assert(assertr::not_na, ref_ids, prey_taxon, pred_rank) %>%
+    assertr::assert(assertr::not_na, ref_ids, prey_taxon, pred_rank, year, multiyear) %>%
 # write-out ----
 readr::write_csv(here::here("inst", "csv", "seabirddiet.csv"))
