@@ -1,0 +1,3800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="ab660a24-6ded-44a5-bb95-3dc713b2d198" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+  <dataset>
+    <title>Seabird Diet Database</title>
+    <creator>
+      <individualName>
+        <givenName>Ruedi</givenName>
+        <surName>Nager</surName>
+      </individualName>
+      <address>
+        <deliveryPoint>Graham Kerr Building, University of Glasgow, Glasgow G12 8QQ</deliveryPoint>
+        <country>UK</country>
+      </address>
+      <electronicMailAddress>ruedi.nager@glasgow.ac.uk</electronicMailAddress>
+      <userId directory="http://orcid.org/000-0003-1129-5724"/>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>James</givenName>
+        <surName>Grecian</surName>
+      </individualName>
+      <address>
+        <deliveryPoint>Scottish Oceans Institute, East Sands, St Andrews</deliveryPoint>
+        <country>UK</country>
+      </address>
+      <electronicMailAddress>wjg5@st-andrews.ac.uk</electronicMailAddress>
+      <userId directory="http://orcid.org/0000-0002-6428-719X"/>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Agnes</givenName>
+        <surName>Olin</surName>
+      </individualName>
+      <address>
+        <deliveryPoint>Graham Kerr Building, University of Glasgow, Glasgow G12 8QQ</deliveryPoint>
+        <country>UK</country>
+      </address>
+      <electronicMailAddress>agnesolin@gmail.com</electronicMailAddress>
+      <userId directory="http://orcid.org/0000-0002-8508-3911"/>
+    </creator>
+    <pubDate>2018</pubDate>
+    <abstract>
+      <para>
+  This data base was created as part of the Marine Ecosystem Research
+  Programme, funded by the Natural Environment Research Council (NERC)
+  and the Department for Environment, Food and Rural Affairs (Defra),
+  that aimed to integrate exisiting and new marine data sets with
+  current models of marine ecosystem services to further our knowledge
+  and understanding of the UK marine ecosystems. The aim of the Seabird
+  Prey Date Base was to collate a new data set with all known
+  information on prey consumed by seabirds breeding in the British
+  Isles. We have focused on the 10 most common seabird species by total
+  biomass during the breeding season, accounting for 95% of biomass of
+  seabirds consuming a marine diet in 2000. Thus the prey reflects the
+  major of marine prey consumed by seabirds in British waters.
+</para>
+      <para>
+  Information was primarily gathered from the primary literature by
+  searching the web of science for titles, abstract or keywords
+  containing ‘diet’, ‘food’, and species name. Data are presented as the
+  frequency of each identified prey taxa per colony and year; each prey
+  taxa is entered as a separate record. The contribution of the prey to
+  the diet in the study year and site is expressed in one of three
+  currencies commonly used in seabird dietary studies (Duffy &amp;amp;
+  Jackson 1986, Barrett et al. 2007): frequency of occurrence, numerical
+  frequency and biomass frequency (see the data attributes table).
+</para>
+    </abstract>
+    <keywordSet>
+      <keyword>Marine birds</keyword>
+      <keyword>Diets</keyword>
+      <keyword>Food composition</keyword>
+      <keyword>Predators</keyword>
+      <keyword>Prey selection</keyword>
+      <keyword>Predation</keyword>
+      <keyword>Forage species</keyword>
+      <keyword>Niches</keyword>
+      <keyword>Food webs</keyword>
+      <keywordThesaurus>Aquatic Sciences and Fisheries Thesaurus - FAO</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>https://creativecommons.org/licenses/by/3.0/</intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Studies come mainly from locations around the British 
+Isles, but we also included relevant studies from the North Atlantic and very 
+rarely for the Mediterranean and the Pacific where the same species also bred.
+Sometimes samples were taken over a wider region and where it was not 
+distinguished between two or more specific locations where diet samples were collected we took approximately the midpoint between multiple locations where relevant.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-9.75</westBoundingCoordinate>
+          <eastBoundingCoordinate>1.75</eastBoundingCoordinate>
+          <northBoundingCoordinate>60.84</northBoundingCoordinate>
+          <southBoundingCoordinate>50.266</southBoundingCoordinate>
+          <boundingAltitudes>
+            <altitudeMinimum>0</altitudeMinimum>
+            <altitudeMaximum>0</altitudeMaximum>
+            <altitudeUnits>meter</altitudeUnits>
+          </boundingAltitudes>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1933-01-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2017-12-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Annelida</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Polychaeta</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Phyllodocida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Aphroditidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Aphrodita</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Aphrodita aculeata</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Annelida</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Polychaeta</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Phyllodocida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Nereididae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Annelida</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Polychaeta</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Annelida</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Hexanauplia</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Siphonostomatoida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Caligidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Caligus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Caligus coryphaenae</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Amphipoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Hyperiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Hyperia</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Hyperia galba</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Amphipoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Talitridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Orchestia</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Orchestia gammarellus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Amphipoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Tryphosidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Hippomedon</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Hippomedon denticulatus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Acanthephyridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Acanthephyra</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Acanthephyra pelagica</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Acanthephyridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Acanthephyra</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Crangonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Crangon</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Crangon crangon</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Munididae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Munida</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Munida intermedia</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Nephropidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Nephrops</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Nephrops norvegicus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Paguridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pagurus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pagurus bernhardus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pandalidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pandalus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pandalus borealis</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pandalidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pandalus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pandalus montagui</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pasiphaeidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Parapasiphae</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Parapasiphae sulcatifrons</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Polybiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Liocarcinus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Decapoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Euphausiacea</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Euphausiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Meganyctiphanes</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Meganyctiphanes norvegica</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Euphausiacea</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Isopoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cirolanidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Eurydice</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Eurydice pulchra</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Isopoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cirolanidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Eurydice</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Isopoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Idoteidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Idotea</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Idotea metallica</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Isopoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Lophogastrida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gnathophausiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gnathophausia</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gnathophausia zoea</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Mysida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Malacostraca</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Arthropoda</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Anguilliformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Anguillidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Anguilla</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Anguilla anguilla</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Argentiniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Argentinidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Argentina</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Argentina sphyraena</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Argentiniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Argentinidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Beloniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Belonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Belone</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Belone belone</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Clupeiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Clupeidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Clupea</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Clupea harengus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Clupeiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Clupeidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Sprattus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Sprattus sprattus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Clupeiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Clupeidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gadiculus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gadiculus argenteus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gadus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gadus morhua</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Melanogrammus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Melanogrammus aeglefinus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Merlangius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Merlangius merlangus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Micromesistius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Micromesistius poutassou</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pollachius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pollachius pollachius</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pollachius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pollachius virens</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pollachius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Trisopterus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Trisopterus esmarkii</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Trisopterus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Trisopterus luscus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Trisopterus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Trisopterus minutus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Trisopterus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lotidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Ciliata</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Ciliata mustela</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lotidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Enchelyopus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Enchelyopus cimbrius</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lotidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gaidropsarus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gaidropsarus vulgaris</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lotidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gaidropsarus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Lotidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Merlucciidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Merluccius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Merluccius merluccius</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gadiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Merlucciidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gasterosteiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gasterosteidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Spinachia</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Spinachia spinachia</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Gasterosteiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gasterosteidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ammodytidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Ammodytes</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Ammodytes marinus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ammodytidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Ammodytes</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Ammodytes tobianus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ammodytidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gymnammodytes</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gymnammodytes semisquamatus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ammodytidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Hyperoplus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Hyperoplus lanceolatus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ammodytidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Anarhichadidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Anarhichas</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Anarhichas lupus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Blenniidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Callionymidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Callionymus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Callionymus lyra</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Callionymidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Callionymus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Callionymidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Carangidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gobiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Crystallogobius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Crystallogobius linearis</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gobiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gobius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gobiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gobiusculus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gobiusculus flavescens</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gobiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Labridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Labrus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Labridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pholidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Pholis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Pholis gunnellus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pholidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Scombridae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Scomber</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Scomber scombrus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Trachinidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Perciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Zoarcidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Zoarces</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Zoarces viviparus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Pleuronectiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pleuronectidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Hippoglossoides</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Hippoglossoides platessoides</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Pleuronectiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pleuronectidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Limanda</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Limanda limanda</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Pleuronectiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pleuronectidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Limanda</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Pleuronectiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Pleuronectidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Pleuronectiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Salmoniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Salmonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Salmo</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Salmo salar</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Salmoniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Salmonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Agonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Agonus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Agonus cataphractus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Agonidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cottidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Myoxocephalus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Myoxocephalus scorpius</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cottidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Taurulus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Taurulus bubalis</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cottidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Neosebastidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Triglidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Chelidonichthys</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Chelidonichthys cuculus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Scorpaeniformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Triglidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Stephanoberyciformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Melamphaidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Scopelogadus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Scopelogadus beanii</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Stomiiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Sternoptychidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Maurolicus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Maurolicus muelleri</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Syngnathiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Syngnathidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Entelurus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Entelurus aequoreus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Syngnathiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Syngnathidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Nerophis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Nerophis lumbriciformis</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Syngnathiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Syngnathidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Syngnathus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Syngnathus acus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Syngnathiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Syngnathidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Syngnathiformes</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Chordata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Actinopterygii</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Cnidaria</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Hydrozoa</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Anthoathecata</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Porpitidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Velella</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Velella velella</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Echinodermata</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Echinoidea</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Bivalvia</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Venerida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Mesodesmatidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Atactodea</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Myopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Loliginidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Alloteuthis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Alloteuthis subulata</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cranchiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Taonius</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Taonius pavo</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Cranchiidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Teuthowenia</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Teuthowenia megalops</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gonatidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Gonatus</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Gonatus steenstrupi</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Gonatidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Mastigoteuthidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Mastigoteuthis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ommastrephidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Todarodes</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Todarodes sagittatus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ommastrephidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Todaropsis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Todaropsis eblanae</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Ommastrephidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Oegopsida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Onychoteuthidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Onychoteuthis</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Onychoteuthis banksii</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Teuthida</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Cephalopoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonRankValue>Gastropoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonRankValue>Neogastropoda</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonRankValue>Muricidae</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonRankValue>Nucella</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                    <taxonRankValue>Nucella lapillus</taxonRankValue>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>phylum</taxonRankName>
+          <taxonRankValue>Mollusca</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>class</taxonRankName>
+            <taxonomicClassification>
+              <taxonRankName>order</taxonRankName>
+              <taxonomicClassification>
+                <taxonRankName>family</taxonRankName>
+                <taxonomicClassification>
+                  <taxonRankName>genus</taxonRankName>
+                  <taxonomicClassification>
+                    <taxonRankName>species</taxonRankName>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Ruedi</givenName>
+        <surName>Nager</surName>
+      </individualName>
+      <address>
+        <deliveryPoint>Graham Kerr Building, University of Glasgow, Glasgow G12 8QQ</deliveryPoint>
+        <country>UK</country>
+      </address>
+      <electronicMailAddress>ruedi.nager@glasgow.ac.uk</electronicMailAddress>
+      <userId directory="http://orcid.org/000-0003-1129-5724"/>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>&lt;emphasis role="strong"&gt;The Seabird Prey Data Base&lt;/emphasis&gt;</para>
+          <para>
+  This data base was created as part of the Marine Ecosystem Research
+  Programme, funded by the Natural Environment Research Council (NERC)
+  and the Department for Environment, Food and Rural Affairs (Defra),
+  that aimed to integrate existing and new marine data sets with current
+  models of marine ecosystem services to further our knowledge and
+  understanding of the UK marine ecosystems. The aim of the Seabird Prey
+  Date Base was to collate a new data set with all known information on
+  prey consumed by seabirds breeding in the British Isles.
+</para>
+          <para>
+  For the predators we have focused on the 10 most common seabird
+  species by total biomass during the breeding season (Table 1). As the
+  focus of the programme was an assessment of the marine ecosystem, for
+  this database we only selected seabird species where the majority of
+  their consumed prey was marine to reflect the focus of the programme.
+  Among the top-ten British seabird species by biomass are two gull
+  species (Herring Gull (</para>
+          <para>
+            <emphasis>Larus argentatus</emphasis>
+          </para>
+          <para>) and
+  Lesser Black-backed Gulls (</para>
+          <para>
+            <emphasis>L. fuscus</emphasis>
+          </para>
+          <para>), but they
+  show a very different diet from the other seabirds, forage to a
+  substantial amount on terrestrial habitat (Garthe et al., 2016;
+  Götmark, 1984) and if they consume marine prey its taxonomy is usually
+  poorly resolved. Therefore we concentrated on Northern Gannet
+  (</para>
+          <para>
+            <emphasis>Morus bassanus</emphasis>
+          </para>
+          <para>), Common Guillemot
+  (</para>
+          <para>
+            <emphasis>Uria aalge</emphasis>
+          </para>
+          <para>), Northern Fulmar (</para>
+          <para>
+            <emphasis>Fulmarus
+  glacialis</emphasis>
+          </para>
+          <para>), Atlantic Puffin (</para>
+          <para>
+            <emphasis>Fratercula
+  arctica</emphasis>
+          </para>
+          <para>), Black-legged Kittiwake (</para>
+          <para>
+            <emphasis>Rissa
+  tridactyla</emphasis>
+          </para>
+          <para>), Razorbill (</para>
+          <para>
+            <emphasis>Alca torda</emphasis>
+          </para>
+          <para>),
+  Manx Shearwater (</para>
+          <para>
+            <emphasis>Puffinus puffinus</emphasis>
+          </para>
+          <para>), and European
+  Shag (</para>
+          <para>
+            <emphasis>Phalacrocorax aristotelis</emphasis>
+          </para>
+          <para>). Together, these
+  birds accounted for 95% of biomass of seabirds consuming a marine diet
+  in 2000 (Grandgeorge et al., 2008; Mitchell, Newton, Ratcliffe, &amp;amp;
+  Dunn, 2004) and thus their prey will reflect the major of marine prey
+  consumed by seabirds in British waters.
+</para>
+          <para>
+  Information was gathered from the primary literature by searching the
+  Web of Science for titles, abstract or keywords containing ‘diet’,
+  ‘food’, and species name. Publications found in the Web of Science
+  search was then inspected for relevant diet information in that
+  publication and references to earlier studies that may provide further
+  diet information. Those publications were then also inspected in the
+  same way until no new references would occur. We have also contacted
+  researchers known to collect or have been collecting seabird diet
+  information for further information that sometimes lead to the
+  inclusion of unpublished information if the source agreed to the
+  inclusion of that information into the data base (coumn Reference).
+</para>
+          <para>
+  For a study to be included in the data base it required to provide at
+  least quantitative information on the diet (see below), a sampling
+  location (site name, latitude and longitude) and sampling date (year
+  of data collection or at least a range of years over which the diet
+  information was collected). We also included a range of other
+  information (Table 2). We distinguished between sampling during the
+  species breeding season (Breeding status, although often not
+  necessarily known whether a particular sample come from a breeding
+  adult) and the non-breeding season; there is much less information for
+  the latter. We distinguished between breeding and non-breeding as
+  diets may change due to seasonal variation in prey availability and
+  between breeding and non-breeding requirements. Diets may also vary
+  between different breeding stages but often the exact breeding stage
+  was not known. Moreover, even in the breeding season typically chicks
+  or birds with chicks are sampled, but there are also non-breeding
+  birds; individuals with chicks can bring in food that is higher in
+  energetic density than the food taken by birds without chicks
+  (Noordhuis &amp;amp; Spaans 1992, Brown &amp;amp; Ewins 1996, Ojowski et al.
+  2001). We also recorded whether the diet sample was obtained from the
+  parent bird or the nestling (Age Group), as chick food can differ from
+  the food eaten by adults (e.g. Ydenberg 1994, Mehlum, 2001, Dierschke
+  &amp;amp; Hüppop 2003). In same cases a sample could have come from either
+  of them as this was recorded as ‘Adult &amp;amp; Chick’.
+</para>
+          <para>
+  For the prey taxa we first recorded the prey type as given in the
+  original study. However, same taxa names have changed over time and in
+  order to use a consistent terminology we matched each prey type to the
+  corresponding lowest possible taxonomic level in WoRMS
+  (http://www.marinespecies.org/) and this is recorded under Prey
+  Species. The quantitative information on how common a prey was in a
+  particular location and year (location-year) can be expressed in one
+  of three currencies commonly used in seabird dietary studies (Duffy
+  &amp;amp; Jackson 1986, Barrett et al. 2007): frequency of occurrence,
+  numerical frequency and biomass frequency (see Table 2). We recorded
+  the metrics that were provided by the original study per year and
+  location (location-year); each prey taxa is entered as a separate
+  record. So if for a seabird predator n prey taxa were identified in
+  the samples for a particular year and location, then there are n rows
+  in the data base representing that information. If there was diet
+  information for separate year, we recorded the information separately,
+  otherwise we give the start and end year over which years information
+  was collected. If the study provided information of the size of a prey
+  taxa (typically prey length) we recorded this under Prey Size; if a
+  range of length were given we recorded the median value. For each
+  location and year the number of samples recorded are provided in the
+  column Sample Size. This is the number of different samples collected
+  at a particular location and year and it is not possible to exclude
+  the possibility that occasionally multiple samples from the same
+  individual could have been included. We have included all available
+  information irrespective of sample sizes, but this may be filtered by
+  a minimal sample size required to provide a representative picture of
+  the birds’ diet which may vary between different sample types and diet
+  diversity.
+</para>
+          <para>
+  Diets from different seabird species are typically collected with
+  different methods (recorded as Sample Type) but often the majority of
+  studies within a species use the same method. Each method has its
+  limitation (see Barrett et al. 2007, Karnovsky et al. 2012). The most
+  representative diet assessment is likely from stomach content and
+  there is information from stomachs for most species and the
+  predominant method for each species can be compared against stomach
+  content to gain some insight into the limitations specific to the
+  methods and locations collated here.
+</para>
+          <para>
+  Finally we recorded whether the information was gathered from a peer
+  reviewed publication (primary literature) or an unpublished record in
+  the column Source.
+</para>
+          <para>
+  Table 3 gives a summary of the number of locations and number of
+  location-years that the data base covers for each of the species
+  included in the data base. The number of locations varies between
+  species depending on number of colonies in Britain and how readily
+  diet information for this species can be collected. For Common
+  Guillemots a total of 42 locations and 152 location-years all around
+  the British coast were included. There was also a good number of
+  locations (range 8=17 locations) and location-years (39-106
+  locations-years) for Atlantic Puffin, Black-legged Kittiwake, European
+  Shag and Razorbill. There was information for five colonies for
+  Northern Fulmar and Northern Gannet, the latter reflecting the samller
+  number of breeding locations in Britain than for the other species.
+  Finally, diet information for Manx Shearwater was only available for
+  one location from one year, although the species would breed at more
+  locations in Britain. The geographical spread of the locations is
+  skewed towards the northern and western parts of the British Isles as
+  this is where the majority of breeding seabirds occur.
+</para>
+          <para>
+  It is hoped that this information will be useful to provide an
+  overview of on what prey species our most common seabirds in British
+  waters rely and insights both in the function and structure of marine
+  ecosystems and a bases for conservation management decisions as many
+  of our seabird populations are declining. As new information will keep
+  adding to our knowledge of the diets of British seabirds this data
+  base will be able to include these new information and act as a
+  reposotory for diet information of British Seabirds.
+</para>
+          <para>
+  References
+</para>
+          <para>
+  Barrett RT, Chapdelaine G, Anker-Nilsson T, Mosbech A, MontevecchiWA,
+  Reid J, Veit RR (2006) Seabird numbers and prey consumption in the
+  North Atlantic. ICES J Mar Sci 63:1145–1158
+</para>
+          <para>
+  Robert T. Barrett, R.T., Camphuysen, C.J., Anker-Nilssen, T.,
+  Chardine, J.W, Furness, R.F., Garthe, S., Hüppop, O., Leopold, M.F.,
+  Montevecchi, W.A., Veit, R.A. 2007. Diet studies of seabirds: a review
+  and recommendations. ICES Journal of Marine Science, 64:1675–1691.
+</para>
+          <para>
+  Brown K. M., Ewins P. J. 1996. Technique-dependent biases in
+  determination of diet composition: an example with ring-billed gulls.
+  Condor , 98:34-41.
+</para>
+          <para>
+  Cairns DK, Chapdelaine G, Montevecchi WA (1991) Prey exploitation by
+  seabirds in the Gulf of St. Lawrence. In: Therriault JC (eds) The Gulf
+  of St. Lawrence: Small ocean or big estuary? Canadian Special
+  Publication of Fisheries and Aquatic Sciences, Mont-Joli, p 277–291
+  Camphuysen
+</para>
+          <para>
+  Dierschke, A-K., Hüppop, O. 2003. Langfristige Veränderungen in der
+  Ernährung von Silbermöwen (</para>
+          <para>) auf
+  Helgoland unter dem Einfluss der Fischerei mit Vergleichen zur
+  Heringsmöwe (</para>
+          <para>
+            <emphasis>Larus fuscus</emphasis>
+          </para>
+          <para>). Seevögel, 24:3-15.
+</para>
+          <para>
+  Duffy, D. &amp;amp; Jackson, S. 1986. Diet studies of seabirds: a review
+  of methods. Colonial Waterbirds , 9:1-17.
+</para>
+          <para>
+  Karnovsky, N., Hobson, K. &amp;amp; Iverson, S. 2012. From lavage to
+  lipids: Estimating diets of seabirds. Marine Ecology Progress Series,
+  451: 263-284.
+</para>
+          <para>
+  Mehlum, F. 2001. Crustaceans in the diet of adult common and
+  Brünnich's guillemots </para>
+          <para> and </para>
+          <para>
+            <emphasis>U.
+  lomvia</emphasis>
+          </para>
+          <para> in the Barents Sea during the breeding period.
+  Marine Ornithology , 29:19-22.
+</para>
+          <para>
+  Noordhuis R. &amp;amp; Spaans A. L. 1992. Interspecific competition for
+  food between herring </para>
+          <para> and lesser
+  black-backed gulls </para>
+          <para> in the Dutch Wadden
+  Sea area. Ardea, 80:115-132.
+</para>
+          <para>
+  Ojowski, U., Eidtmann, C., Furness, R. W. &amp;amp; Garthe S. 2001. Diet
+  and nest attendance of incubating and chick-rearing northern fulmars
+  (</para>
+          <para>
+            <emphasis>Fulmarus glacialis</emphasis>
+          </para>
+          <para>) in Shetland. Marine Biology,
+  139:1193-1200.
+</para>
+          <para>
+  Ydenberg, R. 1994. The behavioural ecology of provisioning in birds.
+  Ecoscience , 1:1-14.
+</para>
+        </description>
+      </methodStep>
+    </methods>
+    <dataTable>
+      <entityName>seabirddiet.csv</entityName>
+      <entityDescription>Seabird Diet Database</entityDescription>
+      <physical>
+        <objectName>seabirddiet.csv</objectName>
+        <size unit="bytes">749458</size>
+        <authentication method="MD5">3e2e962dfc5720d391890d6f92686728</authentication>
+        <dataFormat>
+          <textFormat>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>id</attributeName>
+          <attributeDefinition>Datapoint identifier</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>year</attributeName>
+          <attributeDefinition>Year or midpoint of range of years (rounded up to the nearest year) during which diet samples were taken</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>startyear</attributeName>
+          <attributeDefinition>Year or start of range of years during which diet samples were taken</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>endyear</attributeName>
+          <attributeDefinition>Year or end of range of years during which diet samples were taken</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>multiyear</attributeName>
+          <attributeDefinition>Whether samples were taken over a range of multiple years</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>FALSE</code>
+                    <definition>FALSE</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TRUE</code>
+                    <definition>TRUE</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>location</attributeName>
+          <attributeDefinition>Location where diet samples were taken, typically at a breeding colony</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Sample location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>latitude</attributeName>
+          <attributeDefinition>Location latitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>longitude</attributeName>
+          <attributeDefinition>Location longitude</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_common_name</attributeName>
+          <attributeDefinition>Common name of the seabird predator</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Predator common name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_species</attributeName>
+          <attributeDefinition>Scientific name of the seabird (predator) species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Predator scientific name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_rank</attributeName>
+          <attributeDefinition>Predator taxonomic rank</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>species</code>
+                    <definition>species</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_aphia_id</attributeName>
+          <attributeDefinition>WoRMS aphia id associated with original predator species name</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_valid_name</attributeName>
+          <attributeDefinition>Valid name on WoRMS of original predator species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Predator valid scientific name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_valid_aphia_id</attributeName>
+          <attributeDefinition>WoRMS aphia id associated with valid predator species name</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_breeding_status</attributeName>
+          <attributeDefinition>Whether diets were sampled during the Breeding season or the Non-breeding season</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>breeding</code>
+                    <definition>breeding</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>breeding &amp; non-breeding</code>
+                    <definition>breeding &amp; non-breeding</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>non-breeding</code>
+                    <definition>non-breeding</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_age_group</attributeName>
+          <attributeDefinition>Predator age group. Whether the diet samples were collected from Adult or Chick.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>chick</code>
+                    <definition>chick</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>adult &amp; chick</code>
+                    <definition>adult &amp; chick</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>adult</code>
+                    <definition>adult</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_orig_descr</attributeName>
+          <attributeDefinition>The taxonomic term used in the original source</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey original taxonomic description</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_taxon</attributeName>
+          <attributeDefinition>Prey taxonomic identity. Matched to the lowest possible taxonomic level.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey scientific taxonomic identity</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_rank</attributeName>
+          <attributeDefinition>Prey taxonomic rank</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>phylum</code>
+                    <definition>phylum</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>subphylum</code>
+                    <definition>subphylum</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>class</code>
+                    <definition>class</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>order</code>
+                    <definition>order</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>family</code>
+                    <definition>family</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>genus</code>
+                    <definition>genus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>species</code>
+                    <definition>species</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_aphia_id</attributeName>
+          <attributeDefinition>WoRMS aphia id associated with original prey taxon name</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_valid_name</attributeName>
+          <attributeDefinition>Valid name on WoRMS of original prey taxon</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey valid scientific taxonomic identity</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_valid_aphia_id</attributeName>
+          <attributeDefinition>WoRMS aphia id associated with valid prey taxon name</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_size</attributeName>
+          <attributeDefinition>Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey size</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_sd</attributeName>
+          <attributeDefinition>Prey size standard deviation</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey standard deviation</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_age_group</attributeName>
+          <attributeDefinition>Prey age group. Whether prey was age 0 or +1 years old.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>0</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>1</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_occ</attributeName>
+          <attributeDefinition>Frequency of occurrence of a prey taxon in diet samples of a given study.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_num</attributeName>
+          <attributeDefinition>Frequency of prey taxon across all recorded prey items</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_biomass</attributeName>
+          <attributeDefinition>Prey taxon biomass as a proportion of the total biomass/volume/energy (Where biomass of all prey taxon available)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>sample_size</attributeName>
+          <attributeDefinition>Number of samples from which frequencies have been calculated</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>sample_type</attributeName>
+          <attributeDefinition>Method used to assess diet</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>discard</code>
+                    <definition>discard</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pellet</code>
+                    <definition>pellet</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>regurgitate</code>
+                    <definition>regurgitate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach</code>
+                    <definition>stomach</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach &amp; regurgitate</code>
+                    <definition>stomach &amp; regurgitate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach dead</code>
+                    <definition>stomach dead</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach shot</code>
+                    <definition>stomach shot</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach shot &amp; dead</code>
+                    <definition>stomach shot &amp; dead</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach water offloading</code>
+                    <definition>stomach water offloading</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>vis obs</code>
+                    <definition>vis obs</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ref_n</attributeName>
+          <attributeDefinition>Number of references associated with record</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ref_ids</attributeName>
+          <attributeDefinition>Reference identifiers associated with record</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>reference IDs</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>source</attributeName>
+          <attributeDefinition>Data source</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>dataset</code>
+                    <definition>dataset</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>primary literature</code>
+                    <definition>primary literature</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>report</code>
+                    <definition>report</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>notes</attributeName>
+          <attributeDefinition>Notes</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>
