@@ -4,10 +4,22 @@ library(metadatar)
 library(seabirdPrey)
 
 # load-final-data ----
-data(seabirddiet)
+data(seabirddiet_)
+
+# set-attributes ----
+meta_tbl <- readr::read_csv(
+    here::here("data-raw", "metadata", "attributes.csv"))
+factors <- metadatar::mt_extract_factors_tbl(meta_tbl) 
+attr_tbl <- metadatar::mt_extract_attr_tbl(meta_tbl)
+
+attribute_list <- set_attributes(attributes = attr_tbl,
+                    factors = factors,
+                    col_classes = meta_tbl$columnClasses)
+
+# set physical ----
+physical <- set_physical("inst/csv/seabirddiet.csv")
 
 # latlon-to-sf ----
-
 # get-bbox ----
 bbox <- sf::st_bbox(seabirdPrey::seabirddiet_)
 
@@ -21,17 +33,19 @@ distinguished between two or more specific locations where diet samples were col
 
 
 # set-coverage-description ----
+classification <- readr::read_csv(
+    here::here("data-raw", "metadata", "classification.csv")) %>% 
+    dplyr::select(phylum:species) %>% as.data.frame()
+
 coverage <- 
     set_coverage(begin = seabirdPrey:::yr_to_isorange(seabirddiet$startyear, 
                                               type = "start"), 
                        end = seabirdPrey:::yr_to_isorange(seabirddiet$endyear, 
                                             type = "end"),
-                       sci_names = readr::read_csv(
-                           here::here("data", "metadata", "taxonomy.csv")) %>% 
-                           dplyr::select(phylum:species) %>% as.data.frame(),
+                       sci_names = classification,
                        geographicDescription = geographicDescription,
-                       west = bbox["xmin"], east = bbox["xmax"], 
-                       north = bbox["ymax"], south = bbox["ymin"],
+                       west = bbox["ymin"], east = bbox["ymax"], 
+                       north = bbox["xmax"], south = bbox["xmin"],
                        altitudeMin = 0, altitudeMaximum = 0,
                        altitudeUnits = "meter")
 
@@ -50,55 +64,40 @@ abstract <- set_TextType(abstract_file)
 # set-keywords
 keywordSet <- list(
     list(
-        keywordThesaurus = "LTER controlled vocabulary",
+        keywordThesaurus = "Aquatic Sciences and Fisheries Thesaurus - FAO",
         keyword = list("Marine birds",
                        "Diets",
                        "Food composition",
                        "Predators",
                        "Prey selection",
                        "Predation",
-                       "Forage species")
-    ),
-    list(
-        keywordThesaurus = "LTER core area",
-        keyword =  list("populations", "inorganic nutrients", "disturbance")
-    ),
-    list(
-        keywordThesaurus = "HFR default",
-        keyword = list("Harvard Forest", "HFR", "LTER", "USA")
+                       "Forage species",
+                       "Niches",
+                       "Food webs")
     ))
 
 
-# set-creators
+# set-creators ----
 creators_df <- readr::read_csv(here::here("data-raw", "metadata",
-                                          "creators.csv"))
-
-
-
+                                          "creators.csv")) %>%
+    dplyr::mutate(admin_area = "Scotland", country = "UK")
 creators_l <- creators_df %>% apply(1, extr_creator)
+contact <- creators_l[[1]]
+#creators_l[[1]] <- NULL
 
 
 
-
-
-
+# set-publisher ----
 publisher <- eml$publisher(
-    organizationName = "Harvard Forest",
-    address = HF_address)
+    organizationName = "Marine Ecosystems Research Programme",
+    address = eml$address(
+        deliveryPoint = "Plymouth Marine Laboratory, Prospect Place",
+        city = "Plymouth",
+        administrativeArea = "Devon",
+        postalCode = "PL1 3DH",
+        country = "UK"))
 
-contact <- 
-    list(
-        individualName = aaron$individualName,
-        electronicMailAddress = aaron$electronicMailAddress,
-        address = HF_address,
-        organizationName = creators_df$affilitation)
-
-# set-attributes ----
-set_attributes()
-
-# set-attributes ----
-
-
+# create-eml ----
 sbd_eml <- eml$eml(
     packageId = uuid::UUIDgenerate(),  
     system = "uuid",
@@ -106,7 +105,7 @@ sbd_eml <- eml$eml(
         title = "Seabird Diet Database",
         creator = creators_l,
         pubDate = "2018",
-        intellectualRights = "http://www.lternet.edu/data/netpolicy.html.",
+        intellectualRights = "https://creativecommons.org/licenses/by/3.0/",
         abstract = abstract,
         keywordSet = keywordSet,
         coverage = coverage,
@@ -116,5 +115,14 @@ sbd_eml <- eml$eml(
             entityName = "seabirddiet.csv",
             entityDescription = "Seabird Diet Database",
             physical = physical,
-            attributeList = attributeList)
+            attributeList = attribute_list)
     ))
+
+# validate eml ----
+eml_validate(sbd_eml)
+
+# write eml ----
+write_eml(sbd_eml, file = here::here("inst", "metadata", "seabirddiet_eml"))
+
+emldown::render_eml(here::here("inst", "metadata", "seabirddiet_eml"), outfile = "index.html")
+
