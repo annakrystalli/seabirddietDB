@@ -36,20 +36,19 @@ yr_to_isorange <- function(x, type = c("both", "start", "end")){
 #' @return an eml creator list element
 #' @export
 extr_creator <- function(x){   
-    eml_address <- eml$address(
+    eml_address <- EML::eml$address(
         deliveryPoint =  x["address"],
-        administrativeArea = "Scotland",
-        country = "UK")
+        administrativeArea = x["amdin_area"],
+        country = x["country"])
     
-    eml2::eml$creator(
-        individualName = eml2::eml$individualName(
+    EML::eml$creator(
+        individualName = EML::eml$individualName(
             givenName = x["givenName"],
             surName = x["familyName"]),
         electronicMailAddress = x["email"],
-        userId = eml2::eml$userId( 
-            directory = "http://orcid.org/"),
-        id = x["ORCID-ID"],
+        userId = EML::eml$userId(
+            directory = paste0("http://orcid.org/", x["ORCID-ID"])),
         address = eml_address,
-        organizationName = x["affilitation"]
+        organizationName = x["affiliation"]
         )
 }
