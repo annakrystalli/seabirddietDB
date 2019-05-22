@@ -1,428 +1,328 @@
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-
-
-
-
-<title>Home</title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Seabird Diet Database</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="custom.css" rel="stylesheet">
 </head>
-
 <body>
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-
-
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">seabirdPrey</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="about.html">About</a>
-</li>
-<li>
-  <a href="data-validation.html">data validation</a>
-</li>
-<li>
-  <a href="taxonomic_processing.html">taxonomic processing</a>
-</li>
-<li>
-  <a href="reference_processing.html">reference processing</a>
-</li>
-<li>
-  <a href="license.html">License</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/annakrystalli/seabirdPrey">
-    <span class="fa fa-github"></span>
-     
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<!-- Add a small amount of space between sections. -->
-<style type="text/css">
-div.section {
-  padding-top: 12px;
-}
-</style>
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Home</h1>
-
+<nav class="navbar navbar-default navbar-fixed-top"><div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a>
 </div>
+<div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#temporal">Temporal coverage</a></li>
+<li><a href="#geographic">Geographic coverage</a></li>
+<li><a href="#datatable">Data tables</a></li>
+<li><a href="#otherentity">Custom units</a></li>
+<li><a href="#otherentity">Other entities</a></li>
+</ul></div>
+</div></nav><div class="container" id="dataset_info"><div class="starter-template">
+<h1>Seabird Diet Database</h1>
+<h3>2018</h3>
+<h4><a href="#datatable"><span class="glyphicon glyphicon-list-alt"></span>
+    Data table(s) <span class="badge">1</span></a></h4>
+<h4><a href="#otherentity"><span class="glyphicon glyphicon-list-alt"></span>
+    Other entity(ies) <span class="badge">0</span></a></h4>
+<h4>Abstract</h4>
+<div class="container"><div class="jumbotron"><p class="lead">
+  This data base was created as part of the Marine Ecosystem Research
+  Programme, funded by the Natural Environment Research Council (NERC)
+  and the Department for Environment, Food and Rural Affairs (Defra),
+  that aimed to integrate exisiting and new marine data sets with
+  current models of marine ecosystem services to further our knowledge
+  and understanding of the UK marine ecosystems. The aim of the Seabird
+  Prey Date Base was to collate a new data set with all known
+  information on prey consumed by seabirds breeding in the British
+  Isles. We have focused on the 10 most common seabird species by total
+  biomass during the breeding season, accounting for 95% of biomass of
+  seabirds consuming a marine diet in 2000. Thus the prey reflects the
+  major of marine prey consumed by seabirds in British waters.
 
-
-<p><strong>Last updated:</strong> 2018-09-19</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/tree/3f181bc86fad057f8bb627466d939bc2e9ddc14c" target="_blank">3f181bc</a> </summary></p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
-<pre><code>
-Ignored files:
-    Ignored:    .Rhistory
-    Ignored:    .Rproj.user/
-    Ignored:    R/.DS_Store
-    Ignored:    analysis/.DS_Store
-    Ignored:    analysis/reference_processing_cache/
-    Ignored:    analysis/taxonomic_processing_cache/
-    Ignored:    code/from_ruedi/
-    Ignored:    code/from_tom/
-    Ignored:    data-raw/.DS_Store
-    Ignored:    data-raw/from_ruedi/
-    Ignored:    data-raw/from_tom/
-    Ignored:    data-raw/metadata/.DS_Store
-    Ignored:    data-raw/metadata/methods.txt
-    Ignored:    data-raw/refs.bib
-    Ignored:    data/.DS_Store
-    Ignored:    docs/.DS_Store
-
-Untracked files:
-    Untracked:  R/data-validation.R
-    Untracked:  R/process-data.R
-    Untracked:  analysis/assets/
-    Untracked:  analysis/dataset_qa.Rmd
-    Untracked:  docs/assets/
-
-Unstaged changes:
-    Modified:   analysis/_site.yml
-    Modified:   data-raw/01_data-process.R
-    Modified:   data-raw/02_create_metadata.R
-    Modified:   data-raw/manual_corrections/mn_seabirddiet_rename.csv
-    Modified:   data-raw/metadata/attributes.csv
-    Modified:   output/seabirddiet.csv
-
-</code></pre>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
-</li>
+  Information was primarily gathered from the primary literature by
+  searching the web of science for titles, abstract or keywords
+  containing ‘diet’, ‘food’, and species name. Data are presented as the
+  frequency of each identified prey taxa per colony and year; each prey
+  taxa is entered as a separate record. The contribution of the prey to
+  the diet in the study year and site is expressed in one of three
+  currencies commonly used in seabird dietary studies (Duffy &amp;amp;
+  Jackson 1986, Barrett et al. 2007): frequency of occurrence, numerical
+  frequency and biomass frequency (see the data attributes table).
+</p></div></div>
+<h4>Metadata Provider</h4>
+<p> 
+  </p>
+<div class="container"><div class="panel-group"><div class="panel panel-default">
+<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse1">Author list</a></h4></div>
+<div id="collapse1" class="panel-collapse collapse">
+<h4>Creators</h4>
+<ul class="list-group">
+<li class="list-group-item">Ruedi 
+            Nager 
+            ruedi.nager@glasgow.ac.uk</li>
+<li class="list-group-item">James 
+            Grecian 
+            wjg5@st-andrews.ac.uk</li>
+<li class="list-group-item">Agnes 
+            Olin 
+            agnesolin@gmail.com</li>
 </ul>
-<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
-<thead>
+<h4>Associated parties</h4>
+<ul class="list-group"></ul>
+</div>
+</div></div></div>
+<h4>Keywords</h4>
+<p><ul><li>Marine birds</li></ul><ul><li>Diets</li></ul><ul><li>Food composition</li></ul><ul><li>Predators</li></ul><ul><li>Prey selection</li></ul><ul><li>Predation</li></ul><ul><li>Forage species</li></ul><ul><li>Niches</li></ul><ul><li>Food webs</li></ul></p>
+</div></div>
+<div class="container" id="temporal">
+<h3>
+<span class="glyphicon glyphicon-time"></span>
+ Temporal coverage</h3>
+<table class="table table-striped">
 <tr>
-<th style="text-align:left;">
-File
-</th>
-<th style="text-align:left;">
-Version
-</th>
-<th style="text-align:left;">
-Author
-</th>
-<th style="text-align:left;">
-Date
-</th>
-<th style="text-align:left;">
-Message
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/https://annakrystalli@github.com/annakrystalli/seabirdPrey/99bf23e7f9c8e9333b3ed54b2d37bcc582d6fd64/docs/index.html" target="_blank">99bf23e</a>
-</td>
-<td style="text-align:left;">
-annakrystalli
-</td>
-<td style="text-align:left;">
-2018-07-19
-</td>
-<td style="text-align:left;">
-Build site.
-</td>
+<th>Start date</th>
+<th>End date</th>
 </tr>
 <tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/https://annakrystalli@github.com/annakrystalli/seabirdPrey/8657c4a857b08e8668b298ebce29b39264a906ea/docs/index.html" target="_blank">8657c4a</a>
-</td>
-<td style="text-align:left;">
-annakrystalli
-</td>
-<td style="text-align:left;">
-2018-07-19
-</td>
-<td style="text-align:left;">
-Build site.
-</td>
+<td>1933-01-01</td>
+<td>2017-12-31</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/https://annakrystalli@github.com/annakrystalli/seabirdPrey/1d62415113c25c60b63a43345aa02961a6502b2e/docs/index.html" target="_blank">1d62415</a>
-</td>
-<td style="text-align:left;">
-annakrystalli
-</td>
-<td style="text-align:left;">
-2018-06-23
-</td>
-<td style="text-align:left;">
-add taxonomic matching report to header
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://annakrystalli@github.com/annakrystalli/seabirdPrey/blob/a93ef7137449376fab89b504af18591a8ef702bd/analysis/index.Rmd" target="_blank">a93ef71</a>
-</td>
-<td style="text-align:left;">
-annakrystalli
-</td>
-<td style="text-align:left;">
-2018-06-14
-</td>
-<td style="text-align:left;">
-Start workflowr project.
-</td>
-</tr>
-</tbody>
 </table>
-</ul>
-<p></details></p>
-<hr />
-<p>Welcome to my research website.</p>
-
-<!-- Adjust MathJax settings so that all math formulae are shown using
-TeX fonts only; see
-http://docs.mathjax.org/en/latest/configuration.html.  This will make
-the presentation more consistent at the cost of the webpage sometimes
-taking slightly longer to load. Note that this only works because the
-footer is added to webpages before the MathJax javascript. -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.0.1
-</p>
-<hr>
-
-
-
 </div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+<div class="container" id="geographic">
+<h3>
+<span class="glyphicon glyphicon-globe"></span>
+         Geographic coverage
+      </h3>
+<div class="embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item" src="map.html" style="padding:50px"></iframe></div>
+</div>
+<div class="container" id="taxonomic">
+<h3>
+<span class="glyphicon glyphicon-tree-deciduous"></span>
+Taxonomic coverage</h3>
+<div class="embed-responsive embed-responsive-4by3"><iframe class="embed-responsive-item" src="taxo_table.html" style="padding:50px"></iframe></div>
+</div>
+<div class="container" id="datatable">
+<h3>
+<span class="glyphicon glyphicon-list-alt"></span>
+ Data tables</h3>
+<br><tr><h4>
+<td>seabirddiet.csv</td>
+<td>,  records</td>,
+      <td>Seabird Diet Database</td>
+</h4></tr>
+<br><tr>
+    Physical: seabirddiet.csv</tr>
+<div class="table-responsive"><table class="table table-striped">
+<tr>
+<th>attribute name</th>
+<th>definition</th>
+<th>format, unit or codes</th>
+</tr>
+<tr>
+<td>id</td>
+<td>Datapoint identifier</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Year or midpoint of range of years (rounded up to the nearest year) during which diet samples were taken</td>
+<td>YYYY</td>
+</tr>
+<tr>
+<td>startyear</td>
+<td>Year or start of range of years during which diet samples were taken</td>
+<td>YYYY</td>
+</tr>
+<tr>
+<td>endyear</td>
+<td>Year or end of range of years during which diet samples were taken</td>
+<td>YYYY</td>
+</tr>
+<tr>
+<td>multiyear</td>
+<td>Whether samples were taken over a range of multiple years</td>
+<td>FALSE = FALSE TRUE = TRUE </td>
+</tr>
+<tr>
+<td>location</td>
+<td>Location where diet samples were taken, typically at a breeding colony</td>
+<td></td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Location latitude</td>
+<td>degree</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Location longitude</td>
+<td>degree</td>
+</tr>
+<tr>
+<td>pred_common_name</td>
+<td>Common name of the seabird predator</td>
+<td></td>
+</tr>
+<tr>
+<td>pred_species</td>
+<td>Scientific name of the seabird (predator) species</td>
+<td></td>
+</tr>
+<tr>
+<td>pred_rank</td>
+<td>Predator taxonomic rank</td>
+<td>species = species </td>
+</tr>
+<tr>
+<td>pred_aphia_id</td>
+<td>WoRMS aphia id associated with original predator species name</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>pred_valid_name</td>
+<td>Valid name on WoRMS of original predator species</td>
+<td></td>
+</tr>
+<tr>
+<td>pred_valid_aphia_id</td>
+<td>WoRMS aphia id associated with valid predator species name</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>pred_breeding_status</td>
+<td>Whether diets were sampled during the Breeding season or the Non-breeding season</td>
+<td>breeding = breeding breeding &amp; non-breeding = breeding &amp; non-breeding non-breeding = non-breeding </td>
+</tr>
+<tr>
+<td>pred_age_group</td>
+<td>Predator age group. Whether the diet samples were collected from Adult or Chick.</td>
+<td>chick = chick adult &amp; chick = adult &amp; chick adult = adult </td>
+</tr>
+<tr>
+<td>prey_orig_descr</td>
+<td>The taxonomic term used in the original source</td>
+<td></td>
+</tr>
+<tr>
+<td>prey_taxon</td>
+<td>Prey taxonomic identity. Matched to the lowest possible taxonomic level.</td>
+<td></td>
+</tr>
+<tr>
+<td>prey_rank</td>
+<td>Prey taxonomic rank</td>
+<td>phylum = phylum subphylum = subphylum class = class order = order family = family genus = genus species = species </td>
+</tr>
+<tr>
+<td>prey_aphia_id</td>
+<td>WoRMS aphia id associated with original prey taxon name</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>prey_valid_name</td>
+<td>Valid name on WoRMS of original prey taxon</td>
+<td></td>
+</tr>
+<tr>
+<td>prey_valid_aphia_id</td>
+<td>WoRMS aphia id associated with valid prey taxon name</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>prey_size</td>
+<td>Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units</td>
+<td></td>
+</tr>
+<tr>
+<td>prey_sd</td>
+<td>Prey size standard deviation</td>
+<td></td>
+</tr>
+<tr>
+<td>prey_age_group</td>
+<td>Prey age group. Whether prey was age 0 or +1 years old.</td>
+<td>0 = 0 1 = 1 </td>
+</tr>
+<tr>
+<td>freq_occ</td>
+<td>Frequency of occurrence of a prey taxon in diet samples of a given study.</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>freq_num</td>
+<td>Frequency of prey taxon across all recorded prey items</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>freq_biomass</td>
+<td>Prey taxon biomass as a proportion of the total biomass/volume/energy (Where biomass of all prey taxon available)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>sample_size</td>
+<td>Number of samples from which frequencies have been calculated</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>sample_type</td>
+<td>Method used to assess diet</td>
+<td>discard = discard pellet = pellet regurgitate = regurgitate stomach = stomach stomach &amp; regurgitate = stomach &amp; regurgitate stomach dead = stomach dead stomach shot = stomach shot stomach shot &amp; dead = stomach shot &amp; dead stomach water offloading = stomach water offloading vis obs = vis obs </td>
+</tr>
+<tr>
+<td>ref_n</td>
+<td>Number of references associated with record</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>ref_ids</td>
+<td>Reference identifiers associated with record</td>
+<td></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Data source</td>
+<td>dataset = dataset primary literature = primary literature report = report </td>
+</tr>
+<tr>
+<td>notes</td>
+<td>Notes</td>
+<td></td>
+</tr>
+</table></div>
+</div>
+<div class="container" id="units">
+<h3>
+<span class="glyphicon glyphicon-glass"></span>
+ Custom units</h3>
+<table class="table"><tr>
+<th>unit name</th>
+<th>parent SI unit</th>
+<th>unit type</th>
+<th>description</th>
+</tr></table>
+</div>
+<div class="container" id="otherentity">
+<h3>
+<span class="glyphicon glyphicon-list-alt"></span>
+          Other entities
+       </h3>
+<table class="table"></table>
+</div>
+<div class="container">
+<h4>Intellectual Rights</h4>
+<p>https://creativecommons.org/licenses/by/3.0/</p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+<footer><div class="copyright"><p>Development supported by <a href="https://ropensci.org/"><img src="http://unconf17.ropensci.org/images/ropensci_small.png" height="35"></a></p></div>
+<div class="madeby">
+        created with <a href="https://github.com/ropenscilabs/emldown">emldown</a>
+</div></footer>
 </html>
