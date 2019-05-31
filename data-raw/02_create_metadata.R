@@ -6,6 +6,7 @@ library(seabirdPrey)
 data(seabirddiet_)
 data(seabirddiet)
 
+# load metadata tables
 meta_tbl <- readr::read_csv(here::here("data-raw", "metadata", "attributes.csv"))
 
 # update meta_tbl attributeName
