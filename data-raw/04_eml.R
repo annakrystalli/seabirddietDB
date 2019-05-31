@@ -85,7 +85,9 @@ creators_l <- creators_df %>% apply(1, extr_creator)
 contact <- creators_l[[1]]
 #creators_l[[1]] <- NULL
 
-
+# set-references ----
+references_df <- read_csv(here::here("data-raw", "metadata", "references.csv" ))
+references_l <- list(metadata = references_df %>% apply(1, extr_citations))
 
 # set-publisher ----
 publisher <- eml$publisher(
@@ -102,6 +104,7 @@ sbd_eml <- eml$eml(
     packageId = uuid::UUIDgenerate(),  
     system = "uuid",
     dataset = eml$dataset(
+        id = "dat.001",
         title = "Seabird Diet Database",
         creator = creators_l,
         pubDate = "2018",
@@ -115,8 +118,11 @@ sbd_eml <- eml$eml(
             entityName = "seabirddiet.csv",
             entityDescription = "Seabird Diet Database",
             physical = physical,
-            attributeList = attribute_list)
-    ))
+            attributeList = attribute_list)),
+    additionalMetadata = eml$additionalMetadata(
+        describes = "dat.001",
+        metadata = references_l)
+    )
 
 # validate eml ----
 eml_validate(sbd_eml)
@@ -126,3 +132,6 @@ write_eml(sbd_eml, file = here::here("inst", "metadata", "seabirddiet_eml"))
 
 emldown::render_eml(here::here("inst", "metadata", "seabirddiet_eml"), outfile = "index.html")
 
+library(EML)
+
+eml$citation
