@@ -52,3 +52,17 @@ extr_creator <- function(x){
         organizationName = x["affiliation"]
         )
 }
+
+#' Extract reference to list of eml citations format
+#'
+#' Function to be applied to the `references.csv` data.frame to exctract tabular information 
+#' into a list of eml citation format for each reference. 
+#' @param x a row in the `references` data.frame 
+#' (read from `data-raw/metadata/references.csv`)
+#'
+#' @return an eml creator list element
+#' @export
+extr_citations <- function(x){
+    list(citation = list(key = x["ref_id"],
+                         unstructured_citation = x["ref_valid"]))
+}
