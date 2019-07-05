@@ -1,5 +1,5 @@
 # ---- load-libraries ----
-library(seabirdPrey)
+library(seabirddiet.devtools)
 library(dplyr)
 
 # read-data ----
@@ -117,14 +117,20 @@ mn_names <- readr::read_csv(
 seabirddiet <- seabirddiet %>% rename_at(vars(mn_names$names), ~ mn_names$rename)
 
 
-# clean-mutate-ind ----
+# clean-funny-characters ----
 seabirddiet <- seabirddiet %>%
     mutate(
         # freq-biomass
-        freq_biomass = stringr::str_extract(freq_biomass, "\\d+\\.*\\d*") %>%
-            as.numeric(),
+        freq_biomass = readr::parse_number(freq_biomass),
         # prey_size
-        prey_size = stringr::str_replace(prey_size, "\xf1|ñ", "+/-")) 
+        prey_size = stringr::str_replace_all(prey_size, "\xf1|ñ", "+/-") %>%  
+            stringr::str_replace_all("\\+/[^\\-]", "+/-") %>% 
+            stringr::str_replace_all("([<>=])\\s*", "\\1 ") %>%
+            stringr::str_replace_all("(\\d+)\\s*-\\s*(\\d+)", "\\1 - \\2")  %>% 
+            stringr::str_replace_all("\\s*(cm|mm)", " \\1") %>% 
+            stringr::str_replace_all("\\s*\\+/-\\s*", " +/- "))
+
+
 
 
 # clean-factors
@@ -152,10 +158,41 @@ seabirddiet <- seabirddiet %>%
                   dplyr::starts_with("ref"),
                   everything())
 
+# ---- SAVE_DATA ----
 # dataset-validate
 seabirddiet %>%
     assertr::assert(is.numeric, year, startyear, endyear, 
                     latitude, longitude, freq_occ, freq_num, freq_biomass) %>%
+    assertr::assert(is.logical, multiyear) %>%
+    assertr::assert(is.character, prey_age_group) %>%
     assertr::assert(assertr::not_na, ref_ids, prey_taxon, pred_rank, year, multiyear) %>%
-# write-out ----
+    assertr::assert(assertr::is_uniq, id) %>%
+    assertr::assert(assertr::within_bounds(0, 1), freq_occ, freq_num, freq_biomass) %>%
+# csv ----
 readr::write_csv(here::here("inst", "csv", "seabirddiet.csv"))
+
+# seabirddiet_ ----
+usethis::use_data(seabirddiet, overwrite = T)
+
+# seabirddiet_ ----
+# sf
+seabirddiet_ <- sf::st_as_sf(seabirddiet, coords = c("latitude", "longitude"), crs = 4326) 
+
+seabirddiet_ <- dplyr::mutate(seabirddiet_, 
+                              # set factors                          
+                              prey_rank = factor(prey_rank, 
+                                                 levels = c("phylum", "subphylum", "class",
+                                                            "order","family","genus","species")),
+                              pred_rank = factor(pred_rank),
+                              pred_age_group = factor(pred_age_group,
+                                                      levels = c("chick","adult & chick","adult")),
+                              pred_breeding_status = factor(pred_breeding_status),
+                              prey_age_group = factor(prey_age_group),
+                              sample_type = factor(sample_type),
+                              source = factor(source)) %>% 
+    # set integers
+    mutate_at(vars(c("year", "startyear", "endyear", "id"),
+                   contains("aphia_id")), as.integer)
+
+usethis::use_data(seabirddiet_, overwrite = T)
+devtools::install(quick = TRUE, dependencies = FALSE)
