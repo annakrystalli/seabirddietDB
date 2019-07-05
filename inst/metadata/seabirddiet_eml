@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="370977c1-97c7-4bcc-8d00-59db66080155" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
-  <dataset>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="eb4ed503-455b-48b3-8a68-6330a46caa5a" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+  <dataset id="dat.001">
     <title>Seabird Diet Database</title>
     <creator>
       <individualName>
@@ -4272,4 +4272,302 @@ distinguished between two or more specific locations where diet samples were col
       </attributeList>
     </dataTable>
   </dataset>
+  <additionalMetadata>
+    <describes>dat.001</describes>
+    <metadata>
+      <citation_list>
+        <citation>
+          <unstructured_citation>Anderson et al 2014 Ibis 156, 23-34</unstructured_citation>
+        </citation>
+        <citation.1>
+          <unstructured_citation>Bailey et al 1991 ICES Mar. Sci. Symp., 193, 209-216</unstructured_citation>
+        </citation.1>
+        <citation.10>
+          <unstructured_citation>Camphuysen &amp; van Franeker 1996 Sula 10: 143-150</unstructured_citation>
+        </citation.10>
+        <citation.11>
+          <unstructured_citation>Chivers 2012 Bird Study 59, 363-367</unstructured_citation>
+        </citation.11>
+        <citation.12>
+          <unstructured_citation>Chivers et al 2012 Bird Study 59, 67-73</unstructured_citation>
+        </citation.12>
+        <citation.13>
+          <unstructured_citation>Corkhill 1973 Bird Study 20,207-220</unstructured_citation>
+        </citation.13>
+        <citation.14>
+          <unstructured_citation>Coulson 1985 Journal of Animal Ecology 54, 9-26</unstructured_citation>
+        </citation.14>
+        <citation.15>
+          <unstructured_citation>Daunt &amp; Wanless IMLOT 1973-2014</unstructured_citation>
+        </citation.15>
+        <citation.16>
+          <unstructured_citation>Evans 1975 Bird Study 22, 239-247</unstructured_citation>
+        </citation.16>
+        <citation.17>
+          <unstructured_citation>Fowler &amp; Dye 1987 Seabird 10,71-74</unstructured_citation>
+        </citation.17>
+        <citation.18>
+          <unstructured_citation>Francis Daunt</unstructured_citation>
+        </citation.18>
+        <citation.19>
+          <unstructured_citation>Furness &amp; Todd 1984 Ibis 126: 379-387</unstructured_citation>
+        </citation.19>
+        <citation.2>
+          <unstructured_citation>Baker et 1999 JNCC Report 289, 1-51</unstructured_citation>
+        </citation.2>
+        <citation.20>
+          <unstructured_citation>Furness 1990 Ibis 132, 205-217</unstructured_citation>
+        </citation.20>
+        <citation.21>
+          <unstructured_citation>Galbraith 1983 Bird Study 30, 109-120</unstructured_citation>
+        </citation.21>
+        <citation.22>
+          <unstructured_citation>Gray et al 2003 J Zool 259,109-113</unstructured_citation>
+        </citation.22>
+        <citation.23>
+          <unstructured_citation>Halley et al 1995 Seabird 17, 12-20</unstructured_citation>
+        </citation.23>
+        <citation.24>
+          <unstructured_citation>Hamer et al 2000 MEPS 200, 257-264</unstructured_citation>
+        </citation.24>
+        <citation.25>
+          <unstructured_citation>Hamer et al 2007 Marine Ecology - Progress Series 338, 295-305</unstructured_citation>
+        </citation.25>
+        <citation.26>
+          <unstructured_citation>Harris &amp; Hislop 1978 J Zool 185: 213-236</unstructured_citation>
+        </citation.26>
+        <citation.27>
+          <unstructured_citation>Harris &amp; Riddiford 1989 Scottish Birds 15, 119-125</unstructured_citation>
+        </citation.27>
+        <citation.28>
+          <unstructured_citation>Harris &amp; Wanless 1985 J Zool 207, 441-458</unstructured_citation>
+        </citation.28>
+        <citation.29>
+          <unstructured_citation>Harris &amp; Wanless 1986 Ornis Scand 17, 41-46</unstructured_citation>
+        </citation.29>
+        <citation.3>
+          <unstructured_citation>Blake BF 1984 J. Experimental. Mar.Biol. Ecol. 76, 89-103</unstructured_citation>
+        </citation.3>
+        <citation.30>
+          <unstructured_citation>Harris &amp; Wanless 1990 Journal of Applied Ecology 27,172-187</unstructured_citation>
+        </citation.30>
+        <citation.31>
+          <unstructured_citation>Harris &amp; Wanless 1991 Ornis Scandinavica 22,375-382</unstructured_citation>
+        </citation.31>
+        <citation.32>
+          <unstructured_citation>Harris &amp; Wanless 1993 Bird Study 40,135-139</unstructured_citation>
+        </citation.32>
+        <citation.33>
+          <unstructured_citation>Harris &amp; Wanless 1997 ICES Journal of Marine Science 54, 615-623</unstructured_citation>
+        </citation.33>
+        <citation.34>
+          <unstructured_citation>Harris &amp; Wanless 1997 ICES Journal of Marine Science 54, 615–623</unstructured_citation>
+        </citation.34>
+        <citation.35>
+          <unstructured_citation>Harris &amp; Wanless 1998 JNCC Report, No. 282</unstructured_citation>
+        </citation.35>
+        <citation.36>
+          <unstructured_citation>Harris 1970 Ibis 112, 540-541</unstructured_citation>
+        </citation.36>
+        <citation.37>
+          <unstructured_citation>Harris et al 2005 JNCC Report, No. 375</unstructured_citation>
+        </citation.37>
+        <citation.38>
+          <unstructured_citation>Harvey et al 1990 Fair Isle Bird Observatory Report 42, 47-54</unstructured_citation>
+        </citation.38>
+        <citation.39>
+          <unstructured_citation>Hatchwell 1991 Ibis 133, 153-161</unstructured_citation>
+        </citation.39>
+        <citation.4>
+          <unstructured_citation>Blake et al 1955 Estuarine, Coastal &amp; Shelf Science 20, 559-568</unstructured_citation>
+        </citation.4>
+        <citation.40>
+          <unstructured_citation>Heubeck 2009 Seabird 22, 9-18</unstructured_citation>
+        </citation.40>
+        <citation.41>
+          <unstructured_citation>Howells et al 2017 MEPS 583, 227-242</unstructured_citation>
+        </citation.41>
+        <citation.42>
+          <unstructured_citation>Lewis et al 2001 Marine Ecology Progress Series 221, 277-284</unstructured_citation>
+        </citation.42>
+        <citation.43>
+          <unstructured_citation>Lewis et al 2003 Ardea 91, 167-176</unstructured_citation>
+        </citation.43>
+        <citation.44>
+          <unstructured_citation>Lumsden &amp; Haddow 1946 Journal of Animal Ecology 15,35-42</unstructured_citation>
+        </citation.44>
+        <citation.45>
+          <unstructured_citation>Martin 1989 Bird Study 36:3, 170-180</unstructured_citation>
+        </citation.45>
+        <citation.46>
+          <unstructured_citation>Miles et al 2015 PLoSONE 10: e0131527</unstructured_citation>
+        </citation.46>
+        <citation.47>
+          <unstructured_citation>Mills 1969 Scottish Birds 5,264-268</unstructured_citation>
+        </citation.47>
+        <citation.48>
+          <unstructured_citation>Newell et al 2013  JNCC Report, No. 475b</unstructured_citation>
+        </citation.48>
+        <citation.49>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475a</unstructured_citation>
+        </citation.49>
+        <citation.5>
+          <unstructured_citation>Blake et al 1980 Unpubl NCC Report</unstructured_citation>
+        </citation.5>
+        <citation.50>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475c</unstructured_citation>
+        </citation.50>
+        <citation.51>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475d</unstructured_citation>
+        </citation.51>
+        <citation.52>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475e</unstructured_citation>
+        </citation.52>
+        <citation.53>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475f</unstructured_citation>
+        </citation.53>
+        <citation.54>
+          <unstructured_citation>Newell et al 2013 JNCC Report, No. 475g</unstructured_citation>
+        </citation.54>
+        <citation.55>
+          <unstructured_citation>Newell et al 2016 JNCC Report, No. 475h</unstructured_citation>
+        </citation.55>
+        <citation.56>
+          <unstructured_citation>Newell et al 2016 JNCC Report, No. 475i</unstructured_citation>
+        </citation.56>
+        <citation.57>
+          <unstructured_citation>Newell et al 2016 JNCC Report, No. 475j</unstructured_citation>
+        </citation.57>
+        <citation.58>
+          <unstructured_citation>Newell et al 2016 JNCC Report, No. 475k</unstructured_citation>
+        </citation.58>
+        <citation.59>
+          <unstructured_citation>Ojowski et al 2001 Mar Biol 139,1193-2000</unstructured_citation>
+        </citation.59>
+        <citation.6>
+          <unstructured_citation>Blake et al 1985 Estuarine, Coastal &amp; Shelf Science 20, 559-568</unstructured_citation>
+        </citation.6>
+        <citation.60>
+          <unstructured_citation>Pearson 1968 J Anim Ecol 37, 521-552</unstructured_citation>
+        </citation.60>
+        <citation.61>
+          <unstructured_citation>Phillips et al 1999 Mar Biol 135,159-170</unstructured_citation>
+        </citation.61>
+        <citation.62>
+          <unstructured_citation>Rindorf 2000 Marine Ecology Progress Series 202, 241–252</unstructured_citation>
+        </citation.62>
+        <citation.63>
+          <unstructured_citation>Riordan &amp; Birkhead 2017 Ibis</unstructured_citation>
+        </citation.63>
+        <citation.64>
+          <unstructured_citation>Robertson et al 2014 Marine Biology, 161, 1973-1986</unstructured_citation>
+        </citation.64>
+        <citation.65>
+          <unstructured_citation>Shaw et al 2002 JNCC Report, No. 332</unstructured_citation>
+        </citation.65>
+        <citation.66>
+          <unstructured_citation>Snow 1960 Ibis 102, 554-575</unstructured_citation>
+        </citation.66>
+        <citation.67>
+          <unstructured_citation>Stauss et al 2012 Marine Ecology - Progress Series 457, 151-162</unstructured_citation>
+        </citation.67>
+        <citation.68>
+          <unstructured_citation>Stevens 1933 J Mar Biol Assoc UK 19,277-292</unstructured_citation>
+        </citation.68>
+        <citation.69>
+          <unstructured_citation>Swann 1998 JNCC Report, No. 286</unstructured_citation>
+        </citation.69>
+        <citation.7>
+          <unstructured_citation>Bull  et al 2001 JNCC Report, No. 303</unstructured_citation>
+        </citation.7>
+        <citation.70>
+          <unstructured_citation>Swann 2000 JNCC Report, No. 304</unstructured_citation>
+        </citation.70>
+        <citation.71>
+          <unstructured_citation>Swann 2004 JNCC Report, No. 361</unstructured_citation>
+        </citation.71>
+        <citation.72>
+          <unstructured_citation>Swann 2004 JNCC Report, No. 474a</unstructured_citation>
+        </citation.72>
+        <citation.73>
+          <unstructured_citation>Swann 2013  JNCC Report, No. 474g</unstructured_citation>
+        </citation.73>
+        <citation.74>
+          <unstructured_citation>Swann 2013  JNCC Report, No. 474h</unstructured_citation>
+        </citation.74>
+        <citation.75>
+          <unstructured_citation>Swann 2013 JNCC Report, No. 474d</unstructured_citation>
+        </citation.75>
+        <citation.76>
+          <unstructured_citation>Swann 2013 JNCC Report, No. 474e</unstructured_citation>
+        </citation.76>
+        <citation.77>
+          <unstructured_citation>Swann 2013 JNCC Report, No. 474f</unstructured_citation>
+        </citation.77>
+        <citation.78>
+          <unstructured_citation>Swann et al 2008 Seabird 21, 44-54</unstructured_citation>
+        </citation.78>
+        <citation.79>
+          <unstructured_citation>Swann et al 2016 JNCC Report, No. 474i</unstructured_citation>
+        </citation.79>
+        <citation.8>
+          <unstructured_citation>Bull  et al 2001 JNCC Report, No. 315</unstructured_citation>
+        </citation.8>
+        <citation.80>
+          <unstructured_citation>Swann et al 2016 JNCC Report, No. 474j</unstructured_citation>
+        </citation.80>
+        <citation.81>
+          <unstructured_citation>Swann et al 2016 JNCC Report, No. 474k</unstructured_citation>
+        </citation.81>
+        <citation.82>
+          <unstructured_citation>Swann et al 2016 JNCC Report, No. 474l</unstructured_citation>
+        </citation.82>
+        <citation.83>
+          <unstructured_citation>Thaxter et al 2009 J Avian Biol 40, 75-84</unstructured_citation>
+        </citation.83>
+        <citation.84>
+          <unstructured_citation>Thompson et al 1995 MEPS 125,3-11</unstructured_citation>
+        </citation.84>
+        <citation.85>
+          <unstructured_citation>Thompson, K. 1987. THE ECOLOGY OF THE MANX SHEARWATER PUFFINUS PJJFFINUSON RHUM, WEST SCOTLAND. Unpubl. Thesis University of Glasgow</unstructured_citation>
+        </citation.85>
+        <citation.86>
+          <unstructured_citation>Votier et al 2010 J Appl Ecol 47, 487-497</unstructured_citation>
+        </citation.86>
+        <citation.87>
+          <unstructured_citation>Wagner 1987 Seabird 19,58-59</unstructured_citation>
+        </citation.87>
+        <citation.88>
+          <unstructured_citation>Wakefield et al 2015 Ecology 96, 3058-3074</unstructured_citation>
+        </citation.88>
+        <citation.89>
+          <unstructured_citation>Wanless &amp; Harris 1992 Bird Study 39, 145–154</unstructured_citation>
+        </citation.89>
+        <citation.9>
+          <unstructured_citation>Bull et al 2004 Ardea 92, 43-52</unstructured_citation>
+        </citation.9>
+        <citation.90>
+          <unstructured_citation>Wanless 1984 Seabird 7,62-70</unstructured_citation>
+        </citation.90>
+        <citation.91>
+          <unstructured_citation>Wanless et al 2005 MEPS 294, 1-8</unstructured_citation>
+        </citation.91>
+        <citation.92>
+          <unstructured_citation>Wilson et al 2002 JNCC Report, No. 328</unstructured_citation>
+        </citation.92>
+        <citation.93>
+          <unstructured_citation>Wilson et al 2003 JNCC Report, No. 338</unstructured_citation>
+        </citation.93>
+        <citation.94>
+          <unstructured_citation>Wilson et al 2004 Ardea 92, 197-207</unstructured_citation>
+        </citation.94>
+        <citation.95>
+          <unstructured_citation>Wilson et al 2005 JNCC Report, No. 362</unstructured_citation>
+        </citation.95>
+        <citation.96>
+          <unstructured_citation>Wright &amp; Bailey (n.d.) Marine Laboratory Aberdeen Fisheries Research Report, 15/93</unstructured_citation>
+        </citation.96>
+      </citation_list>
+    </metadata>
+  </additionalMetadata>
 </eml:eml>
