@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<eml:eml
+ packageId="eml.1.1" system="knb"
+ xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1"
+ xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 eml.xsd">
+ <dataset>
+ </dataset>
+ <additionalMetadata>
+  <metadata>
+   <stmml:unitList xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1"
+    xsi:schemaLocation="http://www.xml-cml.org/schema/stmml-1.1 stmml.xsd">
+    <stmml:unit name="gramsPerSquareMeter" 
+                unitType="arealMassDensity" 
+                id="gramsPerSquareMeter" 
+                parentSI="kilogramsPerSquareMeter" 
+                multiplierToSI=".001"
+                />			
+   </stmml:unitList>
+  </metadata>
+ </additionalMetadata>
+</eml:eml>
+		
