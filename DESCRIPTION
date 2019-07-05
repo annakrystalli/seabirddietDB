@@ -1,14 +1,23 @@
-Package: seabirdPrey
+Package: seabirddietDB
 Version: 0.0.0.9000
-Title: Seabird Prey (stomach content) Data
-Description: What the package does (one paragraph).
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-License: What license is it under?
+Title: Seabird Diet Database
+Description: Dataset collated from all known information on prey consumed by seabirds 
+  breeding in the British Isles.  We have focused on the 10 most common seabird species 
+  by total biomass during the breeding season, accounting for 95% of biomass of seabirds 
+  a marine diet in 2000. Thus the prey reflects the majority of marine prey consumed by
+  seabirds in British waters.
+Authors@R: 
+    person(given = "Anna",
+           family = "Krystalli",
+           role = c("aut", "cre"),
+           email = "annakrystalli@googlemail.com",
+           comment = c(ORCID = "0000-0002-2378-4915"))
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
-URL: https://github.com/annakrystalli/seabirdPrey
-BugReports: https://github.com/annakrystalli/seabirdPrey/issues
+URL: https://github.com/annakrystalli/seabirddietDB
+BugReports: https://github.com/annakrystalli/seabirddietDB/issues
 Suggests: 
     rlang,
     rcrossref (>= 0.8.1.9513)
@@ -30,8 +39,7 @@ Imports:
     stringr,
     sf,
     EML
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
 Remotes: 
     ropensci/rcrossref,
     ropensci/EML
+RoxygenNote: 6.1.1
