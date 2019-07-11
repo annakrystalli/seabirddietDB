@@ -2,6 +2,7 @@ library(dplyr)
 library(EML)
 library(metadatar)
 library(seabirdPrey)
+library(seabirddiet.devtools)
 
 # load-final-data ----
 data(seabirddiet_)
@@ -38,9 +39,9 @@ classification <- readr::read_csv(
     dplyr::select(phylum:species) %>% as.data.frame()
 
 coverage <- 
-    set_coverage(begin = seabirdPrey:::yr_to_isorange(seabirddiet$startyear, 
+    set_coverage(begin = yr_to_isorange(seabirddiet$startyear, 
                                               type = "start"), 
-                       end = seabirdPrey:::yr_to_isorange(seabirddiet$endyear, 
+                       end = yr_to_isorange(seabirddiet$endyear, 
                                             type = "end"),
                        sci_names = classification,
                        geographicDescription = geographicDescription,
@@ -86,8 +87,9 @@ contact <- creators_l[[1]]
 #creators_l[[1]] <- NULL
 
 # set-references ----
-references_df <- read_csv(here::here("data-raw", "metadata", "references.csv" ))
-references_l <- list(metadata = references_df %>% apply(1, extr_citations))
+citation_list <- citation_list_make()
+
+
 
 # set-publisher ----
 publisher <- eml$publisher(
@@ -121,7 +123,7 @@ sbd_eml <- eml$eml(
             attributeList = attribute_list)),
     additionalMetadata = eml$additionalMetadata(
         describes = "dat.001",
-        metadata = references_l)
+        metadata = citation_list)
     )
 
 # validate eml ----
@@ -130,8 +132,5 @@ eml_validate(sbd_eml)
 # write eml ----
 write_eml(sbd_eml, file = here::here("inst", "metadata", "seabirddiet_eml"))
 
+# create emldown page ----
 emldown::render_eml(here::here("inst", "metadata", "seabirddiet_eml"), outfile = "index.html")
-
-library(EML)
-
-eml$citation
