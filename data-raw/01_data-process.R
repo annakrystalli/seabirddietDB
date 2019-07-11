@@ -171,6 +171,9 @@ seabirddiet %>%
 # csv ----
 readr::write_csv(here::here("inst", "csv", "seabirddiet.csv"))
 
+# convert to tibble
+seabirddiet <- tibble::as_tibble(seabirddiet)
+
 # seabirddiet_ ----
 usethis::use_data(seabirddiet, overwrite = T)
 
