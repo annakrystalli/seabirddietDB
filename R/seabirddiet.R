@@ -11,7 +11,7 @@
 #'       mytext <- c('In RStudio, this help file includes a searchable table of values.')
 #'     } else {
 #'       mytext <- c("\n Note: the table may not render correctly in the RStudio dark theme. To view, open in a new window", 
-#'       cites:::rd_datatable(readr::read_csv(system.file("metadata", "attributes.csv", 
+#'       seabirddiet.devtools::rd_datatable(readr::read_csv(system.file("metadata", "attributes.csv", 
 #'       package = "seabirddietDB")), class = "row-border", rownames=FALSE))
 #'     }
 #'     mytext
