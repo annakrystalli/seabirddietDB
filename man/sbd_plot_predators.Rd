@@ -4,11 +4,13 @@
 \alias{sbd_plot_predators}
 \title{Plot predators}
 \usage{
-sbd_plot_predators(df = seabirddietDB::seabirddiet,
+sbd_plot_predators(db = seabirddietDB::seabirddiet,
   pred_species = NULL, prey_taxon = NULL, year = NULL,
   metrics = "freq_occ", base_map = "Stamen.Watercolor")
 }
 \arguments{
+\item{db}{Seabird Diet database to filter. Defaults to `seabirddiet`}
+
 \item{pred_species}{character vector. Predator species to include}
 
 \item{prey_taxon}{character vector. Prey taxa to include}
@@ -17,7 +19,8 @@ sbd_plot_predators(df = seabirddietDB::seabirddiet,
 
 \item{metrics}{which dietary metrics to include. Defaults to frequency of occurence (`freq_occ`)}
 
-\item{base_map}{}
+\item{base_map}{plot base map. Use \code{leaflet::providers()} to get list of base map
+providers or visit \url{https://leaflet-extras.github.io/leaflet-providers/preview/} to preview}
 }
 \value{
 plots an interactive leaflet map of the selected data
