@@ -10,6 +10,7 @@ addons:
     packages:
       - libjq-dev
       - libudunits2-dev
+      - libv8-dev
       
 matrix:
   include:
