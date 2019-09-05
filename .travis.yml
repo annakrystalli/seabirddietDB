@@ -3,7 +3,10 @@ language: r
 
 sudo: false
 cache: packages
-
+addons:
+  apt:
+    packages:
+      - libudunits2-dev
 matrix:
   include:
    - r: release
