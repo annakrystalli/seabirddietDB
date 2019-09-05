@@ -1,5 +1,5 @@
 Package: seabirddietDB
-Version: 0.0.0.9000
+Version: 0.0.1
 Title: Seabird Diet Database
 Description: Dataset collated from all known information on prey consumed by seabirds 
   breeding in the British Isles.  We have focused on the 10 most common seabird species 
@@ -18,6 +18,8 @@ LazyData: true
 ByteCompile: true
 URL: https://github.com/annakrystalli/seabirddietDB
 BugReports: https://github.com/annakrystalli/seabirddietDB/issues
+Depends:
+    R (>= 2.10)
 Suggests: 
     rlang,
     rcrossref (>= 0.8.1.9513),
@@ -41,7 +43,8 @@ Imports:
     testthat,
     magrittr,
     sf,
-    leaflet
+    leaflet,
+    knitr
 Remotes: 
     annakrystalli/metadatar
     annakrystalli/seabirddiet.devtools
