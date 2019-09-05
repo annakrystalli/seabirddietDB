@@ -1,0 +1,121 @@
+phylum,subphylum,class,order,family,genus,species
+Annelida,NA,Polychaeta,Phyllodocida,Aphroditidae,Aphrodita,Aphrodita aculeata
+Annelida,NA,Polychaeta,Phyllodocida,Nereididae,NA,NA
+Annelida,NA,Polychaeta,NA,NA,NA,NA
+Annelida,NA,NA,NA,NA,NA,NA
+Arthropoda,Crustacea,Hexanauplia,Siphonostomatoida,Caligidae,Caligus,Caligus coryphaenae
+Arthropoda,Crustacea,Malacostraca,Amphipoda,Hyperiidae,Hyperia,Hyperia galba
+Arthropoda,Crustacea,Malacostraca,Amphipoda,Talitridae,Orchestia,Orchestia gammarellus
+Arthropoda,Crustacea,Malacostraca,Amphipoda,Tryphosidae,Hippomedon,Hippomedon denticulatus
+Arthropoda,Crustacea,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,Acanthephyra pelagica
+Arthropoda,Crustacea,Malacostraca,Decapoda,Acanthephyridae,Acanthephyra,NA
+Arthropoda,Crustacea,Malacostraca,Decapoda,Crangonidae,Crangon,Crangon crangon
+Arthropoda,Crustacea,Malacostraca,Decapoda,Munididae,Munida,Munida intermedia
+Arthropoda,Crustacea,Malacostraca,Decapoda,Nephropidae,Nephrops,Nephrops norvegicus
+Arthropoda,Crustacea,Malacostraca,Decapoda,Paguridae,Pagurus,Pagurus bernhardus
+Arthropoda,Crustacea,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus borealis
+Arthropoda,Crustacea,Malacostraca,Decapoda,Pandalidae,Pandalus,Pandalus montagui
+Arthropoda,Crustacea,Malacostraca,Decapoda,Pasiphaeidae,Parapasiphae,Parapasiphae sulcatifrons
+Arthropoda,Crustacea,Malacostraca,Decapoda,Polybiidae,Liocarcinus,NA
+Arthropoda,Crustacea,Malacostraca,Decapoda,NA,NA,NA
+Arthropoda,Crustacea,Malacostraca,Euphausiacea,Euphausiidae,Meganyctiphanes,Meganyctiphanes norvegica
+Arthropoda,Crustacea,Malacostraca,Euphausiacea,NA,NA,NA
+Arthropoda,Crustacea,Malacostraca,Isopoda,Cirolanidae,Eurydice,Eurydice pulchra
+Arthropoda,Crustacea,Malacostraca,Isopoda,Cirolanidae,Eurydice,NA
+Arthropoda,Crustacea,Malacostraca,Isopoda,Idoteidae,Idotea,Idotea metallica
+Arthropoda,Crustacea,Malacostraca,Isopoda,NA,NA,NA
+Arthropoda,Crustacea,Malacostraca,Lophogastrida,Gnathophausiidae,Gnathophausia,Gnathophausia zoea
+Arthropoda,Crustacea,Malacostraca,Mysida,NA,NA,NA
+Arthropoda,Crustacea,Malacostraca,NA,NA,NA,NA
+Arthropoda,Crustacea,NA,NA,NA,NA,NA
+Chordata,Vertebrata,Actinopterygii,Anguilliformes,Anguillidae,Anguilla,Anguilla anguilla
+Chordata,Vertebrata,Actinopterygii,Argentiniformes,Argentinidae,Argentina,Argentina sphyraena
+Chordata,Vertebrata,Actinopterygii,Argentiniformes,Argentinidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Beloniformes,Belonidae,Belone,Belone belone
+Chordata,Vertebrata,Actinopterygii,Clupeiformes,Clupeidae,Clupea,Clupea harengus
+Chordata,Vertebrata,Actinopterygii,Clupeiformes,Clupeidae,Sprattus,Sprattus sprattus
+Chordata,Vertebrata,Actinopterygii,Clupeiformes,Clupeidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Gadiculus,Gadiculus argenteus
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Gadus,Gadus morhua
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Melanogrammus,Melanogrammus aeglefinus
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Merlangius,Merlangius merlangus
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Micromesistius,Micromesistius poutassou
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius pollachius
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Pollachius,Pollachius virens
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Pollachius,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus esmarkii
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus luscus
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,Trisopterus minutus
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,Trisopterus,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Gadidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Lotidae,Ciliata,Ciliata mustela
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Lotidae,Enchelyopus,Enchelyopus cimbrius
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,Gaidropsarus vulgaris
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Lotidae,Gaidropsarus,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Lotidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Merlucciidae,Merluccius,Merluccius merluccius
+Chordata,Vertebrata,Actinopterygii,Gadiformes,Merlucciidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Gasterosteiformes,Gasterosteidae,Spinachia,Spinachia spinachia
+Chordata,Vertebrata,Actinopterygii,Gasterosteiformes,Gasterosteidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes marinus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Ammodytidae,Ammodytes,Ammodytes tobianus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Ammodytidae,Gymnammodytes,Gymnammodytes semisquamatus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Ammodytidae,Hyperoplus,Hyperoplus lanceolatus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Ammodytidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Anarhichadidae,Anarhichas,Anarhichas lupus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Blenniidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Callionymidae,Callionymus,Callionymus lyra
+Chordata,Vertebrata,Actinopterygii,Perciformes,Callionymidae,Callionymus,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Callionymidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Carangidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Gobiidae,Crystallogobius,Crystallogobius linearis
+Chordata,Vertebrata,Actinopterygii,Perciformes,Gobiidae,Gobius,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Gobiidae,Gobiusculus,Gobiusculus flavescens
+Chordata,Vertebrata,Actinopterygii,Perciformes,Gobiidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Labridae,Labrus,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Labridae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Pholidae,Pholis,Pholis gunnellus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Pholidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Scombridae,Scomber,Scomber scombrus
+Chordata,Vertebrata,Actinopterygii,Perciformes,Trachinidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Perciformes,Zoarcidae,Zoarces,Zoarces viviparus
+Chordata,Vertebrata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Hippoglossoides,Hippoglossoides platessoides
+Chordata,Vertebrata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,Limanda limanda
+Chordata,Vertebrata,Actinopterygii,Pleuronectiformes,Pleuronectidae,Limanda,NA
+Chordata,Vertebrata,Actinopterygii,Pleuronectiformes,Pleuronectidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Pleuronectiformes,NA,NA,NA
+Chordata,Vertebrata,Actinopterygii,Salmoniformes,Salmonidae,Salmo,Salmo salar
+Chordata,Vertebrata,Actinopterygii,Salmoniformes,Salmonidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Agonidae,Agonus,Agonus cataphractus
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Agonidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Cottidae,Myoxocephalus,Myoxocephalus scorpius
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Cottidae,Taurulus,Taurulus bubalis
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Cottidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Neosebastidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Triglidae,Chelidonichthys,Chelidonichthys cuculus
+Chordata,Vertebrata,Actinopterygii,Scorpaeniformes,Triglidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Stephanoberyciformes,Melamphaidae,Scopelogadus,Scopelogadus beanii
+Chordata,Vertebrata,Actinopterygii,Stomiiformes,Sternoptychidae,Maurolicus,Maurolicus muelleri
+Chordata,Vertebrata,Actinopterygii,Syngnathiformes,Syngnathidae,Entelurus,Entelurus aequoreus
+Chordata,Vertebrata,Actinopterygii,Syngnathiformes,Syngnathidae,Nerophis,Nerophis lumbriciformis
+Chordata,Vertebrata,Actinopterygii,Syngnathiformes,Syngnathidae,Syngnathus,Syngnathus acus
+Chordata,Vertebrata,Actinopterygii,Syngnathiformes,Syngnathidae,NA,NA
+Chordata,Vertebrata,Actinopterygii,Syngnathiformes,NA,NA,NA
+Chordata,Vertebrata,Actinopterygii,NA,NA,NA,NA
+Cnidaria,NA,Hydrozoa,Anthoathecata,Porpitidae,Velella,Velella velella
+Echinodermata,Echinozoa,Echinoidea,NA,NA,NA,NA
+Mollusca,NA,Bivalvia,Venerida,Mesodesmatidae,Atactodea,NA
+Mollusca,NA,Cephalopoda,Myopsida,Loliginidae,Alloteuthis,Alloteuthis subulata
+Mollusca,NA,Cephalopoda,Oegopsida,Cranchiidae,Taonius,Taonius pavo
+Mollusca,NA,Cephalopoda,Oegopsida,Cranchiidae,Teuthowenia,Teuthowenia megalops
+Mollusca,NA,Cephalopoda,Oegopsida,Gonatidae,Gonatus,Gonatus steenstrupi
+Mollusca,NA,Cephalopoda,Oegopsida,Gonatidae,NA,NA
+Mollusca,NA,Cephalopoda,Oegopsida,Mastigoteuthidae,Mastigoteuthis,NA
+Mollusca,NA,Cephalopoda,Oegopsida,Ommastrephidae,Todarodes,Todarodes sagittatus
+Mollusca,NA,Cephalopoda,Oegopsida,Ommastrephidae,Todaropsis,Todaropsis eblanae
+Mollusca,NA,Cephalopoda,Oegopsida,Ommastrephidae,NA,NA
+Mollusca,NA,Cephalopoda,Oegopsida,Onychoteuthidae,Onychoteuthis,Onychoteuthis banksii
+Mollusca,NA,Cephalopoda,Teuthida,NA,NA,NA
+Mollusca,NA,Cephalopoda,NA,NA,NA,NA
+Mollusca,NA,Gastropoda,Neogastropoda,Muricidae,Nucella,Nucella lapillus
+Mollusca,NA,NA,NA,NA,NA,NA
