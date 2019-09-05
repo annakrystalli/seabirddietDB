@@ -21,26 +21,30 @@ BugReports: https://github.com/annakrystalli/seabirddietDB/issues
 Suggests: 
     rlang,
     rcrossref (>= 0.8.1.9513),
-    covr
-Imports: 
     readxl,
     janitor,
-    dplyr,
-    here,
-    DT,
-    plyr,
-    testthat,
-    tidyr,
     readr,
-    magrittr,
-    worrms,
     glue,
     purrr,
     assertr,
     stringr,
+    EML,
+    covr,
+    metadatar,
+    seabirddiet.devtools
+Imports: 
+    dplyr,
+    tidyr,
+    here,
+    DT,
+    plyr,
+    testthat,
+    magrittr,
     sf,
-    EML
+    leaflet
 Remotes: 
+    annakrystalli/metadatar
+    annakrystalli/seabirddiet.devtools
     ropensci/rcrossref,
     ropensci/EML
 RoxygenNote: 6.1.1
