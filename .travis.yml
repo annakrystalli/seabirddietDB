@@ -7,10 +7,14 @@ addons:
   apt:
     sources: 
        - sourceline: 'ppa:opencpu/jq' 
+       - sourceline: 'ppa:ubuntugis/ppa'
     packages:
       - libjq-dev
       - libudunits2-dev
       - libv8-dev
+      - libproj-dev 
+      - libgeos-dev 
+      - libgdal-dev
       
 matrix:
   include:
