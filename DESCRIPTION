@@ -46,8 +46,8 @@ Imports:
     leaflet,
     knitr
 Remotes: 
-    annakrystalli/metadatar
-    annakrystalli/seabirddiet.devtools
+    annakrystalli/metadatar,
+    annakrystalli/seabirddiet.devtools,
     ropensci/rcrossref,
     ropensci/EML
 RoxygenNote: 6.1.1
