@@ -1,4 +1,4 @@
 library(testthat)
-library(seabirdPrey)
+library(seabirddietDB)
 
-test_check("seabirdPrey")
+test_check("seabirddietDB")
