@@ -19,22 +19,28 @@ sbd_filter <- function(db = seabirddietDB::seabirddiet, pred_species = NULL, pre
       choices = unique(seabirddiet$pred_species),
       several.ok = TRUE
     )
-
-    db <- dplyr::filter(db, .data$pred_species %in% pred_species)
+    db <- db[db$pred_species %in% pred_species,]
   }
   if (!is.null(prey_taxon)) {
-    prey_taxon <- match.arg(prey_taxon, choices = unique(seabirddiet$prey_taxon), several.ok = TRUE)
-    db <- dplyr::filter(db, .data$prey_taxon %in% prey_taxon)
+    prey_taxon <- match.arg(prey_taxon, 
+                            choices = unique(seabirddiet$prey_taxon), 
+                            several.ok = TRUE)
+    db <- db[db$prey_taxon %in% prey_taxon,]
   }
   if (!is.null(year)) {
-    #year <- match.arg(year, choices = unique(seabirddiet_$year), several.ok = TRUE)
-    db <- dplyr::filter(db, .data$year %in% year)
+    year <- match.arg(as.character(year), 
+                      choices = as.character(unique(seabirddiet_$year)), 
+                      several.ok = TRUE)
+    db <- db[as.character(db$year) %in% year,]
   }
   metrics <- match.arg(metrics, several.ok = TRUE)
-  db <- dplyr::select(db, .data$pred_species, .data$prey_taxon, .data$year,  
-                      dplyr::one_of("location", "latitude", "longitude", "geometry"),
-                      dplyr::one_of(metrics)) %>%
-    dplyr::filter(as.logical(rowSums(!is.na(dplyr::select(db, dplyr::one_of(metrics))))))
+  all_metrics <- c("freq_occ", "freq_biomass", "freq_num")
+
+  # Remove metrics columns that were not requested
+  db <- db[, !names(db) %in% all_metrics[!all_metrics %in% metrics]]
+  
+  # Remove rows for which values in all metrics columns are NA     
+  db <- db[as.logical(rowSums(!is.na(db[,metrics, drop = F]))),]
 
   db
 }
