@@ -1,7 +1,7 @@
 # Restart session!!!
 library(metadatar)
 library(dplyr)
-library(seabirdPrey)
+library(seabirddietDB)
 
 data(seabirddiet_)
 data(seabirddiet)
