@@ -80,6 +80,14 @@ seabirddiet <- seabirddiet_raw %>%
     distinct() %>%
     bind_cols(id =  1:nrow(.), .) 
 
+# remove rows where there is no data on prey occurrence
+seabirddiet <- seabirddiet[as.logical(rowSums(
+        !is.na(seabirddiet[, c("fo_o", "num_freq", "freq_biomass"), drop = F])
+        )),] 
+
+# remove sd column
+seabirddiet <- seabirddiet %>% dplyr::select(-.data$sd)
+
 readr::write_csv(seabirddiet, here::here("data-raw", "intermediate", "seabirddiet.csv"))
 #source(here::here("data-raw", "01c_process_references.R"))
 

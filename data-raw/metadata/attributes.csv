@@ -1,35 +1,34 @@
 attributeName,attributeDefinition,columnClasses,numberType,unit,minimum,maximum,formatString,definition,code,levels
-id,Datapoint identifier,numeric,natural,dimensionless,,,,,,
-year,Year or midpoint of range of years (rounded up to the nearest year) during which diet samples were taken,Date,,,,,YYYY,,,
-startyear,Year or start of range of years during which diet samples were taken,Date,,,,,YYYY,,,
-endyear,Year or end of range of years during which diet samples were taken,Date,,,,,YYYY,,,
-multiyear,Whether samples were taken over a range of multiple years,factor,,,,,,,FALSE;TRUE,FALSE;TRUE
-location,"Location where diet samples were taken, typically a breeding colony, as given in the reporting study. Where samples were taken over a wider region or where sampling was not distinguished between two or more locations, the midpoint between multiple locations was recorded",character,,,,,,Sample location,,
-latitude,Location latitude (N),numeric,real,degree,,,,,,
-longitude,Location longitude (E),numeric,real,degree,,,,,,
-pred_common_name,Common name of the seabird predator,character,,,,,,Predator common name,,
-pred_species,Scientific name of the seabird (predator) species,character,,,,,,Predator scientific name,,
-pred_rank,Predator taxonomic rank,factor,,,,,,,species,species
-pred_aphia_id,WoRMS aphia id associated with original predator species name,numeric,natural,dimensionless,,,,,,
-pred_valid_name,Valid name on WoRMS of original predator species,character,,,,,,Predator valid scientific name,,
-pred_valid_aphia_id,WoRMS aphia id associated with valid predator species name,numeric,natural,dimensionless,,,,,,
-pred_breeding_status,Whether diets were sampled during the Breeding season or the Non-breeding season,factor,,,,,,,breeding;breeding & non-breeding;non-breeding,breeding;breeding & non-breeding;non-breeding
-pred_age_group,Predator age group. Whether the diet samples were collected from Adult or Chick. When age group could not be determined “adult & chick” was recorded.,factor,,,,,,,chick;adult & chick;adult,chick;adult & chick;adult
-prey_orig_descr,The taxonomic term used in the original source,character,,,,,,Prey original taxonomic description,,
-prey_taxon,Prey taxonomic identity. Matched to the lowest possible taxonomic level.,character,,,,,,Prey scientific taxonomic identity,,
-prey_rank,Prey taxonomic rank,factor,,,,,,,phylum;subphylum;class;order;family;genus;species,phylum;subphylum;class;order;family;genus;species
-prey_aphia_id,WoRMS aphia id associated with original prey taxon name,numeric,natural,dimensionless,,,,,,
-prey_valid_name,Valid name on WoRMS of original prey taxon,character,,,,,,Prey valid scientific taxonomic identity,,
-prey_valid_aphia_id,WoRMS aphia id associated with valid prey taxon name,numeric,natural,dimensionless,,,,,,
-prey_size,Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units,character,,,,,,Prey size,,
-prey_sd,Prey size standard deviation,character,,,,,,Prey standard deviation,,
-prey_age_group,Prey age group. Whether prey was age 0 or +1 years old.,factor,,,,,,,0;+1,0;+1
-freq_occ,"Relative frequency of occurrence of a prey taxon across diet samples in a given study. For stomach content analyses, whenever possible this was expressed as a proportion of stomachs that had some content (i.e. empty stomachs were excluded). Frequency of occurrence of all prey taxa recorded in a particular study won’t necessarily sum to 1.",numeric,real,dimensionless,0,1,,,,
-freq_num,Relative numerical frequency of prey taxon among total number of recorded prey items. Numerical frequencies of all recorded prey taxa in a given study should sum to 1.,numeric,real,dimensionless,0,1,,,,
-freq_biomass,Relative biomass of prey taxon with respect to the total biomass/volume/energy recorded in a given study  (where biomass of all prey taxa was available),numeric,real,dimensionless,0,1,,,,
-sample_size,Number of samples from which relative frequencies have been calculated,numeric,natural,dimensionless,1,,,,,
-sample_type,Method used to assess diet,factor,,,,,,,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;vis obs,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;visual observation
-ref_n,Number of references associated with record,numeric,natural,dimensionless,1,,,,,
-ref_ids,Reference identifiers associated with record,character,,,,,,reference IDs,,
-source,Data source,factor,,,,,,,dataset;primary literature;report,dataset;primary literature;report (including unpublished reports and personal communications)
-notes,Notes,character,,,,,,notes,,
+id,Datapoint identifier,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
+pred_common_name,Common name of the seabird predator,character,NA,NA,NA,NA,NA,Predator common name,NA,NA
+pred_species,Scientific name of the seabird (predator) species,character,NA,NA,NA,NA,NA,Predator scientific name,NA,NA
+year,Year or midpoint of range of years (rounded up to the nearest year) during which diet samples were taken,Date,NA,NA,NA,NA,YYYY,NA,NA,NA
+startyear,Year or start of range of years during which diet samples were taken,Date,NA,NA,NA,NA,YYYY,NA,NA,NA
+endyear,Year or end of range of years during which diet samples were taken,Date,NA,NA,NA,NA,YYYY,NA,NA,NA
+multiyear,Whether samples were taken over a range of multiple years,factor,NA,NA,NA,NA,NA,NA,FALSE;TRUE,FALSE;TRUE
+location,"Location where diet samples were taken, typically a breeding colony, as given in the reporting study. Where samples were taken over a wider region or where sampling was not distinguished between two or more locations, the midpoint between multiple locations was recorded",character,NA,NA,NA,NA,NA,Sample location,NA,NA
+latitude,Location latitude (N),numeric,real,degree,NA,NA,NA,NA,NA,NA
+longitude,Location longitude (E),numeric,real,degree,NA,NA,NA,NA,NA,NA
+pred_breeding_status,Whether diets were sampled during the Breeding season or the Non-breeding season,factor,NA,NA,NA,NA,NA,NA,breeding;breeding & non-breeding;non-breeding,breeding;breeding & non-breeding;non-breeding
+pred_age_group,Predator age group. Whether the diet samples were collected from Adult or Chick. When age group could not be determined “adult & chick” was recorded.,factor,NA,NA,NA,NA,NA,NA,chick;adult & chick;adult,chick;adult & chick;adult
+prey_orig_descr,The taxonomic term used in the original source,character,NA,NA,NA,NA,NA,Prey original taxonomic description,NA,NA
+prey_taxon,Prey taxonomic identity. Matched to the lowest possible taxonomic level.,character,NA,NA,NA,NA,NA,Prey scientific taxonomic identity,NA,NA
+freq_occ,"Relative frequency of occurrence of a prey taxon across diet samples in a given study. For stomach content analyses, whenever possible this was expressed as a proportion of stomachs that had some content (i.e. empty stomachs were excluded). Frequency of occurrence of all prey taxa recorded in a particular study won’t necessarily sum to 1.",numeric,real,dimensionless,0,1,NA,NA,NA,NA
+freq_num,Relative numerical frequency of prey taxon among total number of recorded prey items. Numerical frequencies of all recorded prey taxa in a given study should sum to 1.,numeric,real,dimensionless,0,1,NA,NA,NA,NA
+freq_biomass,Relative biomass of prey taxon with respect to the total biomass/volume/energy recorded in a given study  (where biomass of all prey taxa was available),numeric,real,dimensionless,0,1,NA,NA,NA,NA
+prey_size,Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units,character,NA,NA,NA,NA,NA,Prey size,NA,NA
+sample_size,Number of samples from which relative frequencies have been calculated,numeric,natural,dimensionless,1,NA,NA,NA,NA,NA
+sample_type,Method used to assess diet,factor,NA,NA,NA,NA,NA,NA,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;vis obs,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;vis obs
+source,Data source,factor,NA,NA,NA,NA,NA,NA,dataset;primary literature;report,dataset;primary literature;report
+notes,Notes,character,NA,NA,NA,NA,NA,notes,NA,NA
+prey_age_group,Prey age group. Whether prey was age 0 or +1 years old.,factor,NA,NA,NA,NA,NA,NA,+1;0,+1;0
+pred_rank,Predator taxonomic rank,factor,NA,NA,NA,NA,NA,NA,species,species
+pred_aphia_id,WoRMS aphia id associated with original predator species name,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
+pred_valid_name,Valid name on WoRMS of original predator species,character,NA,NA,NA,NA,NA,Predator valid scientific name,NA,NA
+pred_valid_aphia_id,WoRMS aphia id associated with valid predator species name,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
+prey_rank,Prey taxonomic rank,factor,NA,NA,NA,NA,NA,NA,phylum;subphylum;class;order;family;genus;species,phylum;subphylum;class;order;family;genus;species
+prey_aphia_id,WoRMS aphia id associated with original prey taxon name,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
+prey_valid_name,Valid name on WoRMS of original prey taxon,character,NA,NA,NA,NA,NA,Prey valid scientific taxonomic identity,NA,NA
+prey_valid_aphia_id,WoRMS aphia id associated with valid prey taxon name,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
+ref_n,Number of references associated with record,numeric,natural,dimensionless,1,NA,NA,NA,NA,NA
+ref_ids,Reference identifiers associated with record,character,NA,NA,NA,NA,NA,reference IDs,NA,NA

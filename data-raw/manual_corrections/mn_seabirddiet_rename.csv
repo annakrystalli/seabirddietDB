@@ -7,4 +7,3 @@ prey_type,prey_orig_descr,FALSE
 prey_species,prey_taxon,FALSE
 fo_o,freq_occ,FALSE
 num_freq,freq_num,FALSE
-sd,prey_sd,FALSE
