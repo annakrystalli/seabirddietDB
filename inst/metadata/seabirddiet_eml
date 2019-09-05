@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="eb4ed503-455b-48b3-8a68-6330a46caa5a" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="fe76618f-ab32-4f4c-ad7d-a0b932da10c6" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
   <dataset id="dat.001">
     <title>Seabird Diet Database</title>
     <creator>
@@ -41,29 +41,30 @@
     <pubDate>2018</pubDate>
     <abstract>
       <para>
-  This data base was created as part of the Marine Ecosystem Research
-  Programme, funded by the Natural Environment Research Council (NERC)
-  and the Department for Environment, Food and Rural Affairs (Defra),
-  that aimed to integrate exisiting and new marine data sets with
+  This database was created as part of the Marine Ecosystem Research
+  Programme (MERP), funded by the Natural Environment Research Council
+  (NERC) and the Department for Environment, Food and Rural Affairs
+  (Defra) and aiming to integrate existing and new marine data sets with
   current models of marine ecosystem services to further our knowledge
   and understanding of the UK marine ecosystems. The aim of the Seabird
-  Prey Date Base was to collate a new data set with all known
-  information on prey consumed by seabirds breeding in the British
-  Isles. We have focused on the 10 most common seabird species by total
-  biomass during the breeding season, accounting for 95% of biomass of
-  seabirds consuming a marine diet in 2000. Thus the prey reflects the
-  major of marine prey consumed by seabirds in British waters.
+  Prey Database was to collate a new dataset from all known information
+  on prey consumed by seabirds breeding in the British Isles. We have
+  focused on the 10 most common seabird species by total biomass during
+  the breeding season, accounting for 95% of biomass of seabirds
+  consuming a marine diet in 2000. Thus the prey reflects the majority
+  of marine prey consumed by seabirds in British waters.
 </para>
       <para>
   Information was primarily gathered from the primary literature by
   searching the web of science for titles, abstract or keywords
-  containing ‘diet’, ‘food’, and species name. Data are presented as the
-  frequency of each identified prey taxa per colony and year; each prey
-  taxa is entered as a separate record. The contribution of the prey to
-  the diet in the study year and site is expressed in one of three
-  currencies commonly used in seabird dietary studies (Duffy &amp;amp;
-  Jackson 1986, Barrett et al. 2007): frequency of occurrence, numerical
-  frequency and biomass frequency (see the data attributes table).
+  containing ‘diet’, ‘food’, and predator’s species name. Data are
+  presented as the frequency of each identified prey taxon per colony
+  and year; data for each prey taxon is entered as a separate record.
+  The contribution of the prey to the diet in the study year and site is
+  expressed in one of three currencies commonly used in seabird dietary
+  studies (Duffy &amp;amp; Jackson 1986, Barrett et al. 2007): frequency of
+  occurrence, numerical frequency and biomass frequency (see the data
+  attributes table).
 </para>
     </abstract>
     <keywordSet>
@@ -3363,33 +3364,33 @@ distinguished between two or more specific locations where diet samples were col
 </para>
           <para>
   For the predators, we have focused on the 10 most common seabird
-  species by total biomass during the breeding season (Table 1). As the
-  focus of the MERP programme was an assessment of the marine ecosystem,
-  we only selected seabird species where the majority of their consumed
-  prey was marine. Among the top-ten British seabird species by biomass
-  are two gull species (Herring Gull (</para>
+  species by total biomass during the breeding season. As the focus of
+  the MERP programme was an assessment of the marine ecosystem, we only
+  selected seabird species where the majority of their consumed prey was
+  marine. Among the top-ten British seabird species by biomass are two
+  gull species (Herring Gull (</para>
           <para>
-            <emphasis>Larus
-  argentatus</emphasis>
+            <emphasis>Larus argentatus</emphasis>
           </para>
-          <para>) and Lesser Black-backed Gulls (</para>
+          <para>) and
+  Lesser Black-backed Gulls (</para>
           <para>
-            <emphasis>L.
-  fuscus</emphasis>
+            <emphasis>L. fuscus</emphasis>
           </para>
-          <para>)). However, they show a very different diet from the
-  other seabirds, forage to a substantial amount on terrestrial habitat
-  (Garthe et al., 2016; Götmark, 1984) and if they consume marine prey
-  its taxonomy is usually poorly resolved. Therefore, they were excluded
-  from this dataset and we concentrated instead on the Northern Gannet
-  (</para>
+          <para>)). However,
+  they show a very different diet from the other seabirds, forage to a
+  substantial amount on terrestrial habitat (Garthe et al., 2016;
+  Götmark, 1984) and if they consume marine prey its taxonomy is usually
+  poorly resolved. Therefore, they were excluded from this dataset and
+  we concentrated instead on the Northern Gannet (</para>
           <para>
-            <emphasis>Morus bassanus</emphasis>
+            <emphasis>Morus
+  bassanus</emphasis>
           </para>
-          <para>), Common Guillemot
-  (</para>
+          <para>), Common Guillemot (</para>
           <para>
-            <emphasis>Uria aalge</emphasis>
+            <emphasis>Uria
+  aalge</emphasis>
           </para>
           <para>), Northern Fulmar (</para>
           <para>
@@ -3429,8 +3430,8 @@ distinguished between two or more specific locations where diet samples were col
           <para>
   Information was gathered from the primary literature by searching the
   Web of Science for titles, abstract or keywords containing ‘diet’,
-  ‘food’, and species name. Individual publications returned by the
-  search were then inspected for relevant diet information and/or
+  ‘food’, and predaror’s species name. Individual publications returned
+  by the search were then inspected for relevant diet information and/or
   references to earlier studies that could contain further information.
   The process was repeated with any further identified studies until no
   new references could be identified. We also contacted researchers
@@ -3578,9 +3579,6 @@ distinguished between two or more specific locations where diet samples were col
           <para>
   Dierschke, A-K., Hüppop, O. 2003. Langfristige Veränderungen in der
   Ernährung von Silbermöwen (</para>
-          <para>
-            <emphasis>Larus argentatus</emphasis>
-          </para>
           <para>) auf
   Helgoland unter dem Einfluss der Fischerei mit Vergleichen zur
   Heringsmöwe (</para>
@@ -3601,6 +3599,9 @@ distinguished between two or more specific locations where diet samples were col
           <para>
   Mehlum, F. 2001. Crustaceans in the diet of adult common and
   Brünnich's guillemots </para>
+          <para>
+            <emphasis>Uria aalge</emphasis>
+          </para>
           <para> and </para>
           <para>
             <emphasis>U.
@@ -3614,9 +3615,6 @@ distinguished between two or more specific locations where diet samples were col
   food between herring </para>
           <para> and lesser
   black-backed gulls </para>
-          <para>
-            <emphasis>L. fuscus</emphasis>
-          </para>
           <para> in the Dutch Wadden
   Sea area. Ardea, 80:115-132.
 </para>
@@ -3642,8 +3640,8 @@ distinguished between two or more specific locations where diet samples were col
       <entityDescription>Seabird Diet Database</entityDescription>
       <physical>
         <objectName>seabirddiet.csv</objectName>
-        <size unit="bytes">749458</size>
-        <authentication method="MD5">3e2e962dfc5720d391890d6f92686728</authentication>
+        <size unit="bytes">729513</size>
+        <authentication method="MD5">e298affd946217fa86d42ceebd2f079f</authentication>
         <dataFormat>
           <textFormat>
             <recordDelimiter>
@@ -3669,6 +3667,34 @@ distinguished between two or more specific locations where diet samples were col
                 <numberType>natural</numberType>
               </numericDomain>
             </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_common_name</attributeName>
+          <attributeDefinition>Common name of the seabird predator</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Predator common name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_species</attributeName>
+          <attributeDefinition>Scientific name of the seabird (predator) species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Predator scientific name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -3727,7 +3753,7 @@ distinguished between two or more specific locations where diet samples were col
         </attribute>
         <attribute>
           <attributeName>location</attributeName>
-          <attributeDefinition>Location where diet samples were taken, typically at a breeding colony</attributeDefinition>
+          <attributeDefinition>Location where diet samples were taken, typically a breeding colony, as given in the reporting study. Where samples were taken over a wider region or where sampling was not distinguished between two or more locations, the midpoint between multiple locations was recorded</attributeDefinition>
           <storageType>string</storageType>
           <measurementScale>
             <nominal>
@@ -3741,7 +3767,7 @@ distinguished between two or more specific locations where diet samples were col
         </attribute>
         <attribute>
           <attributeName>latitude</attributeName>
-          <attributeDefinition>Location latitude</attributeDefinition>
+          <attributeDefinition>Location latitude (N)</attributeDefinition>
           <storageType>float</storageType>
           <measurementScale>
             <ratio>
@@ -3756,7 +3782,7 @@ distinguished between two or more specific locations where diet samples were col
         </attribute>
         <attribute>
           <attributeName>longitude</attributeName>
-          <attributeDefinition>Location longitude</attributeDefinition>
+          <attributeDefinition>Location longitude (E)</attributeDefinition>
           <storageType>float</storageType>
           <measurementScale>
             <ratio>
@@ -3770,29 +3796,281 @@ distinguished between two or more specific locations where diet samples were col
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>pred_common_name</attributeName>
-          <attributeDefinition>Common name of the seabird predator</attributeDefinition>
+          <attributeName>pred_breeding_status</attributeName>
+          <attributeDefinition>Whether diets were sampled during the Breeding season or the Non-breeding season</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>breeding</code>
+                    <definition>breeding</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>breeding &amp; non-breeding</code>
+                    <definition>breeding &amp; non-breeding</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>non-breeding</code>
+                    <definition>non-breeding</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pred_age_group</attributeName>
+          <attributeDefinition>Predator age group. Whether the diet samples were collected from Adult or Chick. When age group could not be determined “adult &amp; chick” was recorded.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>chick</code>
+                    <definition>chick</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>adult &amp; chick</code>
+                    <definition>adult &amp; chick</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>adult</code>
+                    <definition>adult</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_orig_descr</attributeName>
+          <attributeDefinition>The taxonomic term used in the original source</attributeDefinition>
           <storageType>string</storageType>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Predator common name</definition>
+                  <definition>Prey original taxonomic description</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>pred_species</attributeName>
-          <attributeDefinition>Scientific name of the seabird (predator) species</attributeDefinition>
+          <attributeName>prey_taxon</attributeName>
+          <attributeDefinition>Prey taxonomic identity. Matched to the lowest possible taxonomic level.</attributeDefinition>
           <storageType>string</storageType>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Predator scientific name</definition>
+                  <definition>Prey scientific taxonomic identity</definition>
                 </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_occ</attributeName>
+          <attributeDefinition>Relative frequency of occurrence of a prey taxon across diet samples in a given study. For stomach content analyses, whenever possible this was expressed as a proportion of stomachs that had some content (i.e. empty stomachs were excluded). Frequency of occurrence of all prey taxa recorded in a particular study won’t necessarily sum to 1.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_num</attributeName>
+          <attributeDefinition>Relative numerical frequency of prey taxon among total number of recorded prey items. Numerical frequencies of all recorded prey taxa in a given study should sum to 1.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>freq_biomass</attributeName>
+          <attributeDefinition>Relative biomass of prey taxon with respect to the total biomass/volume/energy recorded in a given study  (where biomass of all prey taxa was available)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_size</attributeName>
+          <attributeDefinition>Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Prey size</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>sample_size</attributeName>
+          <attributeDefinition>Number of samples from which relative frequencies have been calculated</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>sample_type</attributeName>
+          <attributeDefinition>Method used to assess diet</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>discard</code>
+                    <definition>discard</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>pellet</code>
+                    <definition>pellet</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>regurgitate</code>
+                    <definition>regurgitate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach</code>
+                    <definition>stomach</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach &amp; regurgitate</code>
+                    <definition>stomach &amp; regurgitate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach dead</code>
+                    <definition>stomach dead</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach shot</code>
+                    <definition>stomach shot</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach shot &amp; dead</code>
+                    <definition>stomach shot &amp; dead</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>stomach water offloading</code>
+                    <definition>stomach water offloading</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>vis obs</code>
+                    <definition>vis obs</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>source</attributeName>
+          <attributeDefinition>Data source</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>dataset</code>
+                    <definition>dataset</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>primary literature</code>
+                    <definition>primary literature</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>report</code>
+                    <definition>report</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>notes</attributeName>
+          <attributeDefinition>Notes</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>prey_age_group</attributeName>
+          <attributeDefinition>Prey age group. Whether prey was age 0 or +1 years old.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>+1</code>
+                    <definition>+1</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>0</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
@@ -3856,84 +4134,6 @@ distinguished between two or more specific locations where diet samples were col
                 <numberType>natural</numberType>
               </numericDomain>
             </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>pred_breeding_status</attributeName>
-          <attributeDefinition>Whether diets were sampled during the Breeding season or the Non-breeding season</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <enumeratedDomain>
-                  <codeDefinition>
-                    <code>breeding</code>
-                    <definition>breeding</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>breeding &amp; non-breeding</code>
-                    <definition>breeding &amp; non-breeding</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>non-breeding</code>
-                    <definition>non-breeding</definition>
-                  </codeDefinition>
-                </enumeratedDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>pred_age_group</attributeName>
-          <attributeDefinition>Predator age group. Whether the diet samples were collected from Adult or Chick.</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <enumeratedDomain>
-                  <codeDefinition>
-                    <code>chick</code>
-                    <definition>chick</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>adult &amp; chick</code>
-                    <definition>adult &amp; chick</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>adult</code>
-                    <definition>adult</definition>
-                  </codeDefinition>
-                </enumeratedDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>prey_orig_descr</attributeName>
-          <attributeDefinition>The taxonomic term used in the original source</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Prey original taxonomic description</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>prey_taxon</attributeName>
-          <attributeDefinition>Prey taxonomic identity. Matched to the lowest possible taxonomic level.</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Prey scientific taxonomic identity</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -4022,183 +4222,6 @@ distinguished between two or more specific locations where diet samples were col
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>prey_size</attributeName>
-          <attributeDefinition>Average prey size. Textual data as recorded in the data source which may contain standard deviation and inconsistent units</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Prey size</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>prey_sd</attributeName>
-          <attributeDefinition>Prey size standard deviation</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Prey standard deviation</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>prey_age_group</attributeName>
-          <attributeDefinition>Prey age group. Whether prey was age 0 or +1 years old.</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <enumeratedDomain>
-                  <codeDefinition>
-                    <code>0</code>
-                    <definition>0</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>1</code>
-                    <definition>1</definition>
-                  </codeDefinition>
-                </enumeratedDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>freq_occ</attributeName>
-          <attributeDefinition>Frequency of occurrence of a prey taxon in diet samples of a given study.</attributeDefinition>
-          <storageType>float</storageType>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>dimensionless</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">1</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>freq_num</attributeName>
-          <attributeDefinition>Frequency of prey taxon across all recorded prey items</attributeDefinition>
-          <storageType>float</storageType>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>dimensionless</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">1</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>freq_biomass</attributeName>
-          <attributeDefinition>Prey taxon biomass as a proportion of the total biomass/volume/energy (Where biomass of all prey taxon available)</attributeDefinition>
-          <storageType>float</storageType>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>dimensionless</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">1</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>sample_size</attributeName>
-          <attributeDefinition>Number of samples from which frequencies have been calculated</attributeDefinition>
-          <storageType>float</storageType>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>dimensionless</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>natural</numberType>
-                <bounds>
-                  <minimum exclusive="false">1</minimum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>sample_type</attributeName>
-          <attributeDefinition>Method used to assess diet</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <enumeratedDomain>
-                  <codeDefinition>
-                    <code>discard</code>
-                    <definition>discard</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>pellet</code>
-                    <definition>pellet</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>regurgitate</code>
-                    <definition>regurgitate</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach</code>
-                    <definition>stomach</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach &amp; regurgitate</code>
-                    <definition>stomach &amp; regurgitate</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach dead</code>
-                    <definition>stomach dead</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach shot</code>
-                    <definition>stomach shot</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach shot &amp; dead</code>
-                    <definition>stomach shot &amp; dead</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>stomach water offloading</code>
-                    <definition>stomach water offloading</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>vis obs</code>
-                    <definition>vis obs</definition>
-                  </codeDefinition>
-                </enumeratedDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>ref_n</attributeName>
           <attributeDefinition>Number of references associated with record</attributeDefinition>
           <storageType>float</storageType>
@@ -4225,45 +4248,6 @@ distinguished between two or more specific locations where diet samples were col
               <nonNumericDomain>
                 <textDomain>
                   <definition>reference IDs</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>source</attributeName>
-          <attributeDefinition>Data source</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <enumeratedDomain>
-                  <codeDefinition>
-                    <code>dataset</code>
-                    <definition>dataset</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>primary literature</code>
-                    <definition>primary literature</definition>
-                  </codeDefinition>
-                  <codeDefinition>
-                    <code>report</code>
-                    <definition>report</definition>
-                  </codeDefinition>
-                </enumeratedDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>notes</attributeName>
-          <attributeDefinition>Notes</attributeDefinition>
-          <storageType>string</storageType>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>notes</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
