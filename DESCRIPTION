@@ -30,7 +30,7 @@ Suggests:
     purrr,
     assertr,
     stringr,
-    EML,
+    EML (>= 2.0.0),
     covr,
     metadatar,
     seabirddiet.devtools
