@@ -5,9 +5,12 @@ sudo: false
 cache: packages
 addons:
   apt:
+    sources: 
+       - sourceline: 'ppa:opencpu/jq' 
     packages:
-      - libudunits2-dev
       - libjq-dev
+      - libudunits2-dev
+      
 matrix:
   include:
    - r: release
