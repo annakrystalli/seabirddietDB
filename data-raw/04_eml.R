@@ -136,6 +136,19 @@ write_eml(sbd_eml, file = here::here("inst", "metadata", "seabirddiet_eml"))
 emldown::render_eml(here::here("inst", "metadata", "seabirddiet_eml"), outfile = "index.html")
 
 
-# 
 ## ---- save-metadata ----
-class
+# classification
+classification <- tibble::as_tibble(classification)
+use_data(classification, overwrite = TRUE)
+# references
+references <- readr::read_csv(here::here("data-raw", "metadata", "references.csv"))
+use_data(references, overwrite = TRUE)
+
+# attributes
+attributes <- attr_tbl
+use_data(attributes, overwrite = TRUE)
+
+# install to include metadata tables
+devtools::install(quick = TRUE, dependencies = FALSE)
+
+
