@@ -15,3 +15,13 @@ test_that("seabirddiet_ correct", {
     expect_equal(ncol(seabirddiet) - 1, ncol(seabirddiet_))
     expect_equal(class(seabirddiet_), c("sf", "tbl_df", "tbl", "data.frame"))
 })
+
+test_that("validate columns", {
+expect_equal(seabirddiet,seabirddiet %>% assertr::assert(is.numeric, year, startyear, endyear, 
+                                              latitude, longitude, freq_occ, freq_num, freq_biomass) %>%
+                 assertr::assert(is.logical, multiyear) %>%
+                 assertr::assert(is.character, prey_age_group) %>%
+                 assertr::assert(assertr::not_na, ref_ids, prey_taxon, pred_rank, year, multiyear) %>%
+                 assertr::assert(assertr::is_uniq, id) %>%
+                 assertr::assert(assertr::within_bounds(0, 1), freq_occ, freq_num, freq_biomass))
+})
