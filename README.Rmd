@@ -23,18 +23,18 @@ The goal of seabirddietDB is to provide access and tools to interact with a data
 
 ## Installation
 
-You can install the released version of seabirddietDB from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("seabirddietDB")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("annakrystalli/seabirddietDB")
 ```
+
+## Data 
+
+For more details on the dataset, check out the [full documentation]()
+
+
 ## Example
 
 To access the data simply load the package. The data is then available
@@ -42,10 +42,6 @@ To access the data simply load the package. The data is then available
 ```{r print-seabirddiet}
 library(seabirddietDB)
 
-```
-
-```{r}
-class(seabirddiet)
 ```
 
 
@@ -57,13 +53,8 @@ seabirddiet
 tibble::as_tibble(seabirddiet)
 ```
 
-```{r}
-class(seabirddiet)
-```
 
-
-
-A version with more formal data types/structures in the columns (ie geographic information stored as `sf`, categorical data as factors etc) is also available
+A version with more formal data types/structures in the columns (ie geographic information stored as `sf`, categorical data as factors etc) is also available. Note that you will need package `sf` installed to load this version of the data.
 
 ```{r print-seabirddiet_, eval=FALSE}
 class(seabirddiet_)
@@ -71,6 +62,16 @@ class(seabirddiet_)
 
 
 ## Helpers
+
+### metadata
+
+A number of metadata datasets are included with the package: `attributes`, `references` and `classification`. Load them as you would one of the datasets, e.g. :
+
+```{r}
+references
+```
+
+
 
 ### List
 List predators
@@ -126,4 +127,12 @@ There are additional helpers for interactive plotting of data
 sbd_plot_predators(year = 1973)
 ```
 
+
+***
+
+To cite use
+
+```{r}
+citation("seabirddietDB")
+```
 
