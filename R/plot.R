@@ -16,17 +16,13 @@ sbd_plot_predators <- function(db = seabirddietDB::seabirddiet, pred_species = N
     db <- db %>% sbd_filter(pred_species = pred_species, prey_taxon = prey_taxon, 
                             year = year, 
                             metrics = metrics) %>%
-        dplyr::select(dplyr::one_of(c("year", "latitude", "longitude", "pred_species", 
-                                      "prey_taxon", metrics))) %>%
-        dplyr::group_by(.data$year, .data$latitude, .data$longitude, .data$pred_species) %>%
-        dplyr::arrange(.data$year, .data$latitude, .data$longitude, .data$pred_species,
-                       dplyr::desc(.data[[metrics[1]]])) %>%
-        tidyr::nest(.key = "tabulate")
+        nest_tables(metrics)
     
     factpal <- colorFactor(rainbow(length(unique(db$pred_species))), db$pred_species)
     
     leaflet(data = db) %>% addProviderTiles(base_map) %>%
         addCircleMarkers(
+            ~longitude, ~latitude,
             color = ~factpal(pred_species),
             stroke = FALSE, fillOpacity = 0.7,
             popup = make_popup(db),
@@ -43,4 +39,14 @@ make_popup <- function(df){
                                    knitr::kable(x["tabulate"], 
                                                 format = "html"))}
     apply(df, 1, popup_row)
+}
+
+nest_tables <- function(df, metrics){
+    df %>%
+    dplyr::select(dplyr::one_of(c("year", "latitude", "longitude", "pred_species", 
+                                  "prey_taxon", metrics))) %>%
+    dplyr::group_by(.data$year, .data$latitude, .data$longitude, .data$pred_species) %>%
+    dplyr::arrange(.data$year, .data$latitude, .data$longitude, .data$pred_species,
+                   dplyr::desc(.data[[metrics[1]]])) %>%
+    tidyr::nest(.key = "tabulate")
 }
