@@ -5,7 +5,7 @@ library(seabirdPrey)
 library(seabirddiet.devtools)
 
 # load-final-data ----
-data(seabirddiet_)
+data(seabirddiet)
 
 # set-attributes ----
 meta_tbl <- readr::read_csv(
@@ -134,3 +134,8 @@ write_eml(sbd_eml, file = here::here("inst", "metadata", "seabirddiet_eml"))
 
 # create emldown page ----
 emldown::render_eml(here::here("inst", "metadata", "seabirddiet_eml"), outfile = "index.html")
+
+
+# 
+## ---- save-metadata ----
+class

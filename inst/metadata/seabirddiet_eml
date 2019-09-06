@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="fe76618f-ab32-4f4c-ad7d-a0b932da10c6" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="b88e47f3-79a5-4e18-9ae8-2a884f5df214" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
   <dataset id="dat.001">
     <title>Seabird Diet Database</title>
     <creator>
@@ -3640,8 +3640,8 @@ distinguished between two or more specific locations where diet samples were col
       <entityDescription>Seabird Diet Database</entityDescription>
       <physical>
         <objectName>seabirddiet.csv</objectName>
-        <size unit="bytes">729513</size>
-        <authentication method="MD5">e298affd946217fa86d42ceebd2f079f</authentication>
+        <size unit="bytes">729967</size>
+        <authentication method="MD5">15d20cd0cc50d7aec129982e3e2bc6b2</authentication>
         <dataFormat>
           <textFormat>
             <recordDelimiter>
@@ -4063,8 +4063,8 @@ distinguished between two or more specific locations where diet samples were col
               <nonNumericDomain>
                 <enumeratedDomain>
                   <codeDefinition>
-                    <code>+1</code>
-                    <definition>+1</definition>
+                    <code>&gt;= 1</code>
+                    <definition>&gt;= 1</definition>
                   </codeDefinition>
                   <codeDefinition>
                     <code>0</code>

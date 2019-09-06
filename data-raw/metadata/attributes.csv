@@ -21,7 +21,7 @@ sample_size,Number of samples from which relative frequencies have been calculat
 sample_type,Method used to assess diet,factor,NA,NA,NA,NA,NA,NA,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;vis obs,discard;pellet;regurgitate;stomach;stomach & regurgitate;stomach dead;stomach shot;stomach shot & dead;stomach water offloading;vis obs
 source,Data source,factor,NA,NA,NA,NA,NA,NA,dataset;primary literature;report,dataset;primary literature;report
 notes,Notes,character,NA,NA,NA,NA,NA,notes,NA,NA
-prey_age_group,Prey age group. Whether prey was age 0 or +1 years old.,factor,NA,NA,NA,NA,NA,NA,+1;0,+1;0
+prey_age_group,Prey age group. Whether prey was age 0 or +1 years old.,factor,NA,NA,NA,NA,NA,NA,>= 1;0,>= 1;0
 pred_rank,Predator taxonomic rank,factor,NA,NA,NA,NA,NA,NA,species,species
 pred_aphia_id,WoRMS aphia id associated with original predator species name,numeric,natural,dimensionless,NA,NA,NA,NA,NA,NA
 pred_valid_name,Valid name on WoRMS of original predator species,character,NA,NA,NA,NA,NA,Predator valid scientific name,NA,NA

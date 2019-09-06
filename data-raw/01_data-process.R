@@ -71,7 +71,7 @@ seabirddiet <- seabirddiet_raw %>%
            # fill prey_age_group column
            prey_age_group = 
                case_when(stringr::str_detect(prey_type, "0") ~ "0",
-                         stringr::str_detect(prey_type, "1|(older)") ~ "+1"),
+                         stringr::str_detect(prey_type, "1|(older)") ~ ">= 1"),
            #prey_size = stringr::str_replace_all(prey_size, "m", "")
            # ensure start and end year are single year, not range
            startyear = stringr::str_extract(startyear, "\\d*") %>% as.numeric(),
@@ -155,7 +155,6 @@ seabirddiet <- seabirddiet %>%
                    -pred_age_group, 
                    -prey_age_group, 
                    -prey_size, 
-                   -prey_sd,
                    everything()) %>%
     # variable group reorder
     dplyr::select(id, year:longitude, 

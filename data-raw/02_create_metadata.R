@@ -19,5 +19,6 @@ meta_tbl <- mt_update_factors(seabirddiet_, meta_tbl, factor_cols = factor_vars,
 readr::write_csv(meta_tbl, here::here("data-raw", "metadata", "attributes.csv"))
 
 
+
 # manual updates if required
 seabirdPrey::mn_edit_df(meta_tbl)   
