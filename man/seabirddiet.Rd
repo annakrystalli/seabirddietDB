@@ -25,7 +25,7 @@ The data are published on the KNB under DOI xxxxxxxxxxx.
     } else {
       mytext <- c("\n Note: the table may not render correctly in the RStudio dark theme. To view, open in a new window", 
       seabirddiet.devtools::rd_datatable(readr::read_csv(system.file("metadata", "attributes.csv", 
-      package = "seabirddietDB")), class = "row-border", rownames=FALSE))
+      package = "seabirddietDB"), col_types = readr::cols()), class = "row-border", rownames=FALSE))
     }
     mytext
   }
