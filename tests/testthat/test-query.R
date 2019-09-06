@@ -49,3 +49,25 @@ test_that("combination selected correctly", {
                                       seabirddiet$prey_taxon == "Gadidae" &
                                       seabirddiet$pred_species == "Uria aalge",]))
     })
+
+test_that("sbd_predators prints correctly", {
+
+    expect_equal(sbd_predators(), sort(unique(seabirddiet$pred_species)))
+    expect_equal(sbd_predators(verbose = T)$pred_species, 
+                 sort(unique(seabirddiet$pred_species)))
+    expect_s3_class(sbd_predators(verbose = T), c("tbl_df", "tbl", "data.frame"))
+    expect_equal(names(sbd_predators(verbose = T)), 
+                 c("pred_species", "pred_rank", "pred_aphia_id", "pred_valid_name", 
+                   "pred_valid_aphia_id"))
+})
+
+test_that("sbd_prey prints correctly", {
+    
+    expect_equal(sbd_prey(), sort(unique(seabirddiet$prey_taxon)))
+    expect_equal(sbd_prey(verbose = T)$prey_taxon, 
+                 sort(unique(seabirddiet$prey_taxon)))
+    expect_s3_class(sbd_prey(verbose = T), c("tbl_df", "tbl", "data.frame"))
+    expect_equal(names(sbd_prey(verbose = T)), 
+                 c("prey_taxon", "prey_rank", "prey_aphia_id", "prey_valid_name", 
+                   "prey_valid_aphia_id"))
+})
