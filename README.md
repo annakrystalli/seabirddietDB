@@ -12,7 +12,7 @@ coverage](https://codecov.io/gh/annakrystalli/seabirddietDB/branch/master/graph/
 <!-- badges: end -->
 
 The goal of seabirddietDB is to provide access and tools to interact
-with a databse of seabird diets around the British Isles
+with a database of seabird diets collected around the British Isles.
 
 ## Installation
 
@@ -26,7 +26,8 @@ remotes::install_github("annakrystalli/seabirddietDB")
 
 ## Data
 
-For more details on the dataset, check out the [full documentation]()
+For more details on the dataset, check out the [full
+documentation](https://annakrystalli.me/seabirddietDB/)
 
 ## Example
 
