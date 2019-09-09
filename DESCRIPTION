@@ -30,7 +30,6 @@ Depends:
     R (>= 2.10)
 Suggests: 
     rlang,
-    rcrossref (>= 0.8.1.9513),
     readxl,
     janitor,
     readr,
@@ -41,21 +40,18 @@ Suggests:
     EML (>= 2.0.0),
     covr,
     metadatar,
-    seabirddiet.devtools
+    seabirddiet.devtools,
+    sf
 Imports: 
     dplyr,
     tidyr,
     here,
     DT,
-    plyr,
     testthat,
-    magrittr,
-    sf,
     leaflet,
     knitr
 Remotes: 
     annakrystalli/metadatar,
     annakrystalli/seabirddiet.devtools,
-    ropensci/rcrossref,
     ropensci/EML
 RoxygenNote: 6.1.1
