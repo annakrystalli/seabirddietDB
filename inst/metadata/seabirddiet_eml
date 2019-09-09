@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="b88e47f3-79a5-4e18-9ae8-2a884f5df214" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" packageId="bd15c896-d088-4313-bf4b-a93ac0a9acee" system="uuid" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1/ eml.xsd">
   <dataset id="dat.001">
     <title>Seabird Diet Database</title>
     <creator>
@@ -37,6 +37,18 @@
       </address>
       <electronicMailAddress>agnesolin@gmail.com</electronicMailAddress>
       <userId directory="http://orcid.org/0000-0002-8508-3911"/>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Anna</givenName>
+        <surName>Krystalli</surName>
+      </individualName>
+      <address>
+        <deliveryPoint>Research Software Engineering, Dept. Computer Science, 211 Portobello, Sheffield S1 4DP</deliveryPoint>
+        <country>UK</country>
+      </address>
+      <electronicMailAddress>a.krystalli@sheffield.ac.uk</electronicMailAddress>
+      <userId directory="http://orcid.org/0000-0002-2378-4915"/>
     </creator>
     <pubDate>2018</pubDate>
     <abstract>
