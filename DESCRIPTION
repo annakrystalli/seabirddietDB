@@ -49,7 +49,9 @@ Imports:
     DT,
     testthat,
     leaflet,
-    knitr
+    knitr,
+    htmlwidgets,
+    stringi
 Remotes: 
     annakrystalli/metadatar,
     annakrystalli/seabirddiet.devtools,
