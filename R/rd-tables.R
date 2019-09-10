@@ -1,13 +1,18 @@
+#' insert interactive table in html rd. 
+#' 
+#' @param df data.frame to 
+#'
+#' @param width width of data.frame
+#' @param ... additional arguments passed to datatable
+#'
 #' @importFrom DT datatable
 #' @export
-#' @noRd
 rd_datatable <- function(df, width = "100%", ...) {
     wrap_widget(datatable(df, width = width, ...))
 }
 
 #' @importFrom stringi stri_subset_regex
 #' @importFrom htmlwidgets saveWidget
-#' @noRd
 wrap_widget <- function(widget) {
     tmp <- tempfile(fileext = ".html")
     htmlwidgets::saveWidget(widget, tmp)
@@ -20,7 +25,6 @@ wrap_widget <- function(widget) {
 }
 
 #' @importFrom stringi stri_replace_all_fixed
-#' @noRd
 escape_rd <- function(x) {
     stri_replace_all_fixed(
         stri_replace_all_fixed(
